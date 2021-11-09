@@ -1,6 +1,6 @@
 {
     "name": "shibgreen-blockchain",
-    "author": "SHIBgreen Network <hello@shibgreennetwork.net> (https://shibgreennetwork.net/)",
+    "author": "SHIBgreen Network <hello@shibgreen.com> (https://shibgreen.com/)",
     "description": "GUI for SHIBgreen Blockchain",
     "productName": "SHIBgreen Blockchain",
     "private": true,

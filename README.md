@@ -2,7 +2,7 @@ SHIBgreen is a cryptocurrency forked from Chia and uses the Proof of Space and T
 
 Discord Channel: https://discord.gg/xguteVCYHh
 
-Website: https://shibgreennetwork.net (coming soon)
+Website: https://shibgreen.com (coming soon)
 
 Introducer: dns-introducer.shibgreen.com:7442
 

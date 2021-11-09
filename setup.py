@@ -47,9 +47,9 @@ dev_dependencies = [
 kwargs = dict(
     name="shibgreen-blockchain",
     author="Mariano Sorgente",
-    author_email="mariano@shibgreennetwork.net",
+    author_email="mariano@shibgreen.com",
     description="SHIBgreen blockchain full node, farmer, timelord, and wallet.",
-    url="https://shibgreennetwork.net/",
+    url="https://shibgreen.com/",
     license="Apache License",
     python_requires=">=3.7, <4",
     keywords="shibgreen blockchain node",

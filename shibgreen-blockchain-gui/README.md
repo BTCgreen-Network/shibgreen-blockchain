@@ -1,5 +1,5 @@
 # shibgreen-blockchain
-![Alt text](https://www.shibgreennetwork.net/img/shibgreen_logo.svg)
+![Alt text](https://www.shibgreen.com/img/shibgreen_logo.svg)
 
 ![GitHub contributors](https://img.shields.io/github/contributors/SHIBgreen-Network/shibgreen-blockchain?logo=GitHub)
 

@@ -410,7 +410,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Visit SHIBgreen Website' }),
             click: () => {
               openExternal(
-                'https://shibgreennetwork.net',
+                'https://shibgreen.com',
               );
             },
           },
