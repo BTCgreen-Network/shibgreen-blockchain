@@ -93,8 +93,8 @@ def configure(
         if testnet == "true" or testnet == "t":
             print("Setting Testnet")
             testnet_port = "38444"
-            testnet_introducer = "testnet-introducer.shibgreennetwork.net"
-            testnet_dns_introducer = "dns-testnet-introducer.shibgreennetwork.net"
+            testnet_introducer = "testnet-introducer.shibgreen.com"
+            testnet_dns_introducer = "dns-testnet-introducer.shibgreen.com"
             testnet = "testnet1"
             config["full_node"]["port"] = int(testnet_port)
             config["full_node"]["introducer_peer"]["port"] = int(testnet_port)
@@ -120,8 +120,8 @@ def configure(
         elif testnet == "false" or testnet == "f":
             print("Setting Mainnet")
             mainnet_port = "7442"
-            mainnet_introducer = "introducer.shibgreennetwork.net"
-            mainnet_dns_introducer = "dns-introducer.shibgreennetwork.net"
+            mainnet_introducer = "introducer.shibgreen.com"
+            mainnet_dns_introducer = "dns-introducer.shibgreen.com"
             net = "mainnet"
             config["full_node"]["port"] = int(mainnet_port)
             config["full_node"]["introducer_peer"]["port"] = int(mainnet_port)

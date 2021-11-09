@@ -4,7 +4,7 @@ Discord Channel: https://discord.gg/xguteVCYHh
 
 Website: https://shibgreennetwork.net (coming soon)
 
-Introducer: dns-introducer.shibgreennetwork.net:7442
+Introducer: dns-introducer.shibgreen.com:7442
 
 Changelog:
 v1.0.0 - Initial Release

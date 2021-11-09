@@ -211,7 +211,7 @@ class FullNode:
             dns_servers = self.config["dns_servers"]
         elif self.config["port"] == 7442:
             # If `dns_servers` misses from the `config`, hardcode it if we're running mainnet.
-            dns_servers.append("dns-introducer.shibgreennetwork.net")
+            dns_servers.append("dns-introducer.shibgreen.com")
         try:
             self.full_node_peers = FullNodePeers(
                 self.server,
