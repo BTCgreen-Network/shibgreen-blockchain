@@ -25,7 +25,7 @@ def calculate_pool_reward(height: uint32) -> uint64:
     elif height < 6 * _blocks_per_year:
         return uint64(int((7 / 8) * 2000 * _byte_per_shibgreen))
     else:
-        return uint64(int((7 / 8) * 500 * _byte_per_shibgreen))
+        return uint64(int((7 / 8) * 200 * _byte_per_shibgreen))
 
 
 def calculate_base_farmer_reward(height: uint32) -> uint64:
@@ -48,4 +48,4 @@ def calculate_base_farmer_reward(height: uint32) -> uint64:
     elif height < 6 * _blocks_per_year:
         return uint64(int((1 / 8) * 2000 * _byte_per_shibgreen))
     else:
-        return uint64(int((1 / 8) * 500 * _byte_per_shibgreen))
+        return uint64(int((1 / 8) * 200 * _byte_per_shibgreen))
