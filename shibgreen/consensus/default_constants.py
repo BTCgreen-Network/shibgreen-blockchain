@@ -30,12 +30,12 @@ testnet_kwargs = {
     # Default used for tests is std_hash(b'')
     "GENESIS_CHALLENGE": bytes.fromhex("265a4a588caa1f6334cdc6fc67fedb2648ceabf1a7f322d53b0e38a859fc3a4d"),
     # Forks of shibgreen should change this value to provide replay attack protection. This is set to mainnet genesis chall
-    "AGG_SIG_ME_ADDITIONAL_DATA": bytes.fromhex("c37d35863a3cb05730a9905ed93b2370fea5a05726561b0b437cc841ce4b9dc5"),
+    "AGG_SIG_ME_ADDITIONAL_DATA": bytes.fromhex("44fe497ba45f383d4fcf49e508ece6fac56c8d6c0f4f1d5c229cff499df8201d"),
     "GENESIS_PRE_FARM_POOL_PUZZLE_HASH": bytes.fromhex(
-        "5593755c5604a1651c85700d2db91a2fa4d978fcd9d5bb9aa948fbf4d0093193"
+        "75e5849b1a27d71e74de1390a4fc81c38b4ed8ce24d4efb2c9a5807d0e82106c"
     ),
     "GENESIS_PRE_FARM_FARMER_PUZZLE_HASH": bytes.fromhex(
-        "5593755c5604a1651c85700d2db91a2fa4d978fcd9d5bb9aa948fbf4d0093193"
+        "75e5849b1a27d71e74de1390a4fc81c38b4ed8ce24d4efb2c9a5807d0e82106c"
     ),
     "MAX_VDF_WITNESS_SIZE": 64,
     # Size of mempool = 50x the size of block
