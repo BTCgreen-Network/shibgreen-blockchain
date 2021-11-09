@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Card, Flex } from '@taco/core';
+import { Card, Flex } from '@shibgreen/core';
 import { Typography } from '@material-ui/core';
 import styled from 'styled-components';
 

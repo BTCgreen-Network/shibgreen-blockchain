@@ -6,28 +6,28 @@ from typing import Dict, Optional, List, Any, Set, Tuple, Union
 
 from blspy import AugSchemeMPL, G1Element
 from secrets import token_bytes
-from taco.protocols import wallet_protocol
-from taco.protocols.wallet_protocol import RespondAdditions, RejectAdditionsRequest
-from taco.server.outbound_message import NodeType
-from taco.types.announcement import Announcement
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import Program
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_spend import CoinSpend
-from taco.types.spend_bundle import SpendBundle
-from taco.util.ints import uint64, uint32, uint8
-from taco.wallet.util.transaction_type import TransactionType
+from shibgreen.protocols import wallet_protocol
+from shibgreen.protocols.wallet_protocol import RespondAdditions, RejectAdditionsRequest
+from shibgreen.server.outbound_message import NodeType
+from shibgreen.types.announcement import Announcement
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.program import Program
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.util.ints import uint64, uint32, uint8
+from shibgreen.wallet.util.transaction_type import TransactionType
 
-from taco.wallet.did_wallet.did_info import DIDInfo
-from taco.wallet.lineage_proof import LineageProof
-from taco.wallet.transaction_record import TransactionRecord
-from taco.wallet.util.wallet_types import WalletType
-from taco.wallet.wallet import Wallet
-from taco.wallet.wallet_coin_record import WalletCoinRecord
-from taco.wallet.wallet_info import WalletInfo
-from taco.wallet.derivation_record import DerivationRecord
-from taco.wallet.did_wallet import did_wallet_puzzles
-from taco.wallet.derive_keys import master_sk_to_wallet_sk
+from shibgreen.wallet.did_wallet.did_info import DIDInfo
+from shibgreen.wallet.lineage_proof import LineageProof
+from shibgreen.wallet.transaction_record import TransactionRecord
+from shibgreen.wallet.util.wallet_types import WalletType
+from shibgreen.wallet.wallet import Wallet
+from shibgreen.wallet.wallet_coin_record import WalletCoinRecord
+from shibgreen.wallet.wallet_info import WalletInfo
+from shibgreen.wallet.derivation_record import DerivationRecord
+from shibgreen.wallet.did_wallet import did_wallet_puzzles
+from shibgreen.wallet.derive_keys import master_sk_to_wallet_sk
 
 
 class DIDWallet:

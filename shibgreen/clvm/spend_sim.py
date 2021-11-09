@@ -2,27 +2,27 @@ import aiosqlite
 
 from typing import Optional, List, Dict, Tuple, Any
 
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import Program, SerializedProgram
-from taco.util.ints import uint64, uint32
-from taco.util.hash import std_hash
-from taco.util.errors import Err
-from taco.util.db_wrapper import DBWrapper
-from taco.types.coin_record import CoinRecord
-from taco.types.spend_bundle import SpendBundle
-from taco.types.generator_types import BlockGenerator
-from taco.types.mempool_inclusion_status import MempoolInclusionStatus
-from taco.types.coin_spend import CoinSpend
-from taco.full_node.bundle_tools import simple_solution_generator
-from taco.full_node.mempool_manager import MempoolManager
-from taco.full_node.coin_store import CoinStore
-from taco.full_node.mempool_check_conditions import get_puzzle_and_solution_for_coin
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.default_constants import DEFAULT_CONSTANTS
-from taco.consensus.coinbase import create_pool_coin, create_farmer_coin
-from taco.consensus.block_rewards import calculate_pool_reward, calculate_base_farmer_reward
-from taco.consensus.cost_calculator import NPCResult
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.program import Program, SerializedProgram
+from shibgreen.util.ints import uint64, uint32
+from shibgreen.util.hash import std_hash
+from shibgreen.util.errors import Err
+from shibgreen.util.db_wrapper import DBWrapper
+from shibgreen.types.coin_record import CoinRecord
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.types.generator_types import BlockGenerator
+from shibgreen.types.mempool_inclusion_status import MempoolInclusionStatus
+from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.full_node.bundle_tools import simple_solution_generator
+from shibgreen.full_node.mempool_manager import MempoolManager
+from shibgreen.full_node.coin_store import CoinStore
+from shibgreen.full_node.mempool_check_conditions import get_puzzle_and_solution_for_coin
+from shibgreen.consensus.constants import ConsensusConstants
+from shibgreen.consensus.default_constants import DEFAULT_CONSTANTS
+from shibgreen.consensus.coinbase import create_pool_coin, create_farmer_coin
+from shibgreen.consensus.block_rewards import calculate_pool_reward, calculate_base_farmer_reward
+from shibgreen.consensus.cost_calculator import NPCResult
 
 """
 The purpose of this file is to provide a lightweight simulator for the testing of Chialisp smart contracts.
@@ -30,7 +30,7 @@ The purpose of this file is to provide a lightweight simulator for the testing o
 The Node object uses actual MempoolManager, Mempool and CoinStore objects, while substituting FullBlock and
 BlockRecord objects for trimmed down versions.
 
-There is also a provided NodeClient object which implements many of the methods from taco.rpc.full_node_rpc_client
+There is also a provided NodeClient object which implements many of the methods from shibgreen.rpc.full_node_rpc_client
 and is designed so that you could test with it and then swap in a real rpc client that uses the same code you tested.
 """
 

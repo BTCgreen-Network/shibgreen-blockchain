@@ -10,7 +10,7 @@ import {
   Button,
 } from '@material-ui/core';
 import { Plural, Trans } from '@lingui/macro';
-import { AlertDialog, ConfirmDialog } from '@taco/core';
+import { AlertDialog, ConfirmDialog } from '@shibgreen/core';
 import { openDialog } from '../../modules/dialog';
 import { unlock_keyring_action } from '../../modules/message';
 import { RootState } from 'modules/rootReducer';

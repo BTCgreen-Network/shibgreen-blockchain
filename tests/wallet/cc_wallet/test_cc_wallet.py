@@ -3,18 +3,18 @@ from typing import List
 
 import pytest
 
-from taco.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
-from taco.full_node.mempool_manager import MempoolManager
-from taco.simulator.simulator_protocol import FarmNewBlockProtocol
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.peer_info import PeerInfo
-from taco.util.ints import uint16, uint32, uint64
-from taco.wallet.cc_wallet.cc_utils import cc_puzzle_hash_for_inner_puzzle_hash
-from taco.wallet.cc_wallet.cc_wallet import CCWallet
-from taco.wallet.puzzles.cc_loader import CC_MOD
-from taco.wallet.transaction_record import TransactionRecord
-from taco.wallet.wallet_coin_record import WalletCoinRecord
+from shibgreen.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
+from shibgreen.full_node.mempool_manager import MempoolManager
+from shibgreen.simulator.simulator_protocol import FarmNewBlockProtocol
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.peer_info import PeerInfo
+from shibgreen.util.ints import uint16, uint32, uint64
+from shibgreen.wallet.cc_wallet.cc_utils import cc_puzzle_hash_for_inner_puzzle_hash
+from shibgreen.wallet.cc_wallet.cc_wallet import CCWallet
+from shibgreen.wallet.puzzles.cc_loader import CC_MOD
+from shibgreen.wallet.transaction_record import TransactionRecord
+from shibgreen.wallet.wallet_coin_record import WalletCoinRecord
 from tests.setup_nodes import setup_simulators_and_wallets
 from tests.time_out_assert import time_out_assert
 

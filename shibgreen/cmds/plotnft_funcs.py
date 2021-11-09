@@ -9,21 +9,21 @@ import time
 from pprint import pprint
 from typing import List, Dict, Optional, Callable
 
-from taco.cmds.wallet_funcs import print_balance, wallet_coin_unit
-from taco.pools.pool_wallet_info import PoolWalletInfo, PoolSingletonState
-from taco.protocols.pool_protocol import POOL_PROTOCOL_VERSION
-from taco.rpc.farmer_rpc_client import FarmerRpcClient
-from taco.rpc.wallet_rpc_client import WalletRpcClient
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.server.server import ssl_context_for_root
-from taco.ssl.create_ssl import get_mozilla_ca_crt
-from taco.util.bech32m import encode_puzzle_hash
-from taco.util.byte_types import hexstr_to_bytes
-from taco.util.config import load_config
-from taco.util.default_root import DEFAULT_ROOT_PATH
-from taco.util.ints import uint16, uint32
-from taco.wallet.transaction_record import TransactionRecord
-from taco.wallet.util.wallet_types import WalletType
+from shibgreen.cmds.wallet_funcs import print_balance, wallet_coin_unit
+from shibgreen.pools.pool_wallet_info import PoolWalletInfo, PoolSingletonState
+from shibgreen.protocols.pool_protocol import POOL_PROTOCOL_VERSION
+from shibgreen.rpc.farmer_rpc_client import FarmerRpcClient
+from shibgreen.rpc.wallet_rpc_client import WalletRpcClient
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.server.server import ssl_context_for_root
+from shibgreen.ssl.create_ssl import get_mozilla_ca_crt
+from shibgreen.util.bech32m import encode_puzzle_hash
+from shibgreen.util.byte_types import hexstr_to_bytes
+from shibgreen.util.config import load_config
+from shibgreen.util.default_root import DEFAULT_ROOT_PATH
+from shibgreen.util.ints import uint16, uint32
+from shibgreen.wallet.transaction_record import TransactionRecord
+from shibgreen.wallet.util.wallet_types import WalletType
 
 
 async def create_pool_args(pool_url: str) -> Dict:
@@ -94,7 +94,7 @@ async def create(args: dict, wallet_client: WalletRpcClient, fingerprint: int) -
                 tx = await wallet_client.get_transaction(str(1), tx_record.name)
                 if len(tx.sent_to) > 0:
                     print(f"Transaction submitted to nodes: {tx.sent_to}")
-                    print(f"Do taco wallet get_transaction -f {fingerprint} -tx 0x{tx_record.name} to get status")
+                    print(f"Do shibgreen wallet get_transaction -f {fingerprint} -tx 0x{tx_record.name} to get status")
                     return None
         except Exception as e:
             print(f"Error creating plot NFT: {e}")
@@ -188,7 +188,7 @@ async def show(args: dict, wallet_client: WalletRpcClient, fingerprint: int) -> 
         if isinstance(e, aiohttp.ClientConnectorError):
             print(
                 f"Connection error. Check if farmer is running at {farmer_rpc_port}."
-                f" You can run the farmer by:\n    taco start farmer-only"
+                f" You can run the farmer by:\n    shibgreen start farmer-only"
             )
         else:
             print(f"Exception from 'wallet' {e}")
@@ -252,7 +252,7 @@ async def get_login_link(launcher_id_str: str) -> None:
         if isinstance(e, aiohttp.ClientConnectorError):
             print(
                 f"Connection error. Check if farmer is running at {farmer_rpc_port}."
-                f" You can run the farmer by:\n    taco start farmer-only"
+                f" You can run the farmer by:\n    shibgreen start farmer-only"
             )
         else:
             print(f"Exception from 'farmer' {e}")
@@ -279,7 +279,7 @@ async def submit_tx_with_confirmation(
                 tx = await wallet_client.get_transaction(str(1), tx_record.name)
                 if len(tx.sent_to) > 0:
                     print(f"Transaction submitted to nodes: {tx.sent_to}")
-                    print(f"Do taco wallet get_transaction -f {fingerprint} -tx 0x{tx_record.name} to get status")
+                    print(f"Do shibgreen wallet get_transaction -f {fingerprint} -tx 0x{tx_record.name} to get status")
                     return None
         except Exception as e:
             print(f"Error performing operation on Plot NFT -f {fingerprint} wallet id: {wallet_id}: {e}")

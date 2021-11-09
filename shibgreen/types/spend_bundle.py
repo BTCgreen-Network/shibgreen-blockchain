@@ -6,11 +6,11 @@ from typing import List
 
 from blspy import AugSchemeMPL, G2Element
 
-from taco.consensus.default_constants import DEFAULT_CONSTANTS
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.streamable import Streamable, dataclass_from_dict, recurse_jsonify, streamable
-from taco.wallet.util.debug_spend_bundle import debug_spend_bundle
+from shibgreen.consensus.default_constants import DEFAULT_CONSTANTS
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.util.streamable import Streamable, dataclass_from_dict, recurse_jsonify, streamable
+from shibgreen.wallet.util.debug_spend_bundle import debug_spend_bundle
 
 from .coin_spend import CoinSpend
 

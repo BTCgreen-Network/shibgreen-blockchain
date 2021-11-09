@@ -3,17 +3,17 @@ import asyncio
 from blspy import G2Element
 from clvm_tools import binutils
 
-from taco.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
-from taco.rpc.full_node_rpc_client import FullNodeRpcClient
-from taco.types.blockchain_format.program import Program
-from taco.types.coin_spend import CoinSpend
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.spend_bundle import SpendBundle
-from taco.util.bech32m import decode_puzzle_hash
-from taco.util.condition_tools import parse_sexp_to_conditions
-from taco.util.config import load_config
-from taco.util.default_root import DEFAULT_ROOT_PATH
-from taco.util.ints import uint32, uint16
+from shibgreen.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
+from shibgreen.rpc.full_node_rpc_client import FullNodeRpcClient
+from shibgreen.types.blockchain_format.program import Program
+from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.types.condition_opcodes import ConditionOpcode
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.util.bech32m import decode_puzzle_hash
+from shibgreen.util.condition_tools import parse_sexp_to_conditions
+from shibgreen.util.config import load_config
+from shibgreen.util.default_root import DEFAULT_ROOT_PATH
+from shibgreen.util.ints import uint32, uint16
 
 
 def print_conditions(spend_bundle: SpendBundle):
@@ -29,7 +29,7 @@ def print_conditions(spend_bundle: SpendBundle):
 
 
 async def main() -> None:
-    rpc_port: uint16 = uint16(18735)
+    rpc_port: uint16 = uint16(18793)
     self_hostname = "localhost"
     path = DEFAULT_ROOT_PATH
     config = load_config(path, "config.yaml")
@@ -43,8 +43,8 @@ async def main() -> None:
         print(farmer_prefarm.amount, farmer_amounts)
         assert farmer_amounts == farmer_prefarm.amount // 2
         assert pool_amounts == pool_prefarm.amount // 2
-        address1 = "xtx1tm2fmappqenrj3c9ngej8k33pujvspxxea6zpu7p4sx0lvle62es9ae95j"  # Taco Network Inc Reserves Account-1
-        address2 = "xtx1tm2fmappqenrj3c9ngej8k33pujvspxxea6zpu7p4sx0lvle62es9ae95j"  # Taco Network Inc Reserves Account-1
+        address1 = "xshib1tm2fmappqenrj3c9ngej8k33pujvspxxea6zpu7p4sx0lvle62es9ae95j"  # SHIBgreen Network Inc Reserves Account-1
+        address2 = "xshib1tm2fmappqenrj3c9ngej8k33pujvspxxea6zpu7p4sx0lvle62es9ae95j"  # SHIBgreen Network Inc Reserves Account-1
 
         ph1 = decode_puzzle_hash(address1)
         ph2 = decode_puzzle_hash(address2)

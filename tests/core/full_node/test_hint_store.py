@@ -3,12 +3,12 @@ import logging
 import pytest
 from clvm.casts import int_to_bytes
 
-from taco.consensus.blockchain import Blockchain
-from taco.full_node.hint_store import HintStore
-from taco.types.blockchain_format.coin import Coin
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.condition_with_args import ConditionWithArgs
-from taco.types.spend_bundle import SpendBundle
+from shibgreen.consensus.blockchain import Blockchain
+from shibgreen.full_node.hint_store import HintStore
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.condition_opcodes import ConditionOpcode
+from shibgreen.types.condition_with_args import ConditionWithArgs
+from shibgreen.types.spend_bundle import SpendBundle
 from tests.core.full_node.test_coin_store import DBConnection
 from tests.wallet_tools import WalletTool
 from tests.setup_nodes import bt

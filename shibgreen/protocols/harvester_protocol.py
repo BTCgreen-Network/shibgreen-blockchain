@@ -3,10 +3,10 @@ from typing import List, Tuple, Optional
 
 from blspy import G1Element, G2Element
 
-from taco.types.blockchain_format.proof_of_space import ProofOfSpace
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.ints import uint8, uint64
-from taco.util.streamable import Streamable, streamable
+from shibgreen.types.blockchain_format.proof_of_space import ProofOfSpace
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.util.ints import uint8, uint64
+from shibgreen.util.streamable import Streamable, streamable
 
 """
 Protocol between harvester and farmer.

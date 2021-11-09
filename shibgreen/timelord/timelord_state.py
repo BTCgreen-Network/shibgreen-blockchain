@@ -1,16 +1,16 @@
 import logging
 from typing import List, Optional, Tuple, Union
 
-from taco.consensus.constants import ConsensusConstants
-from taco.protocols import timelord_protocol
-from taco.timelord.iters_from_block import iters_from_block
-from taco.timelord.types import Chain, StateType
-from taco.types.blockchain_format.classgroup import ClassgroupElement
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.slots import ChallengeBlockInfo
-from taco.types.blockchain_format.sub_epoch_summary import SubEpochSummary
-from taco.types.end_of_slot_bundle import EndOfSubSlotBundle
-from taco.util.ints import uint8, uint32, uint64, uint128
+from shibgreen.consensus.constants import ConsensusConstants
+from shibgreen.protocols import timelord_protocol
+from shibgreen.timelord.iters_from_block import iters_from_block
+from shibgreen.timelord.types import Chain, StateType
+from shibgreen.types.blockchain_format.classgroup import ClassgroupElement
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.blockchain_format.slots import ChallengeBlockInfo
+from shibgreen.types.blockchain_format.sub_epoch_summary import SubEpochSummary
+from shibgreen.types.end_of_slot_bundle import EndOfSubSlotBundle
+from shibgreen.util.ints import uint8, uint32, uint64, uint128
 
 log = logging.getLogger(__name__)
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import icon from '../../assets/img/taco_circle.svg';
+import icon from '../../assets/img/shibgreen_circle.svg';
 
 const GlobalStyle = createGlobalStyle`
   body,
@@ -70,7 +70,7 @@ const Spacer = styled.div`
   margin-bottom: 1rem;
 `;
 
-const url = 'https://taconetwork.net';
+const url = 'https://shibgreennetwork.net';
 
 type Props = {
   version: string;
@@ -114,7 +114,7 @@ export default function About(props: Props) {
         </StyledLink>
         <StyledSubTitle>{description}</StyledSubTitle>
         <Spacer />
-        <div className="copyright">Copyright (c) 2021 Taco Network</div>
+        <div className="copyright">Copyright (c) 2021 SHIBgreen Network</div>
         <Spacer />
         <VersionsTable>
           {versions?.electron && (
@@ -144,7 +144,7 @@ export default function About(props: Props) {
         </VersionsTable>
 
         <BugReport
-          href="https://github.com/Taco-Network/taco-blockchain/issues"
+          href="https://github.com/SHIBgreen-Network/shibgreen-blockchain/issues"
           target="_blank"
         >
           Report an issue

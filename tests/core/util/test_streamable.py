@@ -6,14 +6,14 @@ import io
 from clvm_tools import binutils
 from pytest import raises
 
-from taco.protocols.wallet_protocol import RespondRemovals
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import Program
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.full_block import FullBlock
-from taco.types.weight_proof import SubEpochChallengeSegment
-from taco.util.ints import uint8, uint32
-from taco.util.streamable import (
+from shibgreen.protocols.wallet_protocol import RespondRemovals
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.program import Program
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.full_block import FullBlock
+from shibgreen.types.weight_proof import SubEpochChallengeSegment
+from shibgreen.util.ints import uint8, uint32
+from shibgreen.util.streamable import (
     Streamable,
     streamable,
     parse_bool,

@@ -6,22 +6,22 @@ import pytest
 from clvm.casts import int_to_bytes
 from colorlog import logging
 
-from taco.consensus.block_rewards import calculate_pool_reward, calculate_base_farmer_reward
-from taco.protocols import wallet_protocol, full_node_protocol
-from taco.protocols.full_node_protocol import RespondTransaction
-from taco.protocols.protocol_message_types import ProtocolMessageTypes
-from taco.protocols.wallet_protocol import RespondToCoinUpdates, CoinStateUpdate, RespondToPhUpdates, CoinState
-from taco.server.outbound_message import NodeType
-from taco.simulator.simulator_protocol import FarmNewBlockProtocol, ReorgProtocol
-from taco.types.blockchain_format.coin import Coin
-from taco.types.coin_record import CoinRecord
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.condition_with_args import ConditionWithArgs
-from taco.types.peer_info import PeerInfo
-from taco.types.spend_bundle import SpendBundle
-from taco.util.ints import uint16, uint32, uint64
-from taco.wallet.wallet import Wallet
-from taco.wallet.wallet_state_manager import WalletStateManager
+from shibgreen.consensus.block_rewards import calculate_pool_reward, calculate_base_farmer_reward
+from shibgreen.protocols import wallet_protocol, full_node_protocol
+from shibgreen.protocols.full_node_protocol import RespondTransaction
+from shibgreen.protocols.protocol_message_types import ProtocolMessageTypes
+from shibgreen.protocols.wallet_protocol import RespondToCoinUpdates, CoinStateUpdate, RespondToPhUpdates, CoinState
+from shibgreen.server.outbound_message import NodeType
+from shibgreen.simulator.simulator_protocol import FarmNewBlockProtocol, ReorgProtocol
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.coin_record import CoinRecord
+from shibgreen.types.condition_opcodes import ConditionOpcode
+from shibgreen.types.condition_with_args import ConditionWithArgs
+from shibgreen.types.peer_info import PeerInfo
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.util.ints import uint16, uint32, uint64
+from shibgreen.wallet.wallet import Wallet
+from shibgreen.wallet.wallet_state_manager import WalletStateManager
 from tests.connection_utils import add_dummy_connection
 from tests.setup_nodes import self_hostname, setup_simulators_and_wallets, bt
 from tests.time_out_assert import time_out_assert

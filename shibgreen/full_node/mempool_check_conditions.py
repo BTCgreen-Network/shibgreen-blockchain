@@ -3,19 +3,19 @@ import time
 from typing import Dict, List, Optional
 from clvm_rs import STRICT_MODE
 
-from taco.consensus.cost_calculator import NPCResult
-from taco.full_node.generator import create_generator_args, setup_generator_args
-from taco.types.blockchain_format.program import NIL
-from taco.types.coin_record import CoinRecord
-from taco.types.condition_with_args import ConditionWithArgs
-from taco.types.generator_types import BlockGenerator
-from taco.types.name_puzzle_condition import NPC
-from taco.util.clvm import int_from_bytes
-from taco.util.condition_tools import ConditionOpcode
-from taco.util.errors import Err
-from taco.util.ints import uint32, uint64, uint16
-from taco.wallet.puzzles.generator_loader import GENERATOR_FOR_SINGLE_COIN_MOD
-from taco.wallet.puzzles.rom_bootstrap_generator import get_generator
+from shibgreen.consensus.cost_calculator import NPCResult
+from shibgreen.full_node.generator import create_generator_args, setup_generator_args
+from shibgreen.types.blockchain_format.program import NIL
+from shibgreen.types.coin_record import CoinRecord
+from shibgreen.types.condition_with_args import ConditionWithArgs
+from shibgreen.types.generator_types import BlockGenerator
+from shibgreen.types.name_puzzle_condition import NPC
+from shibgreen.util.clvm import int_from_bytes
+from shibgreen.util.condition_tools import ConditionOpcode
+from shibgreen.util.errors import Err
+from shibgreen.util.ints import uint32, uint64, uint16
+from shibgreen.wallet.puzzles.generator_loader import GENERATOR_FOR_SINGLE_COIN_MOD
+from shibgreen.wallet.puzzles.rom_bootstrap_generator import get_generator
 
 GENERATOR_MOD = get_generator()
 

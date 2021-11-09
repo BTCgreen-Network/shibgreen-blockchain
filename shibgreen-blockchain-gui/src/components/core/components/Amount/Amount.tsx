@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core';
 import { useWatch, useFormContext } from 'react-hook-form';
 import TextField, { TextFieldProps } from '../TextField';
-import { taco_to_byte } from '../../../../util/taco';
+import { shibgreen_to_byte } from '../../../../util/shibgreen';
 import useCurrencyCode from '../../../../hooks/useCurrencyCode';
 import FormatLargeNumber from '../FormatLargeNumber';
 import Flex from '../Flex';
@@ -54,7 +54,7 @@ export default function Amount(props: AmountProps) {
     name,
   });
 
-  const byte = taco_to_byte(value);
+  const byte = shibgreen_to_byte(value);
 
   return (
     <FormControl variant={variant} fullWidth={fullWidth}>

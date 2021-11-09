@@ -8,32 +8,32 @@ from typing import Dict, List, Optional, Set, Tuple
 from blspy import G1Element
 from chiabip158 import PyBIP158
 
-from taco.util import cached_bls
-from taco.consensus.block_record import BlockRecord
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.cost_calculator import NPCResult, calculate_cost_of_program
-from taco.full_node.bundle_tools import simple_solution_generator
-from taco.full_node.coin_store import CoinStore
-from taco.full_node.mempool import Mempool
-from taco.full_node.mempool_check_conditions import mempool_check_conditions_dict, get_name_puzzle_conditions
-from taco.full_node.pending_tx_cache import PendingTxCache
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import SerializedProgram
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_record import CoinRecord
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.condition_with_args import ConditionWithArgs
-from taco.types.mempool_inclusion_status import MempoolInclusionStatus
-from taco.types.mempool_item import MempoolItem
-from taco.types.spend_bundle import SpendBundle
-from taco.util.clvm import int_from_bytes
-from taco.util.condition_tools import (
+from shibgreen.util import cached_bls
+from shibgreen.consensus.block_record import BlockRecord
+from shibgreen.consensus.constants import ConsensusConstants
+from shibgreen.consensus.cost_calculator import NPCResult, calculate_cost_of_program
+from shibgreen.full_node.bundle_tools import simple_solution_generator
+from shibgreen.full_node.coin_store import CoinStore
+from shibgreen.full_node.mempool import Mempool
+from shibgreen.full_node.mempool_check_conditions import mempool_check_conditions_dict, get_name_puzzle_conditions
+from shibgreen.full_node.pending_tx_cache import PendingTxCache
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.program import SerializedProgram
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.coin_record import CoinRecord
+from shibgreen.types.condition_opcodes import ConditionOpcode
+from shibgreen.types.condition_with_args import ConditionWithArgs
+from shibgreen.types.mempool_inclusion_status import MempoolInclusionStatus
+from shibgreen.types.mempool_item import MempoolItem
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.util.clvm import int_from_bytes
+from shibgreen.util.condition_tools import (
     pkm_pairs_for_conditions_dict,
 )
-from taco.util.errors import Err
-from taco.util.generator_tools import additions_for_npc
-from taco.util.ints import uint32, uint64
-from taco.util.streamable import recurse_jsonify
+from shibgreen.util.errors import Err
+from shibgreen.util.generator_tools import additions_for_npc
+from shibgreen.util.ints import uint32, uint64
+from shibgreen.util.streamable import recurse_jsonify
 
 log = logging.getLogger(__name__)
 
@@ -55,7 +55,7 @@ class MempoolManager:
         self.coin_store = coin_store
 
         # The fee per cost must be above this amount to consider the fee "nonzero", and thus able to kick out other
-        # transactions. This prevents spam. This is equivalent to 0.055 XTX per block, or about 0.00005 XTX for two
+        # transactions. This prevents spam. This is equivalent to 0.055 XSHIB per block, or about 0.00005 XSHIB for two
         # spends.
         self.nonzero_fee_minimum_fpc = 5
 
@@ -160,7 +160,7 @@ class MempoolManager:
 
     @staticmethod
     def get_min_fee_increase() -> int:
-        # 0.00001 XTX
+        # 0.00001 XSHIB
         return 10000000
 
     def can_replace(

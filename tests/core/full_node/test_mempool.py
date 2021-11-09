@@ -6,41 +6,41 @@ from typing import Dict, List, Optional, Tuple, Callable
 
 import pytest
 
-import taco.server.ws_connection as ws
+import shibgreen.server.ws_connection as ws
 
-from taco.full_node.mempool import Mempool
-from taco.full_node.full_node_api import FullNodeAPI
-from taco.protocols import full_node_protocol
-from taco.simulator.simulator_protocol import FarmNewBlockProtocol
-from taco.types.announcement import Announcement
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_spend import CoinSpend
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.condition_with_args import ConditionWithArgs
-from taco.types.spend_bundle import SpendBundle
-from taco.types.mempool_item import MempoolItem
-from taco.util.clvm import int_to_bytes
-from taco.util.condition_tools import conditions_for_solution
-from taco.util.errors import Err
-from taco.util.ints import uint64
-from taco.util.hash import std_hash
-from taco.types.mempool_inclusion_status import MempoolInclusionStatus
-from taco.util.api_decorators import api_request, peer_required, bytes_required
-from taco.full_node.mempool_check_conditions import get_name_puzzle_conditions
-from taco.full_node.pending_tx_cache import PendingTxCache
+from shibgreen.full_node.mempool import Mempool
+from shibgreen.full_node.full_node_api import FullNodeAPI
+from shibgreen.protocols import full_node_protocol
+from shibgreen.simulator.simulator_protocol import FarmNewBlockProtocol
+from shibgreen.types.announcement import Announcement
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.types.condition_opcodes import ConditionOpcode
+from shibgreen.types.condition_with_args import ConditionWithArgs
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.types.mempool_item import MempoolItem
+from shibgreen.util.clvm import int_to_bytes
+from shibgreen.util.condition_tools import conditions_for_solution
+from shibgreen.util.errors import Err
+from shibgreen.util.ints import uint64
+from shibgreen.util.hash import std_hash
+from shibgreen.types.mempool_inclusion_status import MempoolInclusionStatus
+from shibgreen.util.api_decorators import api_request, peer_required, bytes_required
+from shibgreen.full_node.mempool_check_conditions import get_name_puzzle_conditions
+from shibgreen.full_node.pending_tx_cache import PendingTxCache
 from blspy import G2Element
 
-from taco.util.recursive_replace import recursive_replace
+from shibgreen.util.recursive_replace import recursive_replace
 from tests.connection_utils import connect_and_get_peer
 from tests.core.node_height import node_height_at_least
 from tests.setup_nodes import bt, setup_simulators_and_wallets
 from tests.time_out_assert import time_out_assert
-from taco.types.blockchain_format.program import Program, INFINITE_COST
-from taco.consensus.cost_calculator import NPCResult
-from taco.types.blockchain_format.program import SerializedProgram
+from shibgreen.types.blockchain_format.program import Program, INFINITE_COST
+from shibgreen.consensus.cost_calculator import NPCResult
+from shibgreen.types.blockchain_format.program import SerializedProgram
 from clvm_tools import binutils
-from taco.types.generator_types import BlockGenerator
+from shibgreen.types.generator_types import BlockGenerator
 from clvm.casts import int_from_bytes
 
 BURN_PUZZLE_HASH = b"0" * 32
@@ -192,7 +192,7 @@ class TestMempool:
 async def respond_transaction(
     node: FullNodeAPI,
     tx: full_node_protocol.RespondTransaction,
-    peer: ws.WSTacoConnection,
+    peer: ws.WSSHIBgreenConnection,
     tx_bytes: bytes = b"",
     test: bool = False,
 ) -> Tuple[MempoolInclusionStatus, Optional[Err]]:

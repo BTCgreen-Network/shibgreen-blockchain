@@ -2,10 +2,10 @@ from typing import List, Optional
 
 import aiosqlite
 
-from taco.util.db_wrapper import DBWrapper
-from taco.util.ints import uint32
-from taco.wallet.util.wallet_types import WalletType
-from taco.wallet.wallet_info import WalletInfo
+from shibgreen.util.db_wrapper import DBWrapper
+from shibgreen.util.ints import uint32
+from shibgreen.wallet.util.wallet_types import WalletType
+from shibgreen.wallet.wallet_info import WalletInfo
 
 
 class WalletUserStore:
@@ -46,7 +46,7 @@ class WalletUserStore:
     async def init_wallet(self):
         all_wallets = await self.get_all_wallet_info_entries()
         if len(all_wallets) == 0:
-            await self.create_wallet("Taco Wallet", WalletType.STANDARD_WALLET, "")
+            await self.create_wallet("SHIBgreen Wallet", WalletType.STANDARD_WALLET, "")
 
     async def _clear_database(self):
         cursor = await self.db_connection.execute("DELETE FROM users_wallets")

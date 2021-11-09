@@ -6,11 +6,11 @@ import aiosqlite
 import pytest
 from blspy import AugSchemeMPL
 
-from taco.util.db_wrapper import DBWrapper
-from taco.util.ints import uint32
-from taco.wallet.derivation_record import DerivationRecord
-from taco.wallet.util.wallet_types import WalletType
-from taco.wallet.wallet_puzzle_store import WalletPuzzleStore
+from shibgreen.util.db_wrapper import DBWrapper
+from shibgreen.util.ints import uint32
+from shibgreen.wallet.derivation_record import DerivationRecord
+from shibgreen.wallet.util.wallet_types import WalletType
+from shibgreen.wallet.wallet_puzzle_store import WalletPuzzleStore
 
 
 @pytest.fixture(scope="module")

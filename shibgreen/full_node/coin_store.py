@@ -1,12 +1,12 @@
 from typing import List, Optional, Set, Dict
 import aiosqlite
-from taco.protocols.wallet_protocol import CoinState
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_record import CoinRecord
-from taco.util.db_wrapper import DBWrapper
-from taco.util.ints import uint32, uint64
-from taco.util.lru_cache import LRUCache
+from shibgreen.protocols.wallet_protocol import CoinState
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.coin_record import CoinRecord
+from shibgreen.util.db_wrapper import DBWrapper
+from shibgreen.util.ints import uint32, uint64
+from shibgreen.util.lru_cache import LRUCache
 from time import time
 import logging
 

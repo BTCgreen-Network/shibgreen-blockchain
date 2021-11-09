@@ -6,16 +6,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: ru_RU\n"
-"Project-Id-Version: taco-blockchain\n"
+"Project-Id-Version: shibgreen-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2021-09-17 17:40\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
-"X-Crowdin-Project: taco-blockchain\n"
+"X-Crowdin-Project: shibgreen-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: ru\n"
-"X-Crowdin-File: /[Taco-Network.taco-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[SHIBgreen-Network.shibgreen-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -23,8 +23,8 @@ msgid "(Optional)"
 msgstr "(Необязательно)"
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:64
-msgid "*Want to explore Taco’s blocks further? Check out <0>Taco Explorer</0> built by an open source developer."
-msgstr "*Хотите посмотреть больше информации о блоках Чиа? Загляните в обозреватель блоков <0>Taco Explorer</0>, созданный на основе открытого исходного кода."
+msgid "*Want to explore SHIBgreen’s blocks further? Check out <0>SHIBgreen Explorer</0> built by an open source developer."
+msgstr "*Хотите посмотреть больше информации о блоках Чиа? Загляните в обозреватель блоков <0>SHIBgreen Explorer</0>, созданный на основе открытого исходного кода."
 
 #: src/components/plot/add/PlotAddNFT.tsx:123
 msgid "+ Add New Plot NFT"
@@ -48,8 +48,8 @@ msgstr "Комбайн - это служба, работающая на маши
 
 #: src/electron/main.tsx:422
 #: src/electron/main.tsx:509
-msgid "About Taco Blockchain"
-msgstr "О программе Taco Blockchain"
+msgid "About SHIBgreen Blockchain"
+msgstr "О программе SHIBgreen Blockchain"
 
 #: src/components/trading/ViewOffer.jsx:74
 msgid "Accept"
@@ -234,8 +234,8 @@ msgid "Block VDF Iterations"
 msgstr "VDF итераций блока"
 
 #: src/components/block/Block.jsx:337
-msgid "Block at height {0} in the Taco blockchain"
-msgstr "Блок на высоте {0} в блокчейне Taco"
+msgid "Block at height {0} in the SHIBgreen blockchain"
+msgstr "Блок на высоте {0} в блокчейне SHIBgreen"
 
 #: src/components/fullNode/FullNode.jsx:331
 #~ msgid "Block hash"
@@ -340,33 +340,33 @@ msgid "Chat on KeyBase"
 msgstr "Чат в KeyBase"
 
 #: src/electron/main.tsx:419
-msgid "Taco"
+msgid "SHIBgreen"
 msgstr "Чиа"
 
 #: src/electron/main.tsx:358
-msgid "Taco Blockchain Wiki"
+msgid "SHIBgreen Blockchain Wiki"
 msgstr ""
-"Блокчейн Taco на Wiki                           Taco coin\n"
+"Блокчейн SHIBgreen на Wiki                           SHIBgreen coin\n"
 "\n"
 "Мы считаем, что криптовалютой должно быть проще пользоваться, чем наличными, ее сложнее потерять и почти невозможно украсть. Любой, кто хочет подтверждать транзакции, должен иметь возможность заниматься майнингом без одноразового оборудования или больших счетов за электроэнергию.\n"
 "9 февраля мы выпустили наш бизнес-документ и запустили основную сеть для получения вознаграждений в пятницу, 19 марта 2021 года. Транзакции будут активированы 3 мая 2021 года около 10:00 по тихоокеанскому времени. Вас также может заинтересовать наш новый согласованный рабочий документ, который впервые был реализован в бета-версии 19 12 января 2021 года.\n"
 "\n"
-"Taco Network разрабатывает блокчейн и платформу интеллектуальных транзакций, созданную изобретателем BitTorrent Брэмом Коэном. Он реализует первый новый алгоритм консенсуса Накамото со времен Биткойна в 2008 году. Доказательства пространства и времени заменяют энергоемкие «доказательства работы».\n"
+"SHIBgreen Network разрабатывает блокчейн и платформу интеллектуальных транзакций, созданную изобретателем BitTorrent Брэмом Коэном. Он реализует первый новый алгоритм консенсуса Накамото со времен Биткойна в 2008 году. Доказательства пространства и времени заменяют энергоемкие «доказательства работы».\n"
 "\n"
-"Chialisp - это новый язык программирования Taco, который является мощным, легким для аудита и безопасным. Это упростит использование криптовалюты, чем наличные деньги или кредит. В настоящее время доступны следующие эталонные смарт-транзакции: атомарные свопы, авторизованные получатели, восстанавливаемые кошельки, кошельки с несколькими подписями, кошельки с ограничением скорости и цветные монеты. Брэм представляет Chialisp в нашем блоге.\n"
-"Вам следует ознакомиться с примечаниями к выпуску, а затем установить блокчейн Taco.\n"
+"Chialisp - это новый язык программирования SHIBgreen, который является мощным, легким для аудита и безопасным. Это упростит использование криптовалюты, чем наличные деньги или кредит. В настоящее время доступны следующие эталонные смарт-транзакции: атомарные свопы, авторизованные получатели, восстанавливаемые кошельки, кошельки с несколькими подписями, кошельки с ограничением скорости и цветные монеты. Брэм представляет Chialisp в нашем блоге.\n"
+"Вам следует ознакомиться с примечаниями к выпуску, а затем установить блокчейн SHIBgreen.\n"
 "\n"
 "Руководство для начинающих\n"
 "\n"
 "\n"
 "Основная информация о Чиа для начала\n"
-"Taco - это новый тип криптовалюты, основанный на емкости предварительно сохраненных случайных данных, которые пользователь создает и хранит в файлах, называемых графиками, что делает консенсус блокчейна чрезвычайно быстрым и экологически чистым. Это улучшение по сравнению с блокчейнами доказательства работы, которые полагаются на быстрые графические карты и специальные машины, выполняющие миллионы вычислений в секунду и тратящие много электроэнергии. Taco также внесла множество улучшений в сценарии, среду сценариев, криптографию, удобство использования и масштабируемость и стремится быть простым, безопасным и мощным блокчейном.\n"
+"SHIBgreen - это новый тип криптовалюты, основанный на емкости предварительно сохраненных случайных данных, которые пользователь создает и хранит в файлах, называемых графиками, что делает консенсус блокчейна чрезвычайно быстрым и экологически чистым. Это улучшение по сравнению с блокчейнами доказательства работы, которые полагаются на быстрые графические карты и специальные машины, выполняющие миллионы вычислений в секунду и тратящие много электроэнергии. SHIBgreen также внесла множество улучшений в сценарии, среду сценариев, криптографию, удобство использования и масштабируемость и стремится быть простым, безопасным и мощным блокчейном.\n"
 "\n"
 "Как это работает\n"
 "\n"
-"Вы можете загрузить программное обеспечение Taco на Windows, Mac или Linux. Версия для Windows автоматически запускается при установке, и Mac просто нужно открыть из каталога приложений - он загружается и начинает синхронизацию с остальной сетью и блокчейном. Полная синхронизация может занять 4–6 часов, хотя со временем эта цифра увеличивается. По сути, вы синхронизируетсь со всеми в сети, загружая всю цепочку блоков, которая включает все транзакции, когда-либо обработанные в сети. Копия базы данных блокчейна taco будет храниться на вашем компьютере. У всех остальных есть копия.\n"
+"Вы можете загрузить программное обеспечение SHIBgreen на Windows, Mac или Linux. Версия для Windows автоматически запускается при установке, и Mac просто нужно открыть из каталога приложений - он загружается и начинает синхронизацию с остальной сетью и блокчейном. Полная синхронизация может занять 4–6 часов, хотя со временем эта цифра увеличивается. По сути, вы синхронизируетсь со всеми в сети, загружая всю цепочку блоков, которая включает все транзакции, когда-либо обработанные в сети. Копия базы данных блокчейна shibgreen будет храниться на вашем компьютере. У всех остальных есть копия.\n"
 "\n"
-"После того, как taco заработала, ее концепция: пользователи создают графики (каждый размером 101 гигабайт), пользователь сохраняет эти графики на компьютерном оборудовании, а затем обрабатывает созданные участки для потенциального заработка монет.\n"
+"После того, как shibgreen заработала, ее концепция: пользователи создают графики (каждый размером 101 гигабайт), пользователь сохраняет эти графики на компьютерном оборудовании, а затем обрабатывает созданные участки для потенциального заработка монет.\n"
 "\n"
 "Внутри каждого графика находится большое количество предварительно сформулированных вычислений, хранящихся в блоках листа Excel, называемых (хеш-ячейками). Пользователь выигрывает потенциальные монеты, предоставляя заранее сформулированный (хеш-код) выигрышный код, позволяющий совершить транзакцию. Выигрышная транзакция выполняется очень быстро в течение 2-3 секунд, и пользователю выплачивается компенсация монетами для облегчения транзакции. Сюжеты содержат много (хеш-ячеек) внутри, поэтому, если используется 1, остается еще много ячеек. Земельный участок рассчитан на срок более 5 лет.\n"
 "\n"
@@ -384,12 +384,12 @@ msgstr ""
 "Руководство для начинающих\n"
 "lon12 отредактировал эту страницу 10 дней назад • 57 редакций\n"
 "Основная информация о Чиа для начала\n"
-"Taco - это новый тип криптовалюты, основанный на емкости предварительно сохраненных случайных данных, которые пользователь создает и хранит в файлах, называемых графиками, что делает консенсус блокчейна чрезвычайно быстрым и экологически чистым. Это улучшение по сравнению с блокчейнами доказательства работы, которые полагаются на быстрые графические карты и специальные машины, выполняющие миллионы вычислений в секунду и тратящие много электроэнергии. Taco также внесла множество улучшений в сценарии, среду сценариев, криптографию, удобство использования и масштабируемость и стремится быть простым, безопасным и мощным блокчейном.\n"
+"SHIBgreen - это новый тип криптовалюты, основанный на емкости предварительно сохраненных случайных данных, которые пользователь создает и хранит в файлах, называемых графиками, что делает консенсус блокчейна чрезвычайно быстрым и экологически чистым. Это улучшение по сравнению с блокчейнами доказательства работы, которые полагаются на быстрые графические карты и специальные машины, выполняющие миллионы вычислений в секунду и тратящие много электроэнергии. SHIBgreen также внесла множество улучшений в сценарии, среду сценариев, криптографию, удобство использования и масштабируемость и стремится быть простым, безопасным и мощным блокчейном.\n"
 "\n"
 "Как это работает\n"
-"Вы можете загрузить программное обеспечение Taco на Windows, Mac или Linux. Версия для Windows автоматически запускается при установке, и Mac просто нужно открыть из каталога приложений - он загружается и начинает синхронизацию с остальной сетью и блокчейном. Полная синхронизация может занять 4–6 часов, хотя со временем эта цифра увеличивается. По сути, вы синхронизируете со всеми в сети, загружая всю цепочку блоков, которая включает все транзакции, когда-либо обработанные в сети. Копия базы данных блокчейна taco будет храниться на вашем компьютере. У всех остальных есть копия.\n"
+"Вы можете загрузить программное обеспечение SHIBgreen на Windows, Mac или Linux. Версия для Windows автоматически запускается при установке, и Mac просто нужно открыть из каталога приложений - он загружается и начинает синхронизацию с остальной сетью и блокчейном. Полная синхронизация может занять 4–6 часов, хотя со временем эта цифра увеличивается. По сути, вы синхронизируете со всеми в сети, загружая всю цепочку блоков, которая включает все транзакции, когда-либо обработанные в сети. Копия базы данных блокчейна shibgreen будет храниться на вашем компьютере. У всех остальных есть копия.\n"
 "\n"
-"После того, как taco заработала, ее концепция: пользователи создают графики (каждый размером 101 гигабайт), пользователь сохраняет эти графики на компьютерном оборудовании, а затем обрабатывает созданные участки для потенциального заработка монет.\n"
+"После того, как shibgreen заработала, ее концепция: пользователи создают графики (каждый размером 101 гигабайт), пользователь сохраняет эти графики на компьютерном оборудовании, а затем обрабатывает созданные участки для потенциального заработка монет.\n"
 "\n"
 "Внутри каждого графика находится большое количество предварительно сформулированных вычислений, хранящихся в блоках листа Excel, называемых (хеш-ячейками). Пользователь выигрывает потенциальные монеты, предоставляя заранее сформулированный (хеш-код) выигрышный код, позволяющий совершить транзакцию. Выигрышная транзакция выполняется очень быстро в течение 2-3 секунд, и пользователю выплачивается компенсация монетами для облегчения транзакции. Сюжеты содержат много (хеш-ячеек) внутри, поэтому, если используется 1, остается еще много ячеек. Земельный участок рассчитан на срок более 5 лет.\n"
 "\n"
@@ -415,8 +415,8 @@ msgstr ""
 "Вот почему транзакции такие зеленые /\n"
 "\n"
 "Вкладка \"Ферма\"\n"
-"Это покажет вам, сколько PLOTS-полей вы создали. Вверху будет показано, сколько Tacos было выращено. Также он показывает, сколько гигов участков у вас в сети. Если у вас есть 2 участка по 101 ГиБ. Затем в левом верхнем углу отображается «Общий размер участков» .\n"
-"2 TIB означает, что вы предлагаете такой объем хранилища для формул сети taco. Рассчитано, как если бы у вас 101 ГиБ x 2 = 202 ГиБ.\n"
+"Это покажет вам, сколько PLOTS-полей вы создали. Вверху будет показано, сколько SHIBgreens было выращено. Также он показывает, сколько гигов участков у вас в сети. Если у вас есть 2 участка по 101 ГиБ. Затем в левом верхнем углу отображается «Общий размер участков» .\n"
+"2 TIB означает, что вы предлагаете такой объем хранилища для формул сети shibgreen. Рассчитано, как если бы у вас 101 ГиБ x 2 = 202 ГиБ.\n"
 "\n"
 "Последние испытания блоков: здесь показаны последние испытания и указатели, которые можно рассматривать как мини-лотереи. Каждые 9 секунд появляется новая вывеска, а это означает, что у вас есть новая возможность проверить свои участки и узнать, выиграли ли вы. Любая другая точка вывески будет выигрышной для кого-то в сети, поэтому каждые 18 секунд создается новый блок.\n"
 "\n"
@@ -425,7 +425,7 @@ msgstr ""
 "Шаг 2 - Выбранный участок проверяется на выигрышный хэш. Итак, в качестве примера - ваша система работает - есть 5 строк, если у вас 157 графиков - каждая из 5 строк читает 0/157. Если выбран график или второй график, это хорошая новость, и число изменится на 1/157 или 2/157, может быть, 3/157. После прохождения фильтра каждый выбранный участок будет проходить «качественный поиск», который выполняет примерно 7 считываний на вашем графике и сообщает вам, выиграли ли участки. Если вы выиграли, это не показывает никаких признаков, так как транзакция выполняется быстро. Ваш кошелек увеличивается.\n"
 "\n"
 "Как только это совпадение появится в первой строке, оно переместится вниз к строкам 2-5, затем, если другой график пройдет шаг 1, он также начнется сверху, amd переместится, выполнив процесс фильтрации.\n"
-"Выигрыши случаются очень редко: в среднем один человек во всем мире выигрывает каждые 18 секунд. На каждой точке указателя (9 секунд) все ваши участки проверяются, чтобы увидеть, какие из них проходят [фильтр поля]. (https://github.com/Taco-Network/taco-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it). Примерно 1/512 всех участков пройдут через фильтр в каждом испытании, поэтому здесь вы можете увидеть, сколько ваших участков прошло. Однако есть 4 608 шансов выиграть 2 чиа каждый день.\n"
+"Выигрыши случаются очень редко: в среднем один человек во всем мире выигрывает каждые 18 секунд. На каждой точке указателя (9 секунд) все ваши участки проверяются, чтобы увидеть, какие из них проходят [фильтр поля]. (https://github.com/SHIBgreen-Network/shibgreen-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it). Примерно 1/512 всех участков пройдут через фильтр в каждом испытании, поэтому здесь вы можете увидеть, сколько ваших участков прошло. Однако есть 4 608 шансов выиграть 2 чиа каждый день.\n"
 "\n"
 "Если по какой-то причине эти строки перестают двигаться, это еще один признак того, что вы не синхронизированы с базой данных и вам необходимо выполнить повторную синхронизацию - см. Ниже.\n"
 "\n"
@@ -435,7 +435,7 @@ msgstr ""
 "\n"
 "Начальный размер графика - 32 k (101 ГиБ). Для создания графика вам потребуется временное хранилище размером не менее 332 ГиБ (357 ГБ).\n"
 "\n"
-"Выберите количество участков - вы можете выбрать количество для создания на SSD или XTX\n"
+"Выберите количество участков - вы можете выбрать количество для создания на SSD или XSHIB\n"
 "\n"
 "График в очередь: означает, что если выбрано (5), он будет отображать # 1, затем, когда закончите, начнется # 2\n"
 "Параллельный график: \n"
@@ -459,7 +459,7 @@ msgstr ""
 " k 32 (101 ГиБ).\n"
 "\n"
 "Для этой работы рекомендуется использовать SSD-накопитель или накопитель NVME, но убедитесь, что вы знаете о SSD Endurance.\n"
-"Выберите место на –XTX, где готовое \"поле\" будет храниться. \n"
+"Выберите место на –XSHIB, где готовое \"поле\" будет храниться. \n"
 "После создания оно перейдет в это место, где его будут обрабатывать и зарабатывать монеты чиа.\n"
 " Хранилище может быть внутренним или подключенным через USB. Сетевые диски могут работать, но могут перегружать вашу локальную сеть или медленно отвечать за вознаграждение (должно быть менее 30 секунд). Планируйте заранее - хранилище быстро заполняется.\n"
 "\n"
@@ -499,29 +499,29 @@ msgstr ""
 "Примечания. \n"
 "Предлагается использовать дополнительное хранилище SSD или NVME для создания полей, а не основной жесткий диск (особенно для несменного NVME, например, на некоторых Mac или ноутбуках с Windows). Если по какой-то причине процесс записи поля не может быть завершен, его следует удален, удалив все временные файлы. Будьте осторожны, чтобы не удалить временные файлы другого строящегося поля.\n"
 "\n"
-"В Windows вы можете использовать taco CLI из Windows PowerShell, что обеспечивает большую гибкость и контроль. PowerShell - это программа, в которой вы вводите команды, нажимаете клавишу ВВОД и выполняете такие действия, как изменение папок, перемещение файлов или запуск программ, таких как taco.\n"
+"В Windows вы можете использовать shibgreen CLI из Windows PowerShell, что обеспечивает большую гибкость и контроль. PowerShell - это программа, в которой вы вводите команды, нажимаете клавишу ВВОД и выполняете такие действия, как изменение папок, перемещение файлов или запуск программ, таких как shibgreen.\n"
 "\n"
 "1. Параллельное построение с использованием PowerShell\n"
-"    cd C:\\Users\\yourUserName\\AppData\\Local\\Taco-Blockchain\\app-1.0.5\\resources\\app.asar.unpacked\\daemon\\\n"
-"    start-process .\\taco.exe -argumentlist \"plots create yourParametersGoHere\"\n"
+"    cd C:\\Users\\yourUserName\\AppData\\Local\\SHIBgreen-Blockchain\\app-1.0.5\\resources\\app.asar.unpacked\\daemon\\\n"
+"    start-process .\\shibgreen.exe -argumentlist \"plots create yourParametersGoHere\"\n"
 "    start-process ....\n"
 "\n"
-"   Если start-process не работает, попробуйте. .\\taco.exe plots create yourParametersGoHere\n"
+"   Если start-process не работает, попробуйте. .\\shibgreen.exe plots create yourParametersGoHere\n"
 "\n"
 "Или добавьте путь\n"
-" \"%USERPROFILE%\\AppData\\Local\\taco-blockchain\\app-1.0.5\\resources\\app.asar.unpacked\\daemon\"\n"
+" \"%USERPROFILE%\\AppData\\Local\\shibgreen-blockchain\\app-1.0.5\\resources\\app.asar.unpacked\\daemon\"\n"
 "\n"
-"Чтобы добавить задержку между вашими параллельными процессами, вы можете поместить sleep <seconds> между каждой командой создания полей taco taco plots create , например чтобы отложить следующий процесс на час sleep 3600\n"
+"Чтобы добавить задержку между вашими параллельными процессами, вы можете поместить sleep <seconds> между каждой командой создания полей shibgreen shibgreen plots create , например чтобы отложить следующий процесс на час sleep 3600\n"
 "\n"
 "Конкретный пример:\n"
-"    cd C:\\Users\\yourUserName\\AppData\\Local\\Taco-Blockchain\\app-1.0.5\\resources\\app.asar.unpacked\\daemon\\\n"
-"    start-process ./taco.exe -argumentlist \"plots create -k 32 -b 4000 -u 128 -r 4 -t d:\\tempdrive1 -2 e:\\tempdrive2 -d F:\\plots -n 1\"\n"
+"    cd C:\\Users\\yourUserName\\AppData\\Local\\SHIBgreen-Blockchain\\app-1.0.5\\resources\\app.asar.unpacked\\daemon\\\n"
+"    start-process ./shibgreen.exe -argumentlist \"plots create -k 32 -b 4000 -u 128 -r 4 -t d:\\tempdrive1 -2 e:\\tempdrive2 -d F:\\plots -n 1\"\n"
 "\n"
 "Приведенная выше команда создает одио поле (указывается -n 1), для параллельного построения вам нужно повторить команду (не закрывая первую). Увеличьте значение -n для последовательного построения, то есть после завершения первого участка запускается следующий."
 
 #: src/components/wallet/standard/WalletStandard.tsx:652
-msgid "Taco Wallet"
-msgstr "Кошелек Taco"
+msgid "SHIBgreen Wallet"
+msgstr "Кошелек SHIBgreen"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:36
 msgid "Choose Number of Plots"
@@ -970,8 +970,8 @@ msgid "Enter a strong passphrase to secure your keys:"
 msgstr ""
 
 #: src/components/wallet/WalletImport.tsx:146
-msgid "Enter the 24 word mnemonic that you have saved in order to restore your Taco wallet."
-msgstr "Введите мнемонику из 24 слов, которую вы сохранили, чтобы восстановить свой кошелек Taco."
+msgid "Enter the 24 word mnemonic that you have saved in order to restore your SHIBgreen wallet."
+msgstr "Введите мнемонику из 24 слов, которую вы сохранили, чтобы восстановить свой кошелек SHIBgreen."
 
 #: src/components/settings/RemovePassphrasePrompt.tsx:115
 #: src/components/wallet/EnterPassphrasePrompt.tsx:115
@@ -989,8 +989,8 @@ msgid "Error"
 msgstr "Ошибка"
 
 #: src/components/wallet/standard/WalletStandard.tsx:460
-msgid "Error: Cannot send taco to coloured address. Please enter a taco address."
-msgstr "Ошибка: не удается отправить чиа на цветной адрес. Пожалуйста, введите адрес taco."
+msgid "Error: Cannot send shibgreen to coloured address. Please enter a shibgreen address."
+msgstr "Ошибка: не удается отправить чиа на цветной адрес. Пожалуйста, введите адрес shibgreen."
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:20
 msgid "Estimated Network Space"
@@ -1112,7 +1112,7 @@ msgid "Fee"
 msgstr "Комиссия"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
-#~ msgid "Fee (TXTX)"
+#~ msgid "Fee (TXSHIB)"
 #~ msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
@@ -1317,16 +1317,16 @@ msgid "Join a Pool"
 msgstr "Присоединиться к пулу"
 
 #: src/components/plot/add/PlotAddNFT.tsx:44
-msgid "Join a pool and get consistent XTX farming rewards. The average returns are the same, but it is much less volatile."
-msgstr "Присоединяйтесь к пулу и получайте последовательные награды за фермерство в XTX. Средний доход одинаковый, но намного, менее волатильный."
+msgid "Join a pool and get consistent XSHIB farming rewards. The average returns are the same, but it is much less volatile."
+msgstr "Присоединяйтесь к пулу и получайте последовательные награды за фермерство в XSHIB. Средний доход одинаковый, но намного, менее волатильный."
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:59
-msgid "Join a pool and get consistent XTX farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
-msgstr "Присоединяйтесь к пулу и получайте последовательные награды за фермерство в XTX. Средний доход одинаковый, но намного, менее волатильный. Назначить участки в NFT участки. Вы можете легко переключаться на пулы без повторного засеивания."
+msgid "Join a pool and get consistent XSHIB farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgstr "Присоединяйтесь к пулу и получайте последовательные награды за фермерство в XSHIB. Средний доход одинаковый, но намного, менее волатильный. Назначить участки в NFT участки. Вы можете легко переключаться на пулы без повторного засеивания."
 
 #: src/components/plot/add/PlotAddNFT.tsx:133
-msgid "Join a pool and get more consistent XTX farming rewards. Create a plot NFT and assign your new plots to a group."
-msgstr "Присоединяйтесь к пулу и получите более последовательные награды за фермерство в XTX. Создайте участки NFT и назначьте свои новые участки в группу."
+msgid "Join a pool and get more consistent XSHIB farming rewards. Create a plot NFT and assign your new plots to a group."
+msgstr "Присоединяйтесь к пулу и получите более последовательные награды за фермерство в XSHIB. Создайте участки NFT и назначьте свои новые участки в группу."
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:63
 msgid "K-Size"
@@ -1601,8 +1601,8 @@ msgid "Not found Plots"
 msgstr "Участки не найдены"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:188
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XTX reward for pooling plots."
-msgstr "Обратите внимание, что это не меняет адреса выплат пула. Это влияет только на старый формат участков и на вознаграждение 0.25XTX за участки в пуле."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XSHIB reward for pooling plots."
+msgstr "Обратите внимание, что это не меняет адреса выплат пула. Это влияет только на старый формат участков и на вознаграждение 0.25XSHIB за участки в пуле."
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:118
 #: src/components/plotNFT/PlotNFTCard.tsx:160
@@ -1917,7 +1917,7 @@ msgid "Plots Passed Filter"
 msgstr "Участки, прошедшие фильтр"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:35
-msgid "Plots are allocated space on your hard drive used to farm and earn Taco. <0>Learn more</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn SHIBgreen. <0>Learn more</0>"
 msgstr "Участки - это выделенное пространство на вашем жестком диске. Участки используются для фарминга и приносят доход в чиа. <0>Подробности</0>"
 
 #: src/components/plot/queue/PlotQueueIndicator.tsx:34
@@ -2272,8 +2272,8 @@ msgid "Select Wallet Type"
 msgstr "Выберите Тип Кошелька"
 
 #: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:25
-msgid "Select the final destination for the folder where you would like the plot to be stored. We recommend you use a large slow hard drive (like external XTX)."
-msgstr "Выберите путь для конечной папки, в которой вы хотите хранить участок. Мы рекомендуем вам использовать большой медленный жесткий диск (например, внешний жесткий диск XTX)."
+msgid "Select the final destination for the folder where you would like the plot to be stored. We recommend you use a large slow hard drive (like external XSHIB)."
+msgstr "Выберите путь для конечной папки, в которой вы хотите хранить участок. Мы рекомендуем вам использовать большой медленный жесткий диск (например, внешний жесткий диск XSHIB)."
 
 #: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:41
 #~ msgid "Select the temporary destination for the folder where you would like the plot to be stored. We recommend you use a fast SSD."
@@ -2307,8 +2307,8 @@ msgid "Self Pooling"
 msgstr "Самостоятельное выставление счетов"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:105
-msgid "Self pool. When you win a block you will earn XTX rewards."
-msgstr "Cвой пул. Когда вы выиграете блок, вы получите награду в XTX."
+msgid "Self pool. When you win a block you will earn XSHIB rewards."
+msgstr "Cвой пул. Когда вы выиграете блок, вы получите награду в XSHIB."
 
 #: src/components/trading/CreateOffer.jsx:164
 #: src/components/trading/TradesTable.tsx:47
@@ -2385,8 +2385,8 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr "Пропускает добавление окончательной директории в комбайн для фермерства"
 
 #: src/components/pool/PoolHero.tsx:26
-msgid "Smooth out your XTX farming rewards by joining a pool."
-msgstr "Получите свои награды за фарм XTX, присоединившись к пулу."
+msgid "Smooth out your XSHIB farming rewards by joining a pool."
+msgstr "Получите свои награды за фарм XSHIB, присоединившись к пулу."
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:60
 msgid "Something went wrong"
@@ -2421,8 +2421,8 @@ msgstr "Длина интервала расходования (количест
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:401
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:448
-msgid "Spending Limit (taco per interval): {0}"
-msgstr "Лимит расходования (taco за интервал): {0}"
+msgid "Spending Limit (shibgreen per interval): {0}"
+msgstr "Лимит расходования (shibgreen за интервал): {0}"
 
 #: src/components/fullNode/FullNode.jsx:100
 msgid "State"
@@ -2470,8 +2470,8 @@ msgstr "Статус:"
 #~ msgstr "Sub Block Height"
 
 #: src/components/block/Block.jsx:338
-#~ msgid "Sub Block at height {0} in the Taco blockchain"
-#~ msgstr "Sub Block at height {0} in the Taco blockchain"
+#~ msgid "Sub Block at height {0} in the SHIBgreen blockchain"
+#~ msgstr "Sub Block at height {0} in the SHIBgreen blockchain"
 
 #: src/components/app/AppPassPrompt.tsx:199
 #: src/components/wallet/did/WalletDID.tsx:886
@@ -2504,23 +2504,23 @@ msgstr "Синхронизация <0/>/<1/>"
 #~ msgstr "Syncing {progress}/{tip}"
 
 #: src/components/farm/card/FarmCardBlockRewards.tsx:15
-#~ msgid "TXTX Block Rewards"
+#~ msgid "TXSHIB Block Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardCoinbaseRewards.tsx:12
-#~ msgid "TXTX Farming Rewards"
+#~ msgid "TXSHIB Farming Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardFeesReward.tsx:12
-#~ msgid "TXTX Fees Collected"
+#~ msgid "TXSHIB Fees Collected"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardUserFees.tsx:12
-#~ msgid "TXTX User Fees"
-#~ msgstr "TXTX User Fees"
+#~ msgid "TXSHIB User Fees"
+#~ msgstr "TXSHIB User Fees"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:15
-#~ msgid "TXTX User Transaction Fees"
+#~ msgid "TXSHIB User Transaction Fees"
 #~ msgstr ""
 
 #: src/components/pool/PoolInfo.tsx:37
@@ -2606,8 +2606,8 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Общая комиссия за транзакции в этом блоке, полученная в награду фермерами."
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:102
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XTX address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
-msgstr "Это инструкции по поводу того, как фермер хочет заплатить. По умолчанию это будет XTX адрес, но он может быть установлен в любую строку размером менее 1024 символов,, чтобы он мог представить другой идентификатор блокчейна или платежной системы."
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XSHIB address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgstr "Это инструкции по поводу того, как фермер хочет заплатить. По умолчанию это будет XSHIB адрес, но он может быть установлен в любую строку размером менее 1024 символов,, чтобы он мог представить другой идентификатор блокчейна или платежной системы."
 
 #: src/components/plot/PlotsFailed.tsx:40
 msgid "These plots are invalid, you might want to delete them."
@@ -2629,7 +2629,7 @@ msgid "This feature is available only from the GUI."
 msgstr "Эта функция доступна только из графического интерфейса."
 
 #: src/components/wallet/card/WalletCardSpendableBalance.tsx:26
-msgid "This is the amount of Taco that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Taco that you have just spent but is not yet in the blockchain."
+msgid "This is the amount of SHIBgreen that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and SHIBgreen that you have just spent but is not yet in the blockchain."
 msgstr "Это количество монет Чиа, которое в настоящее время вы можете использовать для совершения транзакций. Баланс не включает ожидающие вознаграждения за фармиг, ожидающие входящие транзакции и монеты, которые вы только что потратили, но они еще не попали в блокчейн."
 
 #: src/components/wallet/card/WalletCardPendingChange.tsx:26
@@ -2649,7 +2649,7 @@ msgid "This is the time the block was created by the farmer, which is before it 
 msgstr "Это момент времени, когда блок был создан фермером, то есть до того, как он был завершен с применением алгоритма подтверждения времени (proof of time)."
 
 #: src/components/wallet/card/WalletCardTotalBalance.tsx:34
-msgid "This is the total amount of taco in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of shibgreen in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr "Это общее количество монет Чиа в блокчейне в текущем пиковом суб блоке, которые контролируются вашими приватными ключами. Баланс включает в себя замороженные награды за фарм, но не включает ожидающие входящие и исходящие транзакции."
 
 #: src/components/wallet/card/WalletCardPendingTotalBalance.tsx:29
@@ -2695,8 +2695,8 @@ msgid "This trade was included on blockchain at this block height"
 msgstr "Сделка была включена в блокчейн на указанной высоте блока"
 
 #: src/components/app/AppTimeBombAlert.tsx:19
-msgid "This version of Taco is no longer compatible with the blockchain and can not safely farm."
-msgstr "Эта версия Taco больше не совместима с блокчейном и не может безопасно фармить."
+msgid "This version of SHIBgreen is no longer compatible with the blockchain and can not safely farm."
+msgstr "Эта версия SHIBgreen больше не совместима с блокчейном и не может безопасно фармить."
 
 #: src/components/fullNode/FullNode.jsx:92
 msgid "Time Created"
@@ -2720,8 +2720,8 @@ msgstr "Кому"
 msgid "Total Balance"
 msgstr "Итоговый баланс"
 
-#: src/components/farm/card/FarmCardTotalTacoFarmed.tsx:15
-#~ msgid "Total Taco Farmed"
+#: src/components/farm/card/FarmCardTotalSHIBgreenFarmed.tsx:15
+#~ msgid "Total SHIBgreen Farmed"
 #~ msgstr ""
 
 #: src/components/fullNode/card/FullNodeCardTotalIterations.tsx:20
@@ -2905,7 +2905,7 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.tacoWallet"
+#~ msgid "WalletItem.shibgreenWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48
@@ -2942,7 +2942,7 @@ msgid "Want to Join a Pool? Create a Plot NFT"
 msgstr "Хотите присоединиться к пулу? Создайте участок NFT"
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:139
-msgid "Want to earn more Taco? Add more plots to your farm."
+msgid "Want to earn more SHIBgreen? Add more plots to your farm."
 msgstr "Хотите получать больше дохода в Чиа? Добавьте больше участков к своей ферме."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:86
@@ -2971,7 +2971,7 @@ msgid "Weight is the total added difficulty of all sub blocks up to and includin
 msgstr "Вес - это общая добавленная сложность всех подблоков, включая этот"
 
 #: src/components/selectKey/SelectKey.tsx:183
-msgid "Welcome to Taco. Please log in with an existing key, or create a new key."
+msgid "Welcome to SHIBgreen. Please log in with an existing key, or create a new key."
 msgstr "Добро пожаловать в Чиа. Пожалуйста, войдите в систему с существующим ключом или создайте новый ключ."
 
 #: src/components/wallet/WalletAdd.tsx:66
@@ -3046,8 +3046,8 @@ msgid "You need to claim your rewards first"
 msgstr "Сначала нужно получить свою награду"
 
 #: src/components/app/AppTimeBomb.tsx:28
-#~ msgid "You need to upgrade the Taco application as this version will stop working soon!"
-#~ msgstr "You need to upgrade the Taco application as this version will stop working soon!"
+#~ msgid "You need to upgrade the SHIBgreen application as this version will stop working soon!"
+#~ msgstr "You need to upgrade the SHIBgreen application as this version will stop working soon!"
 
 #: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:37
 msgid "You need {currencyCode} to join a pool."
@@ -3170,8 +3170,8 @@ msgstr "{0} очков {1} - {2} часов назад"
 msgid "{currencyCode} Block Rewards"
 msgstr "{currencyCode} Награда за блок"
 
-#: src/components/farm/card/FarmCardTotalTacoFarmed.tsx:29
-msgid "{currencyCode} Total Taco Farmed"
+#: src/components/farm/card/FarmCardTotalSHIBgreenFarmed.tsx:29
+msgid "{currencyCode} Total SHIBgreen Farmed"
 msgstr "{currencyCode} Всего Чиа выращено"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:28

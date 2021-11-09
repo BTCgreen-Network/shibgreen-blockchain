@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
-import { Amount, Form, AlertDialog, Back, Card, Flex, ButtonLoading } from '@taco/core';
+import { Amount, Form, AlertDialog, Back, Card, Flex, ButtonLoading } from '@shibgreen/core';
 import {
   Typography,
   Button,
@@ -13,7 +13,7 @@ import {
 } from '../../../modules/createWallet';
 import { useDispatch } from 'react-redux';
 import { create_did_action } from '../../../modules/message';
-import { taco_to_byte } from '../../../util/taco';
+import { shibgreen_to_byte } from '../../../util/shibgreen';
 import { openDialog } from '../../../modules/dialog';
 import { useForm, Controller, useFieldArray } from 'react-hook-form';
 import { Help as HelpIcon } from '@material-ui/icons';
@@ -37,7 +37,7 @@ export default function WalletDIDCreate() {
       const didArray = data.backup_dids?.map((item) => item.backupid) ?? [];
       let uniqDidArray = Array.from(new Set(didArray));
       uniqDidArray = uniqDidArray.filter(item => item !== "")
-      const amount_val = taco_to_byte(data.amount);
+      const amount_val = shibgreen_to_byte(data.amount);
       if (
         amount_val === '' ||
         Number(amount_val) === 0 ||
@@ -116,7 +116,7 @@ export default function WalletDIDCreate() {
                 <Typography variant="subtitle1">
                   Enter amount
                 </Typography>
-                <Tooltip title="The amount of Taco you enter must correspond to an even amount of bytes. One additional byte will be added to the total amount for security purposes.">
+                <Tooltip title="The amount of SHIBgreen you enter must correspond to an even amount of bytes. One additional byte will be added to the total amount for security purposes.">
                   <HelpIcon style={{ color: '#c8c8c8', fontSize: 12 }} />
                 </Tooltip>
               </Flex>

@@ -2,15 +2,15 @@ from typing import Dict
 
 import blspy
 
-from taco.full_node.bundle_tools import simple_solution_generator
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import Program
-from taco.types.coin_spend import CoinSpend
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.generator_types import BlockGenerator
-from taco.types.spend_bundle import SpendBundle
-from taco.util.ints import uint64
-from taco.wallet.puzzles.p2_delegated_puzzle_or_hidden_puzzle import puzzle_for_pk, solution_for_conditions
+from shibgreen.full_node.bundle_tools import simple_solution_generator
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.program import Program
+from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.types.condition_opcodes import ConditionOpcode
+from shibgreen.types.generator_types import BlockGenerator
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.util.ints import uint64
+from shibgreen.wallet.puzzles.p2_delegated_puzzle_or_hidden_puzzle import puzzle_for_pk, solution_for_conditions
 
 GROUP_ORDER = 0x73EDA753299D7D483339D80809A1D80553BDA402FFFE5BFEFFFFFFFF00000001
 

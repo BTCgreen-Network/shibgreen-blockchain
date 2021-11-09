@@ -1,9 +1,9 @@
 from dataclasses import dataclass
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.ints import uint32
-from taco.wallet.util.wallet_types import WalletType
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.util.ints import uint32
+from shibgreen.wallet.util.wallet_types import WalletType
 
 
 @dataclass(frozen=True)

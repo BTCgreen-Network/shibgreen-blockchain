@@ -2,18 +2,18 @@ import asyncio
 import random
 from time import time
 from pathlib import Path
-from taco.full_node.coin_store import CoinStore
+from shibgreen.full_node.coin_store import CoinStore
 from typing import List
 import os
 import sys
 
 import aiosqlite
-from taco.util.db_wrapper import DBWrapper
-from taco.consensus.coinbase import create_farmer_coin, create_pool_coin
-from taco.consensus.default_constants import DEFAULT_CONSTANTS
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.coin import Coin
-from taco.util.ints import uint64
+from shibgreen.util.db_wrapper import DBWrapper
+from shibgreen.consensus.coinbase import create_farmer_coin, create_pool_coin
+from shibgreen.consensus.default_constants import DEFAULT_CONSTANTS
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.util.ints import uint64
 
 
 NUM_ITERS = 200

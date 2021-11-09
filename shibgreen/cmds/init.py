@@ -1,5 +1,5 @@
 import click
-from taco.util.keychain import supports_keyring_passphrase
+from shibgreen.util.keychain import supports_keyring_passphrase
 
 
 @click.command("init", short_help="Create or migrate the configuration")
@@ -23,16 +23,16 @@ def init_cmd(ctx: click.Context, create_certs: str, fix_ssl_permissions: bool, *
 
     \b
     Follow these steps to create new certificates for a remote harvester:
-    - Make a copy of your Farming Machine CA directory: ~/.taco/[version]/config/ssl/ca
-    - Shut down all taco daemon processes with `taco stop all -d`
-    - Run `taco init -c [directory]` on your remote harvester,
+    - Make a copy of your Farming Machine CA directory: ~/.shibgreen/[version]/config/ssl/ca
+    - Shut down all shibgreen daemon processes with `shibgreen stop all -d`
+    - Run `shibgreen init -c [directory]` on your remote harvester,
       where [directory] is the the copy of your Farming Machine CA directory
-    - Get more details on remote harvester on Taco wiki:
-      https://github.com/Taco-Network/taco-blockchain/wiki/Farming-on-many-machines
+    - Get more details on remote harvester on SHIBgreen wiki:
+      https://github.com/SHIBgreen-Network/shibgreen-blockchain/wiki/Farming-on-many-machines
     """
     from pathlib import Path
     from .init_funcs import init
-    from taco.cmds.passphrase_funcs import initialize_passphrase
+    from shibgreen.cmds.passphrase_funcs import initialize_passphrase
 
     set_passphrase = kwargs.get("set_passphrase")
     if set_passphrase:
@@ -42,14 +42,14 @@ def init_cmd(ctx: click.Context, create_certs: str, fix_ssl_permissions: bool, *
 
 
 if not supports_keyring_passphrase():
-    from taco.cmds.passphrase_funcs import remove_passphrase_options_from_cmd
+    from shibgreen.cmds.passphrase_funcs import remove_passphrase_options_from_cmd
 
     # TODO: Remove once keyring passphrase management is rolled out to all platforms
     remove_passphrase_options_from_cmd(init_cmd)
 
 
 if __name__ == "__main__":
-    from .init_funcs import taco_init
-    from taco.util.default_root import DEFAULT_ROOT_PATH
+    from .init_funcs import shibgreen_init
+    from shibgreen.util.default_root import DEFAULT_ROOT_PATH
 
-    taco_init(DEFAULT_ROOT_PATH)
+    shibgreen_init(DEFAULT_ROOT_PATH)

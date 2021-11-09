@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 
 if ([Environment]::Is64BitOperatingSystem -eq $false)
 {
-    Write-Output "Taco requires a 64-bit Windows installation"
+    Write-Output "SHIBgreen requires a 64-bit Windows installation"
     Exit 1
 }
 
@@ -51,13 +51,13 @@ pip install --extra-index-url https://pypi.chia.net/simple/ miniupnpc==2.2.2
 pip install --editable . --extra-index-url https://pypi.chia.net/simple/
 
 Write-Output ""
-Write-Output "Taco blockchain .\Install.ps1 complete."
+Write-Output "SHIBgreen blockchain .\Install.ps1 complete."
 Write-Output "For assistance join us on Keybase in the #support chat channel:"
-Write-Output "https://keybase.io/team/taco_network.public"
+Write-Output "https://keybase.io/team/shibgreen_network.public"
 Write-Output ""
-Write-Output "Try the Quick Start Guide to running taco-blockchain:"
-Write-Output "https://github.com/Taco-Network/taco-blockchain/wiki/Quick-Start-Guide"
+Write-Output "Try the Quick Start Guide to running shibgreen-blockchain:"
+Write-Output "https://github.com/SHIBgreen-Network/shibgreen-blockchain/wiki/Quick-Start-Guide"
 Write-Output ""
 Write-Output "To install the GUI type '.\Install-gui.ps1' after '.\venv\scripts\Activate.ps1'."
 Write-Output ""
-Write-Output "Type '.\venv\Scripts\Activate.ps1' and then 'taco init' to begin."
+Write-Output "Type '.\venv\Scripts\Activate.ps1' and then 'shibgreen init' to begin."

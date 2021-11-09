@@ -1,8 +1,8 @@
 import logging
 
 from blspy import PrivateKey
-from taco.cmds.init_funcs import check_keys
-from taco.util.keychain import Keychain
+from shibgreen.cmds.init_funcs import check_keys
+from shibgreen.util.keychain import Keychain
 from pathlib import Path
 from typing import Any, Dict, List, Optional, cast
 

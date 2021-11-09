@@ -16,75 +16,75 @@ from typing import Callable, Dict, List, Optional, Tuple, Any
 from blspy import AugSchemeMPL, G1Element, G2Element, PrivateKey
 from chiabip158 import PyBIP158
 
-from taco.cmds.init_funcs import create_all_ssl, create_default_taco_config
-from taco.daemon.keychain_proxy import connect_to_keychain_and_validate, wrap_local_keychain
-from taco.full_node.bundle_tools import (
+from shibgreen.cmds.init_funcs import create_all_ssl, create_default_shibgreen_config
+from shibgreen.daemon.keychain_proxy import connect_to_keychain_and_validate, wrap_local_keychain
+from shibgreen.full_node.bundle_tools import (
     best_solution_generator_from_template,
     detect_potential_template_generator,
     simple_solution_generator,
 )
-from taco.util.errors import Err
-from taco.full_node.generator import setup_generator_args
-from taco.full_node.mempool_check_conditions import GENERATOR_MOD
-from taco.plotting.create_plots import create_plots, PlotKeys
-from taco.consensus.block_creation import unfinished_block_to_full_block
-from taco.consensus.block_record import BlockRecord
-from taco.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
-from taco.consensus.blockchain_interface import BlockchainInterface
-from taco.consensus.coinbase import create_puzzlehash_for_pk, create_farmer_coin, create_pool_coin
-from taco.consensus.condition_costs import ConditionCost
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.default_constants import DEFAULT_CONSTANTS
-from taco.consensus.deficit import calculate_deficit
-from taco.consensus.full_block_to_block_record import block_to_block_record
-from taco.consensus.make_sub_epoch_summary import next_sub_epoch_summary
-from taco.consensus.pot_iterations import (
+from shibgreen.util.errors import Err
+from shibgreen.full_node.generator import setup_generator_args
+from shibgreen.full_node.mempool_check_conditions import GENERATOR_MOD
+from shibgreen.plotting.create_plots import create_plots, PlotKeys
+from shibgreen.consensus.block_creation import unfinished_block_to_full_block
+from shibgreen.consensus.block_record import BlockRecord
+from shibgreen.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
+from shibgreen.consensus.blockchain_interface import BlockchainInterface
+from shibgreen.consensus.coinbase import create_puzzlehash_for_pk, create_farmer_coin, create_pool_coin
+from shibgreen.consensus.condition_costs import ConditionCost
+from shibgreen.consensus.constants import ConsensusConstants
+from shibgreen.consensus.default_constants import DEFAULT_CONSTANTS
+from shibgreen.consensus.deficit import calculate_deficit
+from shibgreen.consensus.full_block_to_block_record import block_to_block_record
+from shibgreen.consensus.make_sub_epoch_summary import next_sub_epoch_summary
+from shibgreen.consensus.pot_iterations import (
     calculate_ip_iters,
     calculate_iterations_quality,
     calculate_sp_interval_iters,
     calculate_sp_iters,
     is_overflow_block,
 )
-from taco.consensus.vdf_info_computation import get_signage_point_vdf_info
-from taco.full_node.signage_point import SignagePoint
-from taco.plotting.util import PlotsRefreshParameter, PlotRefreshResult, parse_plot_info
-from taco.plotting.manager import PlotManager
-from taco.server.server import ssl_context_for_server
-from taco.types.blockchain_format.classgroup import ClassgroupElement
-from taco.types.blockchain_format.coin import Coin, hash_coin_list
-from taco.types.blockchain_format.foliage import Foliage, FoliageBlockData, FoliageTransactionBlock, TransactionsInfo
-from taco.types.blockchain_format.pool_target import PoolTarget
-from taco.types.blockchain_format.program import INFINITE_COST
-from taco.types.blockchain_format.proof_of_space import ProofOfSpace
-from taco.types.blockchain_format.reward_chain_block import RewardChainBlockUnfinished
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.slots import (
+from shibgreen.consensus.vdf_info_computation import get_signage_point_vdf_info
+from shibgreen.full_node.signage_point import SignagePoint
+from shibgreen.plotting.util import PlotsRefreshParameter, PlotRefreshResult, parse_plot_info
+from shibgreen.plotting.manager import PlotManager
+from shibgreen.server.server import ssl_context_for_server
+from shibgreen.types.blockchain_format.classgroup import ClassgroupElement
+from shibgreen.types.blockchain_format.coin import Coin, hash_coin_list
+from shibgreen.types.blockchain_format.foliage import Foliage, FoliageBlockData, FoliageTransactionBlock, TransactionsInfo
+from shibgreen.types.blockchain_format.pool_target import PoolTarget
+from shibgreen.types.blockchain_format.program import INFINITE_COST
+from shibgreen.types.blockchain_format.proof_of_space import ProofOfSpace
+from shibgreen.types.blockchain_format.reward_chain_block import RewardChainBlockUnfinished
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.blockchain_format.slots import (
     ChallengeChainSubSlot,
     InfusedChallengeChainSubSlot,
     RewardChainSubSlot,
     SubSlotProofs,
 )
-from taco.types.blockchain_format.sub_epoch_summary import SubEpochSummary
-from taco.types.blockchain_format.vdf import VDFInfo, VDFProof
-from taco.types.end_of_slot_bundle import EndOfSubSlotBundle
-from taco.types.full_block import FullBlock
-from taco.types.generator_types import BlockGenerator, CompressorArg
-from taco.types.spend_bundle import SpendBundle
-from taco.types.unfinished_block import UnfinishedBlock
-from taco.util.bech32m import encode_puzzle_hash
-from taco.util.block_cache import BlockCache
-from taco.util.condition_tools import ConditionOpcode
-from taco.util.config import load_config, save_config
-from taco.util.hash import std_hash
-from taco.util.ints import uint8, uint16, uint32, uint64, uint128
-from taco.util.keychain import Keychain, bytes_to_mnemonic
-from taco.util.merkle_set import MerkleSet
-from taco.util.prev_transaction_block import get_prev_transaction_block
-from taco.util.path import mkdir
-from taco.util.vdf_prover import get_vdf_info_and_proof
+from shibgreen.types.blockchain_format.sub_epoch_summary import SubEpochSummary
+from shibgreen.types.blockchain_format.vdf import VDFInfo, VDFProof
+from shibgreen.types.end_of_slot_bundle import EndOfSubSlotBundle
+from shibgreen.types.full_block import FullBlock
+from shibgreen.types.generator_types import BlockGenerator, CompressorArg
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.types.unfinished_block import UnfinishedBlock
+from shibgreen.util.bech32m import encode_puzzle_hash
+from shibgreen.util.block_cache import BlockCache
+from shibgreen.util.condition_tools import ConditionOpcode
+from shibgreen.util.config import load_config, save_config
+from shibgreen.util.hash import std_hash
+from shibgreen.util.ints import uint8, uint16, uint32, uint64, uint128
+from shibgreen.util.keychain import Keychain, bytes_to_mnemonic
+from shibgreen.util.merkle_set import MerkleSet
+from shibgreen.util.prev_transaction_block import get_prev_transaction_block
+from shibgreen.util.path import mkdir
+from shibgreen.util.vdf_prover import get_vdf_info_and_proof
 from tests.time_out_assert import time_out_assert
 from tests.wallet_tools import WalletTool
-from taco.wallet.derive_keys import (
+from shibgreen.wallet.derive_keys import (
     master_sk_to_farmer_sk,
     master_sk_to_local_sk,
     master_sk_to_pool_sk,
@@ -141,7 +141,7 @@ class BlockTools:
         self.root_path = root_path
         self.local_keychain = keychain
 
-        create_default_taco_config(root_path)
+        create_default_shibgreen_config(root_path)
         create_all_ssl(root_path)
 
         self.local_sk_cache: Dict[bytes32, Tuple[PrivateKey, Any]] = {}
@@ -182,7 +182,7 @@ class BlockTools:
             self.keychain_proxy = wrap_local_keychain(self.local_keychain, log=log)
         else:
             self.keychain_proxy = await connect_to_keychain_and_validate(
-                self.root_path, log, user="testing-1.8.0", service="taco-testing-1.8.0"
+                self.root_path, log, user="testing-1.8.0", service="shibgreen-testing-1.8.0"
             )
 
         await self.keychain_proxy.delete_all_keys()
@@ -207,7 +207,7 @@ class BlockTools:
 
         self.farmer_pubkeys: List[G1Element] = [master_sk_to_farmer_sk(sk).get_g1() for sk in self.all_sks]
         if len(self.pool_pubkeys) == 0 or len(self.farmer_pubkeys) == 0:
-            raise RuntimeError("Keys not generated. Run `taco generate keys`")
+            raise RuntimeError("Keys not generated. Run `shibgreen generate keys`")
 
         self.plot_manager.set_public_keys(self.farmer_pubkeys, self.pool_pubkeys)
 
@@ -258,7 +258,7 @@ class BlockTools:
             if pool_contract_puzzle_hash is None:
                 pool_pk = self.pool_pk
             else:
-                pool_address = encode_puzzle_hash(pool_contract_puzzle_hash, "xtx")
+                pool_address = encode_puzzle_hash(pool_contract_puzzle_hash, "xshib")
 
             keys = PlotKeys(self.farmer_pk, pool_pk, pool_address)
             # No datetime in the filename, to get deterministic filenames and not re-plot
@@ -1296,7 +1296,7 @@ def get_challenges(
 
 
 def get_plot_dir() -> Path:
-    cache_path = Path(os.path.expanduser(os.getenv("TACO_ROOT", "~/.taco/"))) / "test-plots"
+    cache_path = Path(os.path.expanduser(os.getenv("SHIBGREEN_ROOT", "~/.shibgreen/"))) / "test-plots"
     mkdir(cache_path)
     return cache_path
 

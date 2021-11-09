@@ -5,15 +5,15 @@ PWD=$(pwd)
 
 rm -rf ../venv || true
 rm -rf venv || true
-rm -rf taco_blockchain.egg-info || true
+rm -rf shibgreen_blockchain.egg-info || true
 rm -rf build_scripts/final_installer || true
 rm -rf build_scripts/dist || true
 rm -rf build_scripts/pyinstaller || true
-rm -rf taco-blockchain-gui/build || true
-rm -rf taco-blockchain-gui/daemon || true
-rm -rf taco-blockchain-gui/node_modules || true
-rm taco-blockchain-gui/temp.json || true
-( cd "$PWD/taco-blockchain-gui" && git checkout HEAD -- package-lock.json ) || true
+rm -rf shibgreen-blockchain-gui/build || true
+rm -rf shibgreen-blockchain-gui/daemon || true
+rm -rf shibgreen-blockchain-gui/node_modules || true
+rm shibgreen-blockchain-gui/temp.json || true
+( cd "$PWD/shibgreen-blockchain-gui" && git checkout HEAD -- package-lock.json ) || true
 cd "$PWD" || true
 
 # Do our best to get rid of any globally installed notarize-cli versions so the version in the current build script is
@@ -21,7 +21,7 @@ cd "$PWD" || true
 PATH=$(brew --prefix node@14)/bin:$PATH || true
 export PATH
 npm uninstall -g notarize-cli || true
-npm uninstall -g @taco-network/notarize-cli || true
+npm uninstall -g @shibgreen-network/notarize-cli || true
 npm uninstall -g electron-installer-dmg || true
 npm uninstall -g electron-packager || true
 npm uninstall -g electron/electron-osx-sign || true

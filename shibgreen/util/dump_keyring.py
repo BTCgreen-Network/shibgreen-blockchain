@@ -5,10 +5,10 @@ import colorama
 import threading
 import yaml
 
-from taco.cmds.passphrase_funcs import read_passphrase_from_file
-from taco.util.default_root import DEFAULT_KEYS_ROOT_PATH
-from taco.util.file_keyring import FileKeyring
-from taco.util.keyring_wrapper import DEFAULT_PASSPHRASE_IF_NO_MASTER_PASSPHRASE
+from shibgreen.cmds.passphrase_funcs import read_passphrase_from_file
+from shibgreen.util.default_root import DEFAULT_KEYS_ROOT_PATH
+from shibgreen.util.file_keyring import FileKeyring
+from shibgreen.util.keyring_wrapper import DEFAULT_PASSPHRASE_IF_NO_MASTER_PASSPHRASE
 from cryptography.exceptions import InvalidTag
 from getpass import getpass
 from io import TextIOWrapper

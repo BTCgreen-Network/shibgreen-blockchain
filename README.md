@@ -1,10 +1,10 @@
-Taco is a cryptocurrency forked from Chia and uses the Proof of Space and Time consensus algorithm
+SHIBgreen is a cryptocurrency forked from Chia and uses the Proof of Space and Time consensus algorithm
 
 Discord Channel: https://discord.gg/xguteVCYHh
 
-Website: https://taconetwork.net (coming soon)
+Website: https://shibgreennetwork.net (coming soon)
 
-Introducer: dns-introducer.taconetwork.net:18620
+Introducer: dns-introducer.shibgreennetwork.net:7442
 
 Changelog:
 v1.0.0 - Initial Release

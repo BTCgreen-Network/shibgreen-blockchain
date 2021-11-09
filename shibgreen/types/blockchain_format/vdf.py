@@ -7,11 +7,11 @@ from functools import lru_cache
 
 from chiavdf import create_discriminant, verify_n_wesolowski
 
-from taco.consensus.constants import ConsensusConstants
-from taco.types.blockchain_format.classgroup import ClassgroupElement
-from taco.types.blockchain_format.sized_bytes import bytes32, bytes100
-from taco.util.ints import uint8, uint64
-from taco.util.streamable import Streamable, streamable
+from shibgreen.consensus.constants import ConsensusConstants
+from shibgreen.types.blockchain_format.classgroup import ClassgroupElement
+from shibgreen.types.blockchain_format.sized_bytes import bytes32, bytes100
+from shibgreen.util.ints import uint8, uint64
+from shibgreen.util.streamable import Streamable, streamable
 
 log = logging.getLogger(__name__)
 

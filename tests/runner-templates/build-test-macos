@@ -1,5 +1,5 @@
 #
-# THIS FILE IS GENERATED. SEE https://github.com/Taco-Network/taco-blockchain/tree/main/tests#readme
+# THIS FILE IS GENERATED. SEE https://github.com/SHIBgreen-Network/shibgreen-blockchain/tree/main/tests#readme
 #
 name: MacOS TEST_NAME Tests
 
@@ -44,10 +44,10 @@ jobs:
 
     - name: Create keychain for CI use
       run: |
-        security create-keychain -p foo tacochain
-        security default-keychain -s tacochain
-        security unlock-keychain -p foo tacochain
-        security set-keychain-settings -t 7200 -u tacochain
+        security create-keychain -p foo shibgreenchain
+        security default-keychain -s shibgreenchain
+        security unlock-keychain -p foo shibgreenchain
+        security set-keychain-settings -t 7200 -u shibgreenchain
 
     - name: Get pip cache dir
       id: pip-cache
@@ -68,9 +68,9 @@ CHECKOUT_TEST_BLOCKS_AND_PLOTS
     - name: Link home directory
       run: |
         cd $HOME
-        ln -s $GITHUB_WORKSPACE/.taco
-        echo "$HOME/.taco"
-        ls -al $HOME/.taco
+        ln -s $GITHUB_WORKSPACE/.shibgreen
+        echo "$HOME/.shibgreen"
+        ls -al $HOME/.shibgreen
 
     - name: Run install script
       env:
@@ -92,5 +92,5 @@ INSTALL_TIMELORD
         . ./activate
         ./venv/bin/py.test TEST_DIR -s -v --durations 0PYTEST_PARALLEL_ARGS
 #
-# THIS FILE IS GENERATED. SEE https://github.com/Taco-Network/taco-blockchain/tree/main/tests#readme
+# THIS FILE IS GENERATED. SEE https://github.com/SHIBgreen-Network/shibgreen-blockchain/tree/main/tests#readme
 #

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { AlertDialog } from '@taco/core';
+import { AlertDialog } from '@shibgreen/core';
 import {
   Typography,
   Button,
@@ -20,7 +20,7 @@ import {
 } from '../../../modules/createWallet';
 import { useStyles } from './WalletCreate';
 import { create_cc_action } from '../../../modules/message';
-import { taco_to_byte } from '../../../util/taco';
+import { shibgreen_to_byte } from '../../../util/shibgreen';
 import { openDialog } from '../../../modules/dialog';
 
 export const customStyles = makeStyles((theme) => ({
@@ -83,8 +83,8 @@ export const CreateNewCCWallet = () => {
       return;
     }
     dispatch(createState(true, true));
-    const amount = taco_to_byte(amount_input.value);
-    const fee = taco_to_byte(fee_input.value);
+    const amount = shibgreen_to_byte(amount_input.value);
+    const fee = shibgreen_to_byte(fee_input.value);
     dispatch(create_cc_action(amount, fee));
   }
 

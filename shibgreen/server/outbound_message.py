@@ -2,9 +2,9 @@ from dataclasses import dataclass
 from enum import IntEnum
 from typing import Any, Optional
 
-from taco.protocols.protocol_message_types import ProtocolMessageTypes
-from taco.util.ints import uint8, uint16
-from taco.util.streamable import Streamable, streamable
+from shibgreen.protocols.protocol_message_types import ProtocolMessageTypes
+from shibgreen.util.ints import uint8, uint16
+from shibgreen.util.streamable import Streamable, streamable
 
 
 class NodeType(IntEnum):

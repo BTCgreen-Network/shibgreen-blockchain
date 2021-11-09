@@ -2,16 +2,16 @@ from collections import defaultdict
 from dataclasses import dataclass, replace
 from typing import Dict, Iterator, Optional
 
-from taco.util.condition_tools import created_outputs_for_conditions_dict
-from taco.full_node.mempool_check_conditions import mempool_check_conditions_dict, get_name_puzzle_conditions
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_record import CoinRecord
-from taco.types.spend_bundle import SpendBundle
-from taco.util.ints import uint32, uint64
-from taco.full_node.bundle_tools import simple_solution_generator
-from taco.util.errors import Err
-from taco.consensus.cost_calculator import NPCResult
+from shibgreen.util.condition_tools import created_outputs_for_conditions_dict
+from shibgreen.full_node.mempool_check_conditions import mempool_check_conditions_dict, get_name_puzzle_conditions
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.coin_record import CoinRecord
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.util.ints import uint32, uint64
+from shibgreen.full_node.bundle_tools import simple_solution_generator
+from shibgreen.util.errors import Err
+from shibgreen.consensus.cost_calculator import NPCResult
 
 
 MAX_COST = 11000000000

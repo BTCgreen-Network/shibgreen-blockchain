@@ -12,7 +12,7 @@ import {
   Form,
   FormBackButton,
   State,
-} from '@taco/core';
+} from '@shibgreen/core';
 import { useForm } from 'react-hook-form';
 import { ChevronRight as ChevronRightIcon } from '@material-ui/icons';
 import { Grid, Typography } from '@material-ui/core';
@@ -21,7 +21,7 @@ import usePlotNFTs from '../../hooks/usePlotNFTs';
 import { pwAbsorbRewards } from '../../modules/plotNFT';
 import { SubmitData } from './select/PlotNFTSelectPool';
 import PlotNFTName from './PlotNFTName';
-import { byte_to_taco, taco_to_byte } from '../../util/taco';
+import { byte_to_shibgreen, shibgreen_to_byte } from '../../util/shibgreen';
 import useStandardWallet from '../../hooks/useStandardWallet';
 
 type FormData = {
@@ -64,7 +64,7 @@ export default function PlotNFTAbsorbRewards(props: Props) {
 
       const { fee } = data;
 
-      const feeBytes = taco_to_byte(fee);
+      const feeBytes = shibgreen_to_byte(fee);
 
       if (walletId === undefined || !address) {
         return;
@@ -137,7 +137,7 @@ export default function PlotNFTAbsorbRewards(props: Props) {
               <Trans>
                 You will recieve{' '}
                 <UnitFormat
-                  value={byte_to_taco(BigInt(balance))}
+                  value={byte_to_shibgreen(BigInt(balance))}
                   display="inline"
                   state={State.SUCCESS}
                 />{' '}

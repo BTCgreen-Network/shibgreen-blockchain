@@ -1,12 +1,12 @@
 from typing import Dict, Optional, Tuple
 
-from taco.types.blockchain_format.program import Program, INFINITE_COST
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.spend_bundle import SpendBundle
-from taco.util.condition_tools import conditions_dict_for_solution
-from taco.wallet.cc_wallet import cc_utils
-from taco.wallet.trade_record import TradeRecord
-from taco.wallet.trading.trade_status import TradeStatus
+from shibgreen.types.blockchain_format.program import Program, INFINITE_COST
+from shibgreen.types.condition_opcodes import ConditionOpcode
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.util.condition_tools import conditions_dict_for_solution
+from shibgreen.wallet.cc_wallet import cc_utils
+from shibgreen.wallet.trade_record import TradeRecord
+from shibgreen.wallet.trading.trade_status import TradeStatus
 
 
 def trade_status_ui_string(status: TradeStatus):
@@ -83,10 +83,10 @@ def get_discrepancies_for_spend_bundle(
                 coin_amount = coinsol.coin.amount
                 out_amount = get_output_amount_for_puzzle_and_solution(puzzle, solution)
                 diff = coin_amount - out_amount
-                if "taco" in cc_discrepancies:
-                    cc_discrepancies["taco"] = cc_discrepancies["taco"] + diff
+                if "shibgreen" in cc_discrepancies:
+                    cc_discrepancies["shibgreen"] = cc_discrepancies["shibgreen"] + diff
                 else:
-                    cc_discrepancies["taco"] = diff
+                    cc_discrepancies["shibgreen"] = diff
 
         return True, cc_discrepancies, None
     except Exception as e:

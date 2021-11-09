@@ -3,10 +3,10 @@ import { Trans } from '@lingui/macro';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../../modules/rootReducer';
 import FarmCard from './FarmCard';
-import { byte_to_taco } from '../../../util/taco';
+import { byte_to_shibgreen } from '../../../util/shibgreen';
 import useCurrencyCode from '../../../hooks/useCurrencyCode';
 
-export default function FarmCardTotalTacoFarmed() {
+export default function FarmCardTotalSHIBgreenFarmed() {
   const currencyCode = useCurrencyCode();
 
   const loading = useSelector(
@@ -17,17 +17,17 @@ export default function FarmCardTotalTacoFarmed() {
     (state: RootState) => state.wallet_state.farmed_amount?.farmed_amount,
   );
 
-  const totalTacoFarmed = useMemo(() => {
+  const totalSHIBgreenFarmed = useMemo(() => {
     if (farmedAmount !== undefined) {
       const val = BigInt(farmedAmount.toString());
-      return byte_to_taco(val);
+      return byte_to_shibgreen(val);
     }
   }, [farmedAmount]);
 
   return (
     <FarmCard
-      title={<Trans>{currencyCode} Total Taco Farmed</Trans>}
-      value={totalTacoFarmed}
+      title={<Trans>{currencyCode} Total SHIBgreen Farmed</Trans>}
+      value={totalSHIBgreenFarmed}
       loading={loading}
     />
   );

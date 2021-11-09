@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 
 if ($null -eq (Get-ChildItem env:VIRTUAL_ENV -ErrorAction SilentlyContinue))
 {
-    Write-Output "This script requires that the Taco Python virtual environment is activated."
+    Write-Output "This script requires that the SHIBgreen Python virtual environment is activated."
     Write-Output "Execute '.\venv\Scripts\Activate.ps1' before running."
     Exit 1
 }
@@ -17,7 +17,7 @@ Write-Output "Running 'git submodule update --init --recursive'."
 Write-Output ""
 git submodule update --init --recursive
 
-Set-Location taco-blockchain-gui
+Set-Location shibgreen-blockchain-gui
 
 $ErrorActionPreference = "SilentlyContinue"
 npm install --loglevel=error
@@ -26,6 +26,6 @@ npm run build
 py ..\installhelper.py
 
 Write-Output ""
-Write-Output "Taco blockchain Install-gui.ps1 completed."
+Write-Output "SHIBgreen blockchain Install-gui.ps1 completed."
 Write-Output ""
-Write-Output "Type 'cd taco-blockchain-gui' and then 'npm run electron' to start the GUI."
+Write-Output "Type 'cd shibgreen-blockchain-gui' and then 'npm run electron' to start the GUI."

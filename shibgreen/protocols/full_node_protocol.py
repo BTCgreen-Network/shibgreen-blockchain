@@ -1,16 +1,16 @@
 from dataclasses import dataclass
 from typing import List, Optional
 
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.vdf import VDFInfo, VDFProof
-from taco.types.end_of_slot_bundle import EndOfSubSlotBundle
-from taco.types.full_block import FullBlock
-from taco.types.peer_info import TimestampedPeerInfo
-from taco.types.spend_bundle import SpendBundle
-from taco.types.unfinished_block import UnfinishedBlock
-from taco.types.weight_proof import WeightProof
-from taco.util.ints import uint8, uint32, uint64, uint128
-from taco.util.streamable import Streamable, streamable
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.blockchain_format.vdf import VDFInfo, VDFProof
+from shibgreen.types.end_of_slot_bundle import EndOfSubSlotBundle
+from shibgreen.types.full_block import FullBlock
+from shibgreen.types.peer_info import TimestampedPeerInfo
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.types.unfinished_block import UnfinishedBlock
+from shibgreen.types.weight_proof import WeightProof
+from shibgreen.util.ints import uint8, uint32, uint64, uint128
+from shibgreen.util.streamable import Streamable, streamable
 
 """
 Protocol between full nodes.

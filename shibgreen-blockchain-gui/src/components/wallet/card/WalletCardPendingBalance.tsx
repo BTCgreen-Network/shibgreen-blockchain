@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro';
 import FarmCard from '../../farm/card/FarmCard';
 import useWallet from '../../../hooks/useWallet';
 import useCurrencyCode from '../../../hooks/useCurrencyCode';
-import { byte_to_taco_string } from '../../../util/taco';
+import { byte_to_shibgreen_string } from '../../../util/shibgreen';
 
 type Props = {
   wallet_id: number;
@@ -31,7 +31,7 @@ export default function WalletCardPendingBalance(props: Props) {
       }
       value={
         <span>
-          {byte_to_taco_string(value)} {currencyCode}
+          {byte_to_shibgreen_string(value)} {currencyCode}
         </span>
       }
     />

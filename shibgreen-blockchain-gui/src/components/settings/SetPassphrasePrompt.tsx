@@ -10,7 +10,7 @@ import {
   TextField
 } from '@material-ui/core';
 import { Trans } from '@lingui/macro';
-import { AlertDialog } from '@taco/core';
+import { AlertDialog } from '@shibgreen/core';
 import { openDialog } from '../../modules/dialog';
 import { change_keyring_passphrase_action } from '../../modules/message';
 import { validateChangePassphraseParams } from '../app/AppPassPrompt';

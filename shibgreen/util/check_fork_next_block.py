@@ -1,7 +1,7 @@
 from typing import List, Callable
 
-from taco.consensus.blockchain_interface import BlockchainInterface
-from taco.util.ints import uint32
+from shibgreen.consensus.blockchain_interface import BlockchainInterface
+from shibgreen.util.ints import uint32
 
 
 async def check_fork_next_block(

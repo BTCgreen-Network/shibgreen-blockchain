@@ -2,24 +2,24 @@ import logging
 import ssl
 
 from blspy import AugSchemeMPL, PrivateKey
-from taco.cmds.init_funcs import check_keys
-from taco.daemon.client import DaemonProxy
-from taco.daemon.keychain_server import (
+from shibgreen.cmds.init_funcs import check_keys
+from shibgreen.daemon.client import DaemonProxy
+from shibgreen.daemon.keychain_server import (
     KEYCHAIN_ERR_KEYERROR,
     KEYCHAIN_ERR_LOCKED,
     KEYCHAIN_ERR_MALFORMED_REQUEST,
     KEYCHAIN_ERR_NO_KEYS,
 )
-from taco.server.server import ssl_context_for_client
-from taco.util.config import load_config
-from taco.util.keychain import (
+from shibgreen.server.server import ssl_context_for_client
+from shibgreen.util.config import load_config
+from shibgreen.util.keychain import (
     Keychain,
     KeyringIsLocked,
     bytes_to_mnemonic,
     mnemonic_to_seed,
     supports_keyring_passphrase,
 )
-from taco.util.ws_message import WsRpcMessage
+from shibgreen.util.ws_message import WsRpcMessage
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 

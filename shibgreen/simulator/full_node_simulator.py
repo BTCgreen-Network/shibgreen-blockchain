@@ -1,12 +1,12 @@
 from typing import List, Optional
 
-from taco.consensus.block_record import BlockRecord
-from taco.full_node.full_node_api import FullNodeAPI
-from taco.protocols.full_node_protocol import RespondBlock
-from taco.simulator.simulator_protocol import FarmNewBlockProtocol, ReorgProtocol
-from taco.types.full_block import FullBlock
-from taco.util.api_decorators import api_request
-from taco.util.ints import uint8
+from shibgreen.consensus.block_record import BlockRecord
+from shibgreen.full_node.full_node_api import FullNodeAPI
+from shibgreen.protocols.full_node_protocol import RespondBlock
+from shibgreen.simulator.simulator_protocol import FarmNewBlockProtocol, ReorgProtocol
+from shibgreen.types.full_block import FullBlock
+from shibgreen.util.api_decorators import api_request
+from shibgreen.util.ints import uint8
 
 
 class FullNodeSimulator(FullNodeAPI):

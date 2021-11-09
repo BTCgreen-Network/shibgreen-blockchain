@@ -1,7 +1,7 @@
 import unittest
 from blspy import AugSchemeMPL
-from taco.util import cached_bls
-from taco.util.lru_cache import LRUCache
+from shibgreen.util import cached_bls
+from shibgreen.util.lru_cache import LRUCache
 
 
 class TestCachedBLS(unittest.TestCase):

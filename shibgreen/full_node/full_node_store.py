@@ -4,26 +4,26 @@ import logging
 import time
 from typing import Dict, List, Optional, Set, Tuple
 
-from taco.consensus.block_record import BlockRecord
-from taco.consensus.blockchain_interface import BlockchainInterface
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.difficulty_adjustment import can_finish_sub_and_full_epoch
-from taco.consensus.make_sub_epoch_summary import next_sub_epoch_summary
-from taco.consensus.multiprocess_validation import PreValidationResult
-from taco.consensus.pot_iterations import calculate_sp_interval_iters
-from taco.full_node.signage_point import SignagePoint
-from taco.protocols import timelord_protocol
-from taco.server.outbound_message import Message
-from taco.types.blockchain_format.classgroup import ClassgroupElement
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.sub_epoch_summary import SubEpochSummary
-from taco.types.blockchain_format.vdf import VDFInfo
-from taco.types.end_of_slot_bundle import EndOfSubSlotBundle
-from taco.types.full_block import FullBlock
-from taco.types.generator_types import CompressorArg
-from taco.types.unfinished_block import UnfinishedBlock
-from taco.util.ints import uint8, uint32, uint64, uint128
-from taco.util.lru_cache import LRUCache
+from shibgreen.consensus.block_record import BlockRecord
+from shibgreen.consensus.blockchain_interface import BlockchainInterface
+from shibgreen.consensus.constants import ConsensusConstants
+from shibgreen.consensus.difficulty_adjustment import can_finish_sub_and_full_epoch
+from shibgreen.consensus.make_sub_epoch_summary import next_sub_epoch_summary
+from shibgreen.consensus.multiprocess_validation import PreValidationResult
+from shibgreen.consensus.pot_iterations import calculate_sp_interval_iters
+from shibgreen.full_node.signage_point import SignagePoint
+from shibgreen.protocols import timelord_protocol
+from shibgreen.server.outbound_message import Message
+from shibgreen.types.blockchain_format.classgroup import ClassgroupElement
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.blockchain_format.sub_epoch_summary import SubEpochSummary
+from shibgreen.types.blockchain_format.vdf import VDFInfo
+from shibgreen.types.end_of_slot_bundle import EndOfSubSlotBundle
+from shibgreen.types.full_block import FullBlock
+from shibgreen.types.generator_types import CompressorArg
+from shibgreen.types.unfinished_block import UnfinishedBlock
+from shibgreen.util.ints import uint8, uint32, uint64, uint128
+from shibgreen.util.lru_cache import LRUCache
 
 log = logging.getLogger(__name__)
 

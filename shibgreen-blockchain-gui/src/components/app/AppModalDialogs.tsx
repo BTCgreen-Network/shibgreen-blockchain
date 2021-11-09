@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { ModalDialogs } from '@taco/core';
+import { ModalDialogs } from '@shibgreen/core';
 import { RootState } from '../../modules/rootReducer';
 
 export default function AppModalDialogs() {

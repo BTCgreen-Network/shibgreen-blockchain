@@ -7,23 +7,23 @@ import aiosqlite
 import pytest
 import tempfile
 
-from taco.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
-from taco.consensus.blockchain import Blockchain, ReceiveBlockResult
-from taco.consensus.coinbase import create_farmer_coin, create_pool_coin
-from taco.full_node.block_store import BlockStore
-from taco.full_node.coin_store import CoinStore
-from taco.full_node.hint_store import HintStore
-from taco.full_node.mempool_check_conditions import get_name_puzzle_conditions
-from taco.types.blockchain_format.coin import Coin
-from taco.types.coin_record import CoinRecord
-from taco.types.full_block import FullBlock
-from taco.types.generator_types import BlockGenerator
-from taco.util.generator_tools import tx_removals_and_additions
-from taco.util.ints import uint64, uint32
+from shibgreen.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
+from shibgreen.consensus.blockchain import Blockchain, ReceiveBlockResult
+from shibgreen.consensus.coinbase import create_farmer_coin, create_pool_coin
+from shibgreen.full_node.block_store import BlockStore
+from shibgreen.full_node.coin_store import CoinStore
+from shibgreen.full_node.hint_store import HintStore
+from shibgreen.full_node.mempool_check_conditions import get_name_puzzle_conditions
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.coin_record import CoinRecord
+from shibgreen.types.full_block import FullBlock
+from shibgreen.types.generator_types import BlockGenerator
+from shibgreen.util.generator_tools import tx_removals_and_additions
+from shibgreen.util.ints import uint64, uint32
 from tests.wallet_tools import WalletTool
-from taco.util.db_wrapper import DBWrapper
+from shibgreen.util.db_wrapper import DBWrapper
 from tests.setup_nodes import bt, test_constants
-from taco.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
 
 
 @pytest.fixture(scope="module")

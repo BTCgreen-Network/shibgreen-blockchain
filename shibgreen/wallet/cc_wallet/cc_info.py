@@ -1,9 +1,9 @@
 from dataclasses import dataclass
 from typing import List, Optional, Tuple
 
-from taco.types.blockchain_format.program import Program
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.streamable import Streamable, streamable
+from shibgreen.types.blockchain_format.program import Program
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

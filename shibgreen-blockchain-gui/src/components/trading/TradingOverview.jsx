@@ -11,13 +11,13 @@ import {
   Box,
   Typography,
 } from '@material-ui/core';
-import { Card, Flex } from '@taco/core';
+import { Card, Flex } from '@shibgreen/core';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import Grid from '@material-ui/core/Grid';
 import HelpIcon from '@material-ui/icons/Help';
 import { unix_to_short_date } from '../../util/utils';
 import { presetOverview, presentTrade } from '../../modules/trade';
-import { byte_to_taco_string } from '../../util/taco';
+import { byte_to_shibgreen_string } from '../../util/shibgreen';
 import {
   get_all_trades,
   cancel_trade_with_spend_action,
@@ -301,7 +301,7 @@ const OfferRow = (props) => {
       </Box>
       <Box flexGrow={1}>{side}</Box>
       <Box flexGrow={1} style={{ textAlign: 'right' }}>
-        {byte_to_taco_string(amount)}
+        {byte_to_shibgreen_string(amount)}
       </Box>
     </Box>
   );

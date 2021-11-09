@@ -3,13 +3,13 @@ from pathlib import Path
 from multiprocessing import freeze_support
 from typing import Dict
 
-from taco.full_node.full_node import FullNode
-from taco.rpc.full_node_rpc_api import FullNodeRpcApi
-from taco.server.outbound_message import NodeType
-from taco.server.start_service import run_service
-from taco.util.config import load_config_cli
-from taco.util.default_root import DEFAULT_ROOT_PATH
-from taco.util.path import mkdir, path_from_root
+from shibgreen.full_node.full_node import FullNode
+from shibgreen.rpc.full_node_rpc_api import FullNodeRpcApi
+from shibgreen.server.outbound_message import NodeType
+from shibgreen.server.start_service import run_service
+from shibgreen.util.config import load_config_cli
+from shibgreen.util.default_root import DEFAULT_ROOT_PATH
+from shibgreen.util.path import mkdir, path_from_root
 from tests.block_tools import BlockTools, create_block_tools, test_constants
 from tests.util.keyring import TempKeyring
 

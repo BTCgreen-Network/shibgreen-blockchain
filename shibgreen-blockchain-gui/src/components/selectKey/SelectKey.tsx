@@ -2,7 +2,7 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { Button, ConfirmDialog, Flex, Logo } from '@taco/core';
+import { Button, ConfirmDialog, Flex, Logo } from '@shibgreen/core';
 import { Alert } from '@material-ui/lab';
 import {
   Card,
@@ -181,7 +181,7 @@ export default function SelectKey() {
               </Typography>
               <Typography variant="subtitle1">
                 <Trans>
-                  Welcome to Taco. Please log in with an existing key, or create
+                  Welcome to SHIBgreen. Please log in with an existing key, or create
                   a new key.
                 </Trans>
               </Typography>

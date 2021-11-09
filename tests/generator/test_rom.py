@@ -1,23 +1,23 @@
 from clvm_tools import binutils
 from clvm_tools.clvmc import compile_clvm_text
 
-from taco.full_node.generator import run_generator
-from taco.full_node.mempool_check_conditions import get_name_puzzle_conditions
-from taco.types.blockchain_format.program import Program, SerializedProgram
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.condition_with_args import ConditionWithArgs
-from taco.types.name_puzzle_condition import NPC
-from taco.types.generator_types import BlockGenerator, GeneratorArg
-from taco.util.clvm import int_to_bytes
-from taco.util.condition_tools import ConditionOpcode
-from taco.util.ints import uint32
-from taco.wallet.puzzles.load_clvm import load_clvm
+from shibgreen.full_node.generator import run_generator
+from shibgreen.full_node.mempool_check_conditions import get_name_puzzle_conditions
+from shibgreen.types.blockchain_format.program import Program, SerializedProgram
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.condition_with_args import ConditionWithArgs
+from shibgreen.types.name_puzzle_condition import NPC
+from shibgreen.types.generator_types import BlockGenerator, GeneratorArg
+from shibgreen.util.clvm import int_to_bytes
+from shibgreen.util.condition_tools import ConditionOpcode
+from shibgreen.util.ints import uint32
+from shibgreen.wallet.puzzles.load_clvm import load_clvm
 
 MAX_COST = int(1e15)
 COST_PER_BYTE = int(12000)
 
 
-DESERIALIZE_MOD = load_clvm("chialisp_deserialisation.clvm", package_or_requirement="taco.wallet.puzzles")
+DESERIALIZE_MOD = load_clvm("chialisp_deserialisation.clvm", package_or_requirement="shibgreen.wallet.puzzles")
 
 
 GENERATOR_CODE = """

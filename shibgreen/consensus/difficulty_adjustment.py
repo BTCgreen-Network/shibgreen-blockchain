@@ -1,11 +1,11 @@
 from typing import List, Optional, Tuple
 
-from taco.consensus.block_record import BlockRecord
-from taco.consensus.blockchain_interface import BlockchainInterface
-from taco.consensus.constants import ConsensusConstants
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.ints import uint8, uint32, uint64, uint128
-from taco.util.significant_bits import count_significant_bits, truncate_to_significant_bits
+from shibgreen.consensus.block_record import BlockRecord
+from shibgreen.consensus.blockchain_interface import BlockchainInterface
+from shibgreen.consensus.constants import ConsensusConstants
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.util.ints import uint8, uint32, uint64, uint128
+from shibgreen.util.significant_bits import count_significant_bits, truncate_to_significant_bits
 
 
 def _get_blocks_at_height(

@@ -12,7 +12,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Backdrop from '@material-ui/core/Backdrop';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { AlertDialog, Card, Flex, Loading, Dropzone } from '@taco/core';
+import { AlertDialog, Card, Flex, Loading, Dropzone } from '@shibgreen/core';
 import {
   did_generate_backup_file,
   did_spend,
@@ -29,7 +29,7 @@ import {
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Tooltip } from '@material-ui/core';
 import HelpIcon from '@material-ui/icons/Help';
-import { byte_to_taco_string } from '../../../util/taco';
+import { byte_to_shibgreen_string } from '../../../util/shibgreen';
 import { useForm, Controller, useFieldArray } from 'react-hook-form';
 import { openDialog } from '../../../modules/dialog';
 import useCurrencyCode from '../../../hooks/useCurrencyCode';
@@ -613,7 +613,7 @@ const BalanceCardSubSection = (props) => {
         </Box>
         <Box>
           <Typography variant="subtitle1">
-            {byte_to_taco_string(props.balance)} TXTX
+            {byte_to_shibgreen_string(props.balance)} TXSHIB
           </Typography>
         </Box>
       </Box>
@@ -948,7 +948,7 @@ const CreateAttest = (props) => {
       return;
     }
     let address = puzhash_input.value.trim();
-    if (address.substring(0, 12) === 'taco_addr://') {
+    if (address.substring(0, 12) === 'shibgreen_addr://') {
       address = address.substring(12);
     }
     if (address.startsWith('0x') || address.startsWith('0X')) {
@@ -1024,7 +1024,7 @@ const CashoutCard = (props) => {
   function cashout() {
     let puzzlehash = address_input.value.trim();
 
-    if (puzzlehash.slice(0, 12) === 'taco_addr://') {
+    if (puzzlehash.slice(0, 12) === 'shibgreen_addr://') {
       puzzlehash = puzzlehash.slice(12);
     }
     if (puzzlehash.startsWith('0x') || puzzlehash.startsWith('0X')) {

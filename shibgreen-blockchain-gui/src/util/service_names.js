@@ -1,10 +1,10 @@
-export const service_wallet = 'taco_wallet';
-export const service_full_node = 'taco_full_node';
-export const service_farmer = 'taco_farmer';
-export const service_harvester = 'taco_harvester';
-export const service_simulator = 'taco_full_node_simulator';
+export const service_wallet = 'shibgreen_wallet';
+export const service_full_node = 'shibgreen_full_node';
+export const service_farmer = 'shibgreen_farmer';
+export const service_harvester = 'shibgreen_harvester';
+export const service_simulator = 'shibgreen_full_node_simulator';
 export const service_daemon = 'daemon';
-export const service_plotter = 'taco plots create';
+export const service_plotter = 'shibgreen plots create';
 
 // Corresponds with outbound_message.py NodeTypes
 export const service_connection_types = {

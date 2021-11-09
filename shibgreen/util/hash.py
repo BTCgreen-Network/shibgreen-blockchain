@@ -1,6 +1,6 @@
 import blspy
 
-from taco.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
 
 
 def std_hash(b) -> bytes32:

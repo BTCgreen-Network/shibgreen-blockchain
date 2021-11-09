@@ -2,8 +2,8 @@ import functools
 from typing import List, Optional
 
 from blspy import AugSchemeMPL, G1Element, G2Element, GTElement
-from taco.util.hash import std_hash
-from taco.util.lru_cache import LRUCache
+from shibgreen.util.hash import std_hash
+from shibgreen.util.lru_cache import LRUCache
 
 
 def get_pairings(cache: LRUCache, pks: List[G1Element], msgs: List[bytes], force_cache: bool) -> List[GTElement]:

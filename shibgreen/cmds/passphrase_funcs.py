@@ -1,11 +1,11 @@
 import click
 import sys
 
-from taco.daemon.client import acquire_connection_to_daemon
-from taco.util.keychain import Keychain, obtain_current_passphrase, supports_os_passphrase_storage
-from taco.util.keyring_wrapper import DEFAULT_PASSPHRASE_IF_NO_MASTER_PASSPHRASE
-from taco.util.misc import prompt_yes_no
-from taco.util.ws_message import WsRpcMessage
+from shibgreen.daemon.client import acquire_connection_to_daemon
+from shibgreen.util.keychain import Keychain, obtain_current_passphrase, supports_os_passphrase_storage
+from shibgreen.util.keyring_wrapper import DEFAULT_PASSPHRASE_IF_NO_MASTER_PASSPHRASE
+from shibgreen.util.misc import prompt_yes_no
+from shibgreen.util.ws_message import WsRpcMessage
 from getpass import getpass
 from io import TextIOWrapper
 from pathlib import Path
@@ -59,7 +59,7 @@ def prompt_to_save_passphrase() -> bool:
             print(
                 "\n"
                 "Your passphrase can be stored in your system's secure credential store. "
-                "Other Taco processes will be able to access your keys without prompting for your passphrase."
+                "Other SHIBgreen processes will be able to access your keys without prompting for your passphrase."
             )
             save = prompt_yes_no(f"Would you like to save your passphrase to the {location} (y/n) ")
 
@@ -100,7 +100,7 @@ def read_passphrase_from_file(passphrase_file: TextIOWrapper) -> str:
 def initialize_passphrase() -> None:
     if Keychain.has_master_passphrase():
         print("Keyring is already protected by a passphrase")
-        print("\nUse 'taco passphrase set' or 'taco passphrase remove' to update or remove your passphrase")
+        print("\nUse 'shibgreen passphrase set' or 'shibgreen passphrase remove' to update or remove your passphrase")
         sys.exit(1)
 
     # We'll rely on Keyring initialization to leverage the cached passphrase for

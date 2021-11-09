@@ -12,7 +12,7 @@ const convert = (amount, from, to) => {
   return Number.parseFloat(amountInFromUnit.div(units.getUnit(to)));
 };
 
-class Taco {
+class SHIBgreen {
   constructor(value, unit) {
     this._value = value;
     this._unit = unit;
@@ -73,42 +73,42 @@ class Taco {
   }
 }
 
-export const taco_formatter = (value, unit) => new Taco(value, unit);
+export const shibgreen_formatter = (value, unit) => new SHIBgreen(value, unit);
 
-taco_formatter.convert = convert;
-taco_formatter.setDisplay = units.setDisplay;
-taco_formatter.setUnit = units.setUnit;
-taco_formatter.getUnit = units.getUnit;
-taco_formatter.setFiat = (currency, rate, display = null) => {
+shibgreen_formatter.convert = convert;
+shibgreen_formatter.setDisplay = units.setDisplay;
+shibgreen_formatter.setUnit = units.setUnit;
+shibgreen_formatter.getUnit = units.getUnit;
+shibgreen_formatter.setFiat = (currency, rate, display = null) => {
   units.setUnit(currency, 1 / rate, display);
 };
 
-export const byte_to_taco = (byte) => {
-  return taco_formatter(Number.parseInt(byte), 'byte').to('taco').value();
+export const byte_to_shibgreen = (byte) => {
+  return shibgreen_formatter(Number.parseInt(byte), 'byte').to('shibgreen').value();
 };
 
-export const taco_to_byte = (taco) => {
-  return taco_formatter(Number.parseFloat(Number(taco)), 'taco')
+export const shibgreen_to_byte = (shibgreen) => {
+  return shibgreen_formatter(Number.parseFloat(Number(shibgreen)), 'shibgreen')
     .to('byte')
     .value();
 };
 
-export const byte_to_taco_string = (byte) => {
-  return taco_formatter(Number(byte), 'byte').to('taco').toString();
+export const byte_to_shibgreen_string = (byte) => {
+  return shibgreen_formatter(Number(byte), 'byte').to('shibgreen').toString();
 };
 
 export const byte_to_colouredcoin = (byte) => {
-  return taco_formatter(Number.parseInt(byte), 'byte')
+  return shibgreen_formatter(Number.parseInt(byte), 'byte')
     .to('colouredcoin')
     .value();
 };
 
 export const colouredcoin_to_byte = (colouredcoin) => {
-  return taco_formatter(Number.parseFloat(Number(colouredcoin)), 'colouredcoin')
+  return shibgreen_formatter(Number.parseFloat(Number(colouredcoin)), 'colouredcoin')
     .to('byte')
     .value();
 };
 
 export const byte_to_colouredcoin_string = (byte) => {
-  return taco_formatter(Number(byte), 'byte').to('colouredcoin').toString();
+  return shibgreen_formatter(Number(byte), 'byte').to('colouredcoin').toString();
 };

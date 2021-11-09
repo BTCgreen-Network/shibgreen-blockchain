@@ -7,8 +7,8 @@ from typing import Dict, List, Optional, Tuple, Union
 from blspy import G1Element, PrivateKey
 from chiapos import DiskProver
 
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.config import load_config, save_config
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.util.config import load_config, save_config
 
 log = logging.getLogger(__name__)
 

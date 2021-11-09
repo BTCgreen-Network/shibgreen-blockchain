@@ -5,16 +5,16 @@ from typing import List, Tuple
 from blspy import G2Element
 from clvm_tools import binutils
 
-from taco.types.blockchain_format.program import Program, INFINITE_COST
-from taco.types.announcement import Announcement
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_spend import CoinSpend
-from taco.types.spend_bundle import SpendBundle
-from taco.util.condition_tools import ConditionOpcode
+from shibgreen.types.blockchain_format.program import Program, INFINITE_COST
+from shibgreen.types.announcement import Announcement
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.util.condition_tools import ConditionOpcode
 
-from taco.util.ints import uint64
-from taco.wallet.puzzles.load_clvm import load_clvm
+from shibgreen.util.ints import uint64
+from shibgreen.wallet.puzzles.load_clvm import load_clvm
 
 from tests.core.full_node.test_conditions import bt, check_spend_bundle_validity, initial_blocks
 

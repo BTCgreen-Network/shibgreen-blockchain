@@ -6,9 +6,9 @@ from pathlib import Path
 import aiosqlite
 import pytest
 
-from taco.server.address_manager import AddressManager, ExtendedPeerInfo
-from taco.server.address_manager_store import AddressManagerStore
-from taco.types.peer_info import PeerInfo, TimestampedPeerInfo
+from shibgreen.server.address_manager import AddressManager, ExtendedPeerInfo
+from shibgreen.server.address_manager_store import AddressManagerStore
+from shibgreen.types.peer_info import PeerInfo, TimestampedPeerInfo
 
 
 @pytest.fixture(scope="module")

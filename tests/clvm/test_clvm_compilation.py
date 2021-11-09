@@ -3,48 +3,48 @@ from unittest import TestCase
 
 from clvm_tools.clvmc import compile_clvm
 
-from taco.types.blockchain_format.program import Program, SerializedProgram
+from shibgreen.types.blockchain_format.program import Program, SerializedProgram
 
 wallet_program_files = set(
     [
-        "taco/wallet/puzzles/calculate_synthetic_public_key.clvm",
-        "taco/wallet/puzzles/cc.clvm",
-        "taco/wallet/puzzles/chialisp_deserialisation.clvm",
-        "taco/wallet/puzzles/rom_bootstrap_generator.clvm",
-        "taco/wallet/puzzles/generator_for_single_coin.clvm",
-        "taco/wallet/puzzles/genesis-by-coin-id-with-0.clvm",
-        "taco/wallet/puzzles/genesis-by-puzzle-hash-with-0.clvm",
-        "taco/wallet/puzzles/lock.inner.puzzle.clvm",
-        "taco/wallet/puzzles/p2_conditions.clvm",
-        "taco/wallet/puzzles/p2_delegated_conditions.clvm",
-        "taco/wallet/puzzles/p2_delegated_puzzle.clvm",
-        "taco/wallet/puzzles/p2_delegated_puzzle_or_hidden_puzzle.clvm",
-        "taco/wallet/puzzles/p2_m_of_n_delegate_direct.clvm",
-        "taco/wallet/puzzles/p2_puzzle_hash.clvm",
-        "taco/wallet/puzzles/rl_aggregation.clvm",
-        "taco/wallet/puzzles/rl.clvm",
-        "taco/wallet/puzzles/sha256tree_module.clvm",
-        "taco/wallet/puzzles/singleton_top_layer.clvm",
-        "taco/wallet/puzzles/did_innerpuz.clvm",
-        "taco/wallet/puzzles/decompress_puzzle.clvm",
-        "taco/wallet/puzzles/decompress_coin_spend_entry_with_prefix.clvm",
-        "taco/wallet/puzzles/decompress_coin_spend_entry.clvm",
-        "taco/wallet/puzzles/block_program_zero.clvm",
-        "taco/wallet/puzzles/test_generator_deserialize.clvm",
-        "taco/wallet/puzzles/test_multiple_generator_input_arguments.clvm",
-        "taco/wallet/puzzles/p2_singleton.clvm",
-        "taco/wallet/puzzles/pool_waitingroom_innerpuz.clvm",
-        "taco/wallet/puzzles/pool_member_innerpuz.clvm",
-        "taco/wallet/puzzles/singleton_launcher.clvm",
-        "taco/wallet/puzzles/p2_singleton_or_delayed_puzhash.clvm",
+        "shibgreen/wallet/puzzles/calculate_synthetic_public_key.clvm",
+        "shibgreen/wallet/puzzles/cc.clvm",
+        "shibgreen/wallet/puzzles/chialisp_deserialisation.clvm",
+        "shibgreen/wallet/puzzles/rom_bootstrap_generator.clvm",
+        "shibgreen/wallet/puzzles/generator_for_single_coin.clvm",
+        "shibgreen/wallet/puzzles/genesis-by-coin-id-with-0.clvm",
+        "shibgreen/wallet/puzzles/genesis-by-puzzle-hash-with-0.clvm",
+        "shibgreen/wallet/puzzles/lock.inner.puzzle.clvm",
+        "shibgreen/wallet/puzzles/p2_conditions.clvm",
+        "shibgreen/wallet/puzzles/p2_delegated_conditions.clvm",
+        "shibgreen/wallet/puzzles/p2_delegated_puzzle.clvm",
+        "shibgreen/wallet/puzzles/p2_delegated_puzzle_or_hidden_puzzle.clvm",
+        "shibgreen/wallet/puzzles/p2_m_of_n_delegate_direct.clvm",
+        "shibgreen/wallet/puzzles/p2_puzzle_hash.clvm",
+        "shibgreen/wallet/puzzles/rl_aggregation.clvm",
+        "shibgreen/wallet/puzzles/rl.clvm",
+        "shibgreen/wallet/puzzles/sha256tree_module.clvm",
+        "shibgreen/wallet/puzzles/singleton_top_layer.clvm",
+        "shibgreen/wallet/puzzles/did_innerpuz.clvm",
+        "shibgreen/wallet/puzzles/decompress_puzzle.clvm",
+        "shibgreen/wallet/puzzles/decompress_coin_spend_entry_with_prefix.clvm",
+        "shibgreen/wallet/puzzles/decompress_coin_spend_entry.clvm",
+        "shibgreen/wallet/puzzles/block_program_zero.clvm",
+        "shibgreen/wallet/puzzles/test_generator_deserialize.clvm",
+        "shibgreen/wallet/puzzles/test_multiple_generator_input_arguments.clvm",
+        "shibgreen/wallet/puzzles/p2_singleton.clvm",
+        "shibgreen/wallet/puzzles/pool_waitingroom_innerpuz.clvm",
+        "shibgreen/wallet/puzzles/pool_member_innerpuz.clvm",
+        "shibgreen/wallet/puzzles/singleton_launcher.clvm",
+        "shibgreen/wallet/puzzles/p2_singleton_or_delayed_puzhash.clvm",
     ]
 )
 
 clvm_include_files = set(
-    ["taco/wallet/puzzles/create-lock-puzzlehash.clvm", "taco/wallet/puzzles/condition_codes.clvm"]
+    ["shibgreen/wallet/puzzles/create-lock-puzzlehash.clvm", "shibgreen/wallet/puzzles/condition_codes.clvm"]
 )
 
-CLVM_PROGRAM_ROOT = "taco/wallet/puzzles"
+CLVM_PROGRAM_ROOT = "shibgreen/wallet/puzzles"
 
 
 def list_files(dir, glob):
@@ -71,7 +71,7 @@ class TestClvmCompilation(TestCase):
 
     def test_all_programs_listed(self):
         """
-        Checks to see if a new .clvm file was added to taco/wallet/puzzles, but not added to `wallet_program_files`
+        Checks to see if a new .clvm file was added to shibgreen/wallet/puzzles, but not added to `wallet_program_files`
         """
         existing_files = list_files(CLVM_PROGRAM_ROOT, "*.clvm")
         existing_file_paths = set([Path(x).relative_to(CLVM_PROGRAM_ROOT) for x in existing_files])

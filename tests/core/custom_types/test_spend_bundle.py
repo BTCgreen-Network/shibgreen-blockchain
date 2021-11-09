@@ -3,7 +3,7 @@ import unittest
 
 from blspy import G2Element
 
-from taco.types.spend_bundle import SpendBundle
+from shibgreen.types.spend_bundle import SpendBundle
 
 
 BLANK_SPEND_BUNDLE = SpendBundle(coin_spends=[], aggregated_signature=G2Element())

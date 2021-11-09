@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro';
 import FarmCard from '../../farm/card/FarmCard';
 import useWallet from '../../../hooks/useWallet';
 import useCurrencyCode from '../../../hooks/useCurrencyCode';
-import { byte_to_taco_string } from '../../../util/taco';
+import { byte_to_shibgreen_string } from '../../../util/shibgreen';
 
 type Props = {
   wallet_id: number;
@@ -24,15 +24,15 @@ export default function WalletCardSpendableBalance(props: Props) {
       title={<Trans>Spendable Balance</Trans>}
       tooltip={
         <Trans>
-          This is the amount of Taco that you can currently use to make
+          This is the amount of SHIBgreen that you can currently use to make
           transactions. It does not include pending farming rewards, pending
-          incoming transactions, and Taco that you have just spent but is not
+          incoming transactions, and SHIBgreen that you have just spent but is not
           yet in the blockchain.
         </Trans>
       }
       value={
         <>
-          {byte_to_taco_string(value)} {currencyCode}
+          {byte_to_shibgreen_string(value)} {currencyCode}
         </>
       }
     />

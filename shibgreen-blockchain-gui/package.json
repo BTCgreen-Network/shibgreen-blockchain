@@ -1,8 +1,8 @@
 {
-    "name": "taco-blockchain",
-    "author": "Taco Network <hello@taconetwork.net> (https://taconetwork.net/)",
-    "description": "GUI for Taco Blockchain",
-    "productName": "Taco Blockchain",
+    "name": "shibgreen-blockchain",
+    "author": "SHIBgreen Network <hello@shibgreennetwork.net> (https://shibgreennetwork.net/)",
+    "description": "GUI for SHIBgreen Blockchain",
+    "productName": "SHIBgreen Blockchain",
     "private": true,
     "homepage": "./",
     "main": "build/electron/main.js",

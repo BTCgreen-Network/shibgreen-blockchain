@@ -1,7 +1,7 @@
 from typing import Dict
 
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.mempool_item import MempoolItem
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.mempool_item import MempoolItem
 
 
 class PendingTxCache:

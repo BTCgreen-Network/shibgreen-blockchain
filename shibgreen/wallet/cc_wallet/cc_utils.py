@@ -3,15 +3,15 @@ from typing import List, Optional, Tuple
 
 from blspy import AugSchemeMPL, G2Element
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import Program, INFINITE_COST
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.spend_bundle import CoinSpend, SpendBundle
-from taco.util.condition_tools import conditions_dict_for_solution
-from taco.util.ints import uint64
-from taco.wallet.puzzles.cc_loader import CC_MOD, LOCK_INNER_PUZZLE
-from taco.wallet.puzzles.genesis_by_coin_id_with_0 import (
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.program import Program, INFINITE_COST
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.condition_opcodes import ConditionOpcode
+from shibgreen.types.spend_bundle import CoinSpend, SpendBundle
+from shibgreen.util.condition_tools import conditions_dict_for_solution
+from shibgreen.util.ints import uint64
+from shibgreen.wallet.puzzles.cc_loader import CC_MOD, LOCK_INNER_PUZZLE
+from shibgreen.wallet.puzzles.genesis_by_coin_id_with_0 import (
     genesis_coin_id_for_genesis_coin_checker,
     lineage_proof_for_coin,
     lineage_proof_for_genesis,

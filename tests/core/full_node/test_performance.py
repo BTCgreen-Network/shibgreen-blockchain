@@ -9,14 +9,14 @@ from typing import Dict
 import pytest
 import cProfile
 
-from taco.consensus.block_record import BlockRecord
-from taco.full_node.full_node_api import FullNodeAPI
-from taco.protocols import full_node_protocol as fnp
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.condition_with_args import ConditionWithArgs
-from taco.types.unfinished_block import UnfinishedBlock
-from taco.util.clvm import int_to_bytes
-from taco.util.ints import uint64
+from shibgreen.consensus.block_record import BlockRecord
+from shibgreen.full_node.full_node_api import FullNodeAPI
+from shibgreen.protocols import full_node_protocol as fnp
+from shibgreen.types.condition_opcodes import ConditionOpcode
+from shibgreen.types.condition_with_args import ConditionWithArgs
+from shibgreen.types.unfinished_block import UnfinishedBlock
+from shibgreen.util.clvm import int_to_bytes
+from shibgreen.util.ints import uint64
 from tests.wallet_tools import WalletTool
 from tests.core.fixtures import empty_blockchain  # noqa: F401
 

@@ -5,15 +5,15 @@ from typing import List
 import pytest
 from blspy import PrivateKey
 
-from taco.pools.pool_wallet import PoolWallet
-from taco.pools.pool_wallet_info import PoolState, FARMING_TO_POOL
-from taco.simulator.simulator_protocol import FarmNewBlockProtocol
-from taco.types.coin_spend import CoinSpend
-from taco.types.full_block import FullBlock
-from taco.types.peer_info import PeerInfo
-from taco.util.ints import uint16, uint32
-from taco.wallet.derive_keys import master_sk_to_singleton_owner_sk
-from taco.wallet.wallet_state_manager import WalletStateManager
+from shibgreen.pools.pool_wallet import PoolWallet
+from shibgreen.pools.pool_wallet_info import PoolState, FARMING_TO_POOL
+from shibgreen.simulator.simulator_protocol import FarmNewBlockProtocol
+from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.types.full_block import FullBlock
+from shibgreen.types.peer_info import PeerInfo
+from shibgreen.util.ints import uint16, uint32
+from shibgreen.wallet.derive_keys import master_sk_to_singleton_owner_sk
+from shibgreen.wallet.wallet_state_manager import WalletStateManager
 from tests.setup_nodes import self_hostname, setup_simulators_and_wallets
 
 

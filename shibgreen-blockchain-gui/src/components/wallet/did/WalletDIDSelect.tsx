@@ -3,7 +3,7 @@ import { useRouteMatch, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { Grid } from '@material-ui/core';
 import { Restore as RestoreIcon, Add as AddIcon } from '@material-ui/icons';
-import { Back, Flex } from '@taco/core';
+import { Back, Flex } from '@shibgreen/core';
 import WalletCreateCard from '../create/WalletCreateCard';
 
 export default function WalletDIDSelect() {

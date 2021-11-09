@@ -3,9 +3,9 @@ from typing import List, Tuple, Dict, Optional
 
 import aiosqlite
 
-from taco.types.coin_spend import CoinSpend
-from taco.util.db_wrapper import DBWrapper
-from taco.util.ints import uint32
+from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.util.db_wrapper import DBWrapper
+from shibgreen.util.ints import uint32
 
 log = logging.getLogger(__name__)
 

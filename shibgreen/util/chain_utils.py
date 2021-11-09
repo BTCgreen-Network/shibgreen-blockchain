@@ -2,11 +2,11 @@ from typing import List
 
 from clvm.casts import int_from_bytes
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import SerializedProgram
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.util.condition_tools import (
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.program import SerializedProgram
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.condition_opcodes import ConditionOpcode
+from shibgreen.util.condition_tools import (
     conditions_dict_for_solution,
     created_outputs_for_conditions_dict,
 )

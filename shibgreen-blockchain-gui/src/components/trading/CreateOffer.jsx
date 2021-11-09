@@ -12,10 +12,10 @@ import {
   Button,
   InputLabel,
 } from '@material-ui/core';
-import { AlertDialog, Card, Flex } from '@taco/core';
+import { AlertDialog, Card, Flex } from '@shibgreen/core';
 import isElectron from 'is-electron';
 import { newBuy, newSell, addTrade, resetTrades } from '../../modules/trade';
-import { taco_to_byte, colouredcoin_to_byte } from '../../util/taco';
+import { shibgreen_to_byte, colouredcoin_to_byte } from '../../util/shibgreen';
 import { openDialog } from '../../modules/dialog';
 import { create_trade_action } from '../../modules/trade_messages';
 import { COLOURED_COIN } from '../../util/wallet_types';
@@ -82,7 +82,7 @@ export default function CreateOffer() {
     const byte =
       wallets[wallet_id.value].type === COLOURED_COIN
         ? colouredcoin_to_byte(amount_input.value)
-        : taco_to_byte(amount_input.value);
+        : shibgreen_to_byte(amount_input.value);
 
     const trade =
       buy_or_sell.value === 1

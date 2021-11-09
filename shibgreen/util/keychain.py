@@ -5,8 +5,8 @@ import unicodedata
 
 from bitstring import BitArray  # pyright: reportMissingImports=false
 from blspy import AugSchemeMPL, G1Element, PrivateKey  # pyright: reportMissingImports=false
-from taco.util.hash import std_hash
-from taco.util.keyring_wrapper import KeyringWrapper
+from shibgreen.util.hash import std_hash
+from shibgreen.util.keyring_wrapper import KeyringWrapper
 from getpass import getpass
 from hashlib import pbkdf2_hmac
 from pathlib import Path
@@ -16,8 +16,8 @@ from typing import Any, Dict, List, Optional, Tuple
 
 
 CURRENT_KEY_VERSION = "1.8"
-DEFAULT_USER = f"user-taco-{CURRENT_KEY_VERSION}"  # e.g. user-taco-1.8
-DEFAULT_SERVICE = f"taco-{DEFAULT_USER}"  # e.g. taco-user-taco-1.8
+DEFAULT_USER = f"user-shibgreen-{CURRENT_KEY_VERSION}"  # e.g. user-shibgreen-1.8
+DEFAULT_SERVICE = f"shibgreen-{DEFAULT_USER}"  # e.g. shibgreen-user-shibgreen-1.8
 DEFAULT_PASSPHRASE_PROMPT = (
     colorama.Fore.YELLOW + colorama.Style.BRIGHT + "(Unlock Keyring)" + colorama.Style.RESET_ALL + " Passphrase: "
 )  # noqa: E501

@@ -1,14 +1,14 @@
 import asyncio
 import pytest
-from taco.simulator.simulator_protocol import FarmNewBlockProtocol
-from taco.types.peer_info import PeerInfo
-from taco.util.ints import uint16, uint32, uint64
+from shibgreen.simulator.simulator_protocol import FarmNewBlockProtocol
+from shibgreen.types.peer_info import PeerInfo
+from shibgreen.util.ints import uint16, uint32, uint64
 from tests.setup_nodes import setup_simulators_and_wallets
-from taco.wallet.did_wallet.did_wallet import DIDWallet
-from taco.types.blockchain_format.program import Program
+from shibgreen.wallet.did_wallet.did_wallet import DIDWallet
+from shibgreen.types.blockchain_format.program import Program
 from blspy import AugSchemeMPL
-from taco.types.spend_bundle import SpendBundle
-from taco.consensus.block_rewards import calculate_pool_reward, calculate_base_farmer_reward
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.consensus.block_rewards import calculate_pool_reward, calculate_base_farmer_reward
 from tests.time_out_assert import time_out_assert
 
 

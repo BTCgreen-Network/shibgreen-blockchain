@@ -1,9 +1,9 @@
 from dataclasses import dataclass
 from typing import List
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.header_block import HeaderBlock
-from taco.util.streamable import Streamable, streamable
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.header_block import HeaderBlock
+from shibgreen.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

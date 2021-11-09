@@ -1,17 +1,17 @@
 const units = {
-  taco: 1,
+  shibgreen: 1,
   byte: 1 / 1e12,
   colouredcoin: 1 / 1e9,
 };
 
 const aliases = {
-  taco: ['ch', 'taco', 'Taco'],
+  shibgreen: ['ch', 'shibgreen', 'SHIBgreen'],
   byte: ['mj', 'byte'],
   colouredcoin: ['cc', 'colouredcoin'],
 };
 
 const display = {
-  taco: {
+  shibgreen: {
     format: '{amount} CH',
     fractionDigits: 12,
   },

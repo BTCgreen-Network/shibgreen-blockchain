@@ -1,9 +1,9 @@
-from taco.server.outbound_message import NodeType
-from taco.types.peer_info import PeerInfo
+from shibgreen.server.outbound_message import NodeType
+from shibgreen.types.peer_info import PeerInfo
 from tests.block_tools import BlockTools, create_block_tools, create_block_tools_async
-from taco.util.ints import uint16
-from taco.util.keyring_wrapper import DEFAULT_PASSPHRASE_IF_NO_MASTER_PASSPHRASE
-from taco.util.ws_message import create_payload
+from shibgreen.util.ints import uint16
+from shibgreen.util.keyring_wrapper import DEFAULT_PASSPHRASE_IF_NO_MASTER_PASSPHRASE
+from shibgreen.util.ws_message import create_payload
 from tests.core.node_height import node_height_at_least
 from tests.setup_nodes import setup_daemon, self_hostname, setup_full_system
 from tests.simulation.test_simulation import test_constants_modified
@@ -116,7 +116,7 @@ class TestDaemon:
 
         read_handler = asyncio.create_task(reader(ws, message_queue))
         data = {}
-        payload = create_payload("get_blockchain_state", data, service_name, "taco_full_node")
+        payload = create_payload("get_blockchain_state", data, service_name, "shibgreen_full_node")
         await ws.send_str(payload)
 
         await asyncio.sleep(5)

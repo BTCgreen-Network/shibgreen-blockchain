@@ -3,8 +3,8 @@ from typing import Dict
 
 import click
 
-from taco.util.config import load_config, save_config, str2bool
-from taco.util.default_root import DEFAULT_ROOT_PATH
+from shibgreen.util.config import load_config, save_config, str2bool
+from shibgreen.util.default_root import DEFAULT_ROOT_PATH
 
 
 def configure(
@@ -93,8 +93,8 @@ def configure(
         if testnet == "true" or testnet == "t":
             print("Setting Testnet")
             testnet_port = "38444"
-            testnet_introducer = "testnet-introducer.taconetwork.net"
-            testnet_dns_introducer = "dns-testnet-introducer.taconetwork.net"
+            testnet_introducer = "testnet-introducer.shibgreennetwork.net"
+            testnet_dns_introducer = "dns-testnet-introducer.shibgreennetwork.net"
             testnet = "testnet1"
             config["full_node"]["port"] = int(testnet_port)
             config["full_node"]["introducer_peer"]["port"] = int(testnet_port)
@@ -119,9 +119,9 @@ def configure(
 
         elif testnet == "false" or testnet == "f":
             print("Setting Mainnet")
-            mainnet_port = "18620"
-            mainnet_introducer = "introducer.taconetwork.net"
-            mainnet_dns_introducer = "dns-introducer.taconetwork.net"
+            mainnet_port = "7442"
+            mainnet_introducer = "introducer.shibgreennetwork.net"
+            mainnet_dns_introducer = "dns-introducer.shibgreennetwork.net"
             net = "mainnet"
             config["full_node"]["port"] = int(mainnet_port)
             config["full_node"]["introducer_peer"]["port"] = int(mainnet_port)
@@ -151,7 +151,7 @@ def configure(
         change_made = True
 
     if change_made:
-        print("Restart any running taco services for changes to take effect")
+        print("Restart any running shibgreen services for changes to take effect")
         save_config(root_path, "config.yaml", config)
     return 0
 

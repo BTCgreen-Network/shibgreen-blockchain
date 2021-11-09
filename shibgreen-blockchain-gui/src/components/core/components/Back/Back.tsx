@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Flex } from '@taco/core';
+import { Flex } from '@shibgreen/core';
 import { Typography } from '@material-ui/core';
 import { ArrowBackIos as ArrowBackIosIcon } from '@material-ui/icons';
 import { useHistory } from 'react-router-dom';

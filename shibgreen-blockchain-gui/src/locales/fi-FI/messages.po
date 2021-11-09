@@ -6,16 +6,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: fi_FI\n"
-"Project-Id-Version: taco-blockchain\n"
+"Project-Id-Version: shibgreen-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2021-09-17 17:40\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: taco-blockchain\n"
+"X-Crowdin-Project: shibgreen-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: fi\n"
-"X-Crowdin-File: /[Taco-Network.taco-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[SHIBgreen-Network.shibgreen-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -23,8 +23,8 @@ msgid "(Optional)"
 msgstr "(Valinnainen)"
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:64
-msgid "*Want to explore Taco’s blocks further? Check out <0>Taco Explorer</0> built by an open source developer."
-msgstr "Haluatko tarkastella lohkoja? Katso avoimen koodin <0>Taco Explorer</0>."
+msgid "*Want to explore SHIBgreen’s blocks further? Check out <0>SHIBgreen Explorer</0> built by an open source developer."
+msgstr "Haluatko tarkastella lohkoja? Katso avoimen koodin <0>SHIBgreen Explorer</0>."
 
 #: src/components/plot/add/PlotAddNFT.tsx:123
 msgid "+ Add New Plot NFT"
@@ -48,8 +48,8 @@ msgstr "Harvesteri on palvelu koneella, jolle plot-tiedostot on tallennettu. Far
 
 #: src/electron/main.tsx:422
 #: src/electron/main.tsx:509
-msgid "About Taco Blockchain"
-msgstr "Taco Lohkoketjusta"
+msgid "About SHIBgreen Blockchain"
+msgstr "SHIBgreen Lohkoketjusta"
 
 #: src/components/trading/ViewOffer.jsx:74
 msgid "Accept"
@@ -234,8 +234,8 @@ msgid "Block VDF Iterations"
 msgstr "Lohkon VDF-iteraatiot"
 
 #: src/components/block/Block.jsx:337
-msgid "Block at height {0} in the Taco blockchain"
-msgstr "Lohko korkeudessa {0} Tacon lohkoketjussa"
+msgid "Block at height {0} in the SHIBgreen blockchain"
+msgstr "Lohko korkeudessa {0} SHIBgreenn lohkoketjussa"
 
 #: src/components/fullNode/FullNode.jsx:331
 #~ msgid "Block hash"
@@ -340,16 +340,16 @@ msgid "Chat on KeyBase"
 msgstr "Keskustele KeyBasessa"
 
 #: src/electron/main.tsx:419
-msgid "Taco"
-msgstr "Taco"
+msgid "SHIBgreen"
+msgstr "SHIBgreen"
 
 #: src/electron/main.tsx:358
-msgid "Taco Blockchain Wiki"
-msgstr "Taco Wiki"
+msgid "SHIBgreen Blockchain Wiki"
+msgstr "SHIBgreen Wiki"
 
 #: src/components/wallet/standard/WalletStandard.tsx:652
-msgid "Taco Wallet"
-msgstr "Taco-lompakko"
+msgid "SHIBgreen Wallet"
+msgstr "SHIBgreen-lompakko"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:36
 msgid "Choose Number of Plots"
@@ -798,8 +798,8 @@ msgid "Enter a strong passphrase to secure your keys:"
 msgstr ""
 
 #: src/components/wallet/WalletImport.tsx:146
-msgid "Enter the 24 word mnemonic that you have saved in order to restore your Taco wallet."
-msgstr "Anna tallentamasi 24 muistisanaa palauttaaksesi Taco-lompakon."
+msgid "Enter the 24 word mnemonic that you have saved in order to restore your SHIBgreen wallet."
+msgstr "Anna tallentamasi 24 muistisanaa palauttaaksesi SHIBgreen-lompakon."
 
 #: src/components/settings/RemovePassphrasePrompt.tsx:115
 #: src/components/wallet/EnterPassphrasePrompt.tsx:115
@@ -817,8 +817,8 @@ msgid "Error"
 msgstr "Virhe"
 
 #: src/components/wallet/standard/WalletStandard.tsx:460
-msgid "Error: Cannot send taco to coloured address. Please enter a taco address."
-msgstr "Virhe: Chioja ei voi lähettää värikolikko-osoitteeseen. Anna Tacolompakon osoite."
+msgid "Error: Cannot send shibgreen to coloured address. Please enter a shibgreen address."
+msgstr "Virhe: Chioja ei voi lähettää värikolikko-osoitteeseen. Anna SHIBgreenlompakon osoite."
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:20
 msgid "Estimated Network Space"
@@ -940,7 +940,7 @@ msgid "Fee"
 msgstr "Veloitus"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
-#~ msgid "Fee (TXTX)"
+#~ msgid "Fee (TXSHIB)"
 #~ msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
@@ -1145,16 +1145,16 @@ msgid "Join a Pool"
 msgstr "Liity Pooliin"
 
 #: src/components/plot/add/PlotAddNFT.tsx:44
-msgid "Join a pool and get consistent XTX farming rewards. The average returns are the same, but it is much less volatile."
-msgstr "Liity pooliin ja saat tasaisen XTX-tuoton. Keskimääräinen tuotto on sama, mutta hajonta on pienempi kuin itse poolaamalla."
+msgid "Join a pool and get consistent XSHIB farming rewards. The average returns are the same, but it is much less volatile."
+msgstr "Liity pooliin ja saat tasaisen XSHIB-tuoton. Keskimääräinen tuotto on sama, mutta hajonta on pienempi kuin itse poolaamalla."
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:59
-msgid "Join a pool and get consistent XTX farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
-msgstr "Liity pooliin ja saat tasaisen XTX-tuoton. Keskimääräinen tuotto on sama, mutta hajonta on pienempi kuin itse poolaamalla. Aseta plotit osoittamaan Plot-NFT:hen. Voit vaihtaa helposti poolia ilman uudelleenplottausta."
+msgid "Join a pool and get consistent XSHIB farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgstr "Liity pooliin ja saat tasaisen XSHIB-tuoton. Keskimääräinen tuotto on sama, mutta hajonta on pienempi kuin itse poolaamalla. Aseta plotit osoittamaan Plot-NFT:hen. Voit vaihtaa helposti poolia ilman uudelleenplottausta."
 
 #: src/components/plot/add/PlotAddNFT.tsx:133
-msgid "Join a pool and get more consistent XTX farming rewards. Create a plot NFT and assign your new plots to a group."
-msgstr "Liity pooliin ja saat tasaisen XTX-tuoton. Keskimääräinen tuotto on sama, mutta hajonta on pienempi kuin itse poolaamalla. Luo Plot-NFT ja aseta uudet plotit osoittamaan Plot-NFT:hen."
+msgid "Join a pool and get more consistent XSHIB farming rewards. Create a plot NFT and assign your new plots to a group."
+msgstr "Liity pooliin ja saat tasaisen XSHIB-tuoton. Keskimääräinen tuotto on sama, mutta hajonta on pienempi kuin itse poolaamalla. Luo Plot-NFT ja aseta uudet plotit osoittamaan Plot-NFT:hen."
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:63
 msgid "K-Size"
@@ -1429,8 +1429,8 @@ msgid "Not found Plots"
 msgstr "Ei löydettyjä Plot-tiedostoja"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:188
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XTX reward for pooling plots."
-msgstr "Huomaa, että tämä ei muuta poolauksen maksuosoitteitasi. Tämä vaikuttaa vain vanhan formaatin plotteihin, ja 0,25 XTX palkintoon poolausploteissa."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XSHIB reward for pooling plots."
+msgstr "Huomaa, että tämä ei muuta poolauksen maksuosoitteitasi. Tämä vaikuttaa vain vanhan formaatin plotteihin, ja 0,25 XSHIB palkintoon poolausploteissa."
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:118
 #: src/components/plotNFT/PlotNFTCard.tsx:160
@@ -1745,7 +1745,7 @@ msgid "Plots Passed Filter"
 msgstr "Plotteja Päässyt Filtteristä"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:35
-msgid "Plots are allocated space on your hard drive used to farm and earn Taco. <0>Learn more</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn SHIBgreen. <0>Learn more</0>"
 msgstr "Plotit ovat levyn tilavarauksia, joilla tuotetaan ja ansaitaan Chioja. <0>Katso lisää</0>"
 
 #: src/components/plot/queue/PlotQueueIndicator.tsx:34
@@ -2100,7 +2100,7 @@ msgid "Select Wallet Type"
 msgstr "Valitse Lompakkotyyppi"
 
 #: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:25
-msgid "Select the final destination for the folder where you would like the plot to be stored. We recommend you use a large slow hard drive (like external XTX)."
+msgid "Select the final destination for the folder where you would like the plot to be stored. We recommend you use a large slow hard drive (like external XSHIB)."
 msgstr "Valitse lopullinen kohdehakemisto plot-tiedostolle. Suosittelemme isoa massamuistia (esim. ulkoinen kovalevy)."
 
 #: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:41
@@ -2135,8 +2135,8 @@ msgid "Self Pooling"
 msgstr "Itsepoolaus"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:105
-msgid "Self pool. When you win a block you will earn XTX rewards."
-msgstr "Itsepoolaus. Kun voitat lohkon, ansaitset XTX-kolikoita."
+msgid "Self pool. When you win a block you will earn XSHIB rewards."
+msgstr "Itsepoolaus. Kun voitat lohkon, ansaitset XSHIB-kolikoita."
 
 #: src/components/trading/CreateOffer.jsx:164
 #: src/components/trading/TradesTable.tsx:47
@@ -2213,8 +2213,8 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr "Ei lisää lopullista hakemistoa harvesteriin farmaroitavaksi"
 
 #: src/components/pool/PoolHero.tsx:26
-msgid "Smooth out your XTX farming rewards by joining a pool."
-msgstr "Tasaa XTX-farmauspalkkioita liittymällä pooliin."
+msgid "Smooth out your XSHIB farming rewards by joining a pool."
+msgstr "Tasaa XSHIB-farmauspalkkioita liittymällä pooliin."
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:60
 msgid "Something went wrong"
@@ -2249,8 +2249,8 @@ msgstr "Käyttöajanjakson pituus (lohkojen määrä)"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:401
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:448
-msgid "Spending Limit (taco per interval): {0}"
-msgstr "Käyttöraja (Tacoa/ajanjakso):{0}"
+msgid "Spending Limit (shibgreen per interval): {0}"
+msgstr "Käyttöraja (SHIBgreena/ajanjakso):{0}"
 
 #: src/components/fullNode/FullNode.jsx:100
 msgid "State"
@@ -2298,8 +2298,8 @@ msgstr "Tila:"
 #~ msgstr "Sub Block Height"
 
 #: src/components/block/Block.jsx:338
-#~ msgid "Sub Block at height {0} in the Taco blockchain"
-#~ msgstr "Sub Block at height {0} in the Taco blockchain"
+#~ msgid "Sub Block at height {0} in the SHIBgreen blockchain"
+#~ msgstr "Sub Block at height {0} in the SHIBgreen blockchain"
 
 #: src/components/app/AppPassPrompt.tsx:199
 #: src/components/wallet/did/WalletDID.tsx:886
@@ -2332,23 +2332,23 @@ msgstr "Synkronoi <0/>/<1/>"
 #~ msgstr "Syncing {progress}/{tip}"
 
 #: src/components/farm/card/FarmCardBlockRewards.tsx:15
-#~ msgid "TXTX Block Rewards"
+#~ msgid "TXSHIB Block Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardCoinbaseRewards.tsx:12
-#~ msgid "TXTX Farming Rewards"
+#~ msgid "TXSHIB Farming Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardFeesReward.tsx:12
-#~ msgid "TXTX Fees Collected"
+#~ msgid "TXSHIB Fees Collected"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardUserFees.tsx:12
-#~ msgid "TXTX User Fees"
-#~ msgstr "TXTX User Fees"
+#~ msgid "TXSHIB User Fees"
+#~ msgstr "TXSHIB User Fees"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:15
-#~ msgid "TXTX User Transaction Fees"
+#~ msgid "TXSHIB User Transaction Fees"
 #~ msgstr ""
 
 #: src/components/pool/PoolInfo.tsx:37
@@ -2434,8 +2434,8 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Kokonaistransaktioveloitukset tässä lohkossa. Suoritetaan farmarille."
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:102
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XTX address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
-msgstr "Nämä ovat ohjeet siitä, miten farmari haluaa saada maksun. Oletuksena tämä on XTX-osoite, mutta se voidaan asettaa mihin tahansa merkkijonoon, jonka koko on alle 1024 merkkiä, joten se voi edustaa toista lohkoketjua tai maksujärjestelmätunnusta."
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XSHIB address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgstr "Nämä ovat ohjeet siitä, miten farmari haluaa saada maksun. Oletuksena tämä on XSHIB-osoite, mutta se voidaan asettaa mihin tahansa merkkijonoon, jonka koko on alle 1024 merkkiä, joten se voi edustaa toista lohkoketjua tai maksujärjestelmätunnusta."
 
 #: src/components/plot/PlotsFailed.tsx:40
 msgid "These plots are invalid, you might want to delete them."
@@ -2457,7 +2457,7 @@ msgid "This feature is available only from the GUI."
 msgstr "Tämä ominaisuus käytettävissä ainoastaan graafisessa käyttöliittymässä."
 
 #: src/components/wallet/card/WalletCardSpendableBalance.tsx:26
-msgid "This is the amount of Taco that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Taco that you have just spent but is not yet in the blockchain."
+msgid "This is the amount of SHIBgreen that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and SHIBgreen that you have just spent but is not yet in the blockchain."
 msgstr "Transaktioihin käytettävissä oleva Chiojen määrä. Ei sisällä avoimia farmarin palkkioita, avoimia saapuvia transaktioita eikä lähetettyjä, mutta vahvistamattomia transaktioita."
 
 #: src/components/wallet/card/WalletCardPendingChange.tsx:26
@@ -2477,7 +2477,7 @@ msgid "This is the time the block was created by the farmer, which is before it 
 msgstr "Ajankohta jolloin farmari on luonut lohkon. Aikatodiste viimeistelee lohkon tämän ajankohdan jälkeen"
 
 #: src/components/wallet/card/WalletCardTotalBalance.tsx:34
-msgid "This is the total amount of taco in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of shibgreen in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr "Yksityisten avaimiesi hallinoimien Chiojen kokonaissumma lohkoketjussa. Sisälytää jäädytetyt palkkiot, mutta ei tulevia tai lähteviä transaktioita."
 
 #: src/components/wallet/card/WalletCardPendingTotalBalance.tsx:29
@@ -2523,8 +2523,8 @@ msgid "This trade was included on blockchain at this block height"
 msgstr "Kauppa on sisällytetty lohkoketjuun tässä lohkokorkeudessa"
 
 #: src/components/app/AppTimeBombAlert.tsx:19
-msgid "This version of Taco is no longer compatible with the blockchain and can not safely farm."
-msgstr "Tämä Tacon versio ei ole enää yhteensopiva lohkoketjun kanssa."
+msgid "This version of SHIBgreen is no longer compatible with the blockchain and can not safely farm."
+msgstr "Tämä SHIBgreenn versio ei ole enää yhteensopiva lohkoketjun kanssa."
 
 #: src/components/fullNode/FullNode.jsx:92
 msgid "Time Created"
@@ -2548,8 +2548,8 @@ msgstr "Osoitteeseen"
 msgid "Total Balance"
 msgstr "Kokonaissaldo"
 
-#: src/components/farm/card/FarmCardTotalTacoFarmed.tsx:15
-#~ msgid "Total Taco Farmed"
+#: src/components/farm/card/FarmCardTotalSHIBgreenFarmed.tsx:15
+#~ msgid "Total SHIBgreen Farmed"
 #~ msgstr ""
 
 #: src/components/fullNode/card/FullNodeCardTotalIterations.tsx:20
@@ -2733,7 +2733,7 @@ msgstr "Lompakkoa ei löydy"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.tacoWallet"
+#~ msgid "WalletItem.shibgreenWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48
@@ -2770,7 +2770,7 @@ msgid "Want to Join a Pool? Create a Plot NFT"
 msgstr "Haluatko liittyä pooliin? Luo Plot-NFT"
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:139
-msgid "Want to earn more Taco? Add more plots to your farm."
+msgid "Want to earn more SHIBgreen? Add more plots to your farm."
 msgstr "Haluatko ansaita Chioja? Lisää plot-tiedostoja farmiisi."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:86
@@ -2799,8 +2799,8 @@ msgid "Weight is the total added difficulty of all sub blocks up to and includin
 msgstr "Paino on kaikkien tähänastisten lohkojen vaikeuskerroin"
 
 #: src/components/selectKey/SelectKey.tsx:183
-msgid "Welcome to Taco. Please log in with an existing key, or create a new key."
-msgstr "Tervetuloa Tacoan. Kirjaudu sisään avaimella tai luo uusi avain."
+msgid "Welcome to SHIBgreen. Please log in with an existing key, or create a new key."
+msgstr "Tervetuloa SHIBgreenan. Kirjaudu sisään avaimella tai luo uusi avain."
 
 #: src/components/wallet/WalletAdd.tsx:66
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
@@ -2874,8 +2874,8 @@ msgid "You need to claim your rewards first"
 msgstr "Sinun täytyy lunastaa ensin palkkiosi"
 
 #: src/components/app/AppTimeBomb.tsx:28
-#~ msgid "You need to upgrade the Taco application as this version will stop working soon!"
-#~ msgstr "You need to upgrade the Taco application as this version will stop working soon!"
+#~ msgid "You need to upgrade the SHIBgreen application as this version will stop working soon!"
+#~ msgstr "You need to upgrade the SHIBgreen application as this version will stop working soon!"
 
 #: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:37
 msgid "You need {currencyCode} to join a pool."
@@ -2998,8 +2998,8 @@ msgstr "{0} pistettä {1} - {2} tuntia sitten"
 msgid "{currencyCode} Block Rewards"
 msgstr "{currencyCode} Lohkopalkkiot"
 
-#: src/components/farm/card/FarmCardTotalTacoFarmed.tsx:29
-msgid "{currencyCode} Total Taco Farmed"
+#: src/components/farm/card/FarmCardTotalSHIBgreenFarmed.tsx:29
+msgid "{currencyCode} Total SHIBgreen Farmed"
 msgstr "{currencyCode} Chioja Farmaroitu"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:28

@@ -1,11 +1,11 @@
 from dataclasses import dataclass
 from typing import Optional
 
-from taco.protocols.wallet_protocol import CoinState
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.ints import uint32, uint64
-from taco.util.streamable import Streamable, streamable
+from shibgreen.protocols.wallet_protocol import CoinState
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.util.ints import uint32, uint64
+from shibgreen.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

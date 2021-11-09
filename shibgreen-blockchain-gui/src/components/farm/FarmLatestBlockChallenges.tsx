@@ -2,7 +2,7 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import { useSelector } from 'react-redux';
 import { Typography } from '@material-ui/core';
-import { Link, Table, Card } from '@taco/core';
+import { Link, Table, Card } from '@shibgreen/core';
 import type { RootState } from '../../modules/rootReducer';
 import type { Row } from '../core/components/Table/Table';
 
@@ -62,13 +62,13 @@ export default function FarmLatestBlockChallenges() {
       />
       <Typography variant="caption">
         <Trans>
-          *Want to explore Taco’s blocks further? Check out{' '}
+          *Want to explore SHIBgreen’s blocks further? Check out{' '}
           <Link
             color="primary"
-            href="https://alltheblocks.net/taco"
+            href="https://alltheblocks.net/shibgreen"
             target="_blank"
           >
-            Taco Explorer
+            SHIBgreen Explorer
           </Link>{' '}
           built by an open source developer.
         </Trans>

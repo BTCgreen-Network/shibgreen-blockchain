@@ -6,10 +6,10 @@ import time
 import pytest
 import logging
 
-from taco.protocols import full_node_protocol
-from taco.types.peer_info import PeerInfo
-from taco.util.ints import uint16
-from taco.wallet.transaction_record import TransactionRecord
+from shibgreen.protocols import full_node_protocol
+from shibgreen.types.peer_info import PeerInfo
+from shibgreen.util.ints import uint16
+from shibgreen.wallet.transaction_record import TransactionRecord
 from tests.connection_utils import connect_and_get_peer
 from tests.setup_nodes import bt, self_hostname, setup_simulators_and_wallets
 from tests.time_out_assert import time_out_assert

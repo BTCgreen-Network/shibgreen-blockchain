@@ -6,26 +6,26 @@ from typing import Any, Callable, Dict, List, Optional
 
 from aiohttp import WSCloseCode, WSMessage, WSMsgType
 
-from taco.cmds.init_funcs import taco_full_version_str
-from taco.protocols.protocol_message_types import ProtocolMessageTypes
-from taco.protocols.protocol_state_machine import message_response_ok
-from taco.protocols.protocol_timing import INTERNAL_PROTOCOL_ERROR_BAN_SECONDS
-from taco.protocols.shared_protocol import Capability, Handshake
-from taco.server.outbound_message import Message, NodeType, make_msg
-from taco.server.rate_limits import RateLimiter
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.peer_info import PeerInfo
-from taco.util.errors import Err, ProtocolError
-from taco.util.ints import uint8, uint16
+from shibgreen.cmds.init_funcs import shibgreen_full_version_str
+from shibgreen.protocols.protocol_message_types import ProtocolMessageTypes
+from shibgreen.protocols.protocol_state_machine import message_response_ok
+from shibgreen.protocols.protocol_timing import INTERNAL_PROTOCOL_ERROR_BAN_SECONDS
+from shibgreen.protocols.shared_protocol import Capability, Handshake
+from shibgreen.server.outbound_message import Message, NodeType, make_msg
+from shibgreen.server.rate_limits import RateLimiter
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.peer_info import PeerInfo
+from shibgreen.util.errors import Err, ProtocolError
+from shibgreen.util.ints import uint8, uint16
 
 # Each message is prepended with LENGTH_BYTES bytes specifying the length
-from taco.util.network import class_for_type, is_localhost
+from shibgreen.util.network import class_for_type, is_localhost
 
 # Max size 2^(8*4) which is around 4GiB
 LENGTH_BYTES: int = 4
 
 
-class WSTacoConnection:
+class WSSHIBgreenConnection:
     """
     Represents a connection to another node. Local host and port are ours, while peer host and
     port are the host and port of the peer that we are connected to. Node_id and connection_type are
@@ -71,7 +71,7 @@ class WSTacoConnection:
         self.is_outbound = is_outbound
         self.is_feeler = is_feeler
 
-        # TacoConnection metrics
+        # SHIBgreenConnection metrics
         self.creation_time = time.time()
         self.bytes_read = 0
         self.bytes_written = 0
@@ -113,9 +113,9 @@ class WSTacoConnection:
             outbound_handshake = make_msg(
                 ProtocolMessageTypes.handshake,
                 Handshake(
-                    'taco-' + network_id,
+                    'shibgreen-' + network_id,
                     protocol_version,
-                    taco_full_version_str(),
+                    shibgreen_full_version_str(),
                     uint16(server_port),
                     uint8(local_type.value),
                     [(uint16(Capability.BASE.value), "1")],
@@ -136,7 +136,7 @@ class WSTacoConnection:
 
             if message_type != ProtocolMessageTypes.handshake:
                 raise ProtocolError(Err.INVALID_HANDSHAKE)
-            if inbound_handshake.network_id != 'taco-' + network_id:
+            if inbound_handshake.network_id != 'shibgreen-' + network_id:
                 raise ProtocolError(Err.INCOMPATIBLE_NETWORK_ID)
 
             self.version = inbound_handshake.software_version
@@ -163,14 +163,14 @@ class WSTacoConnection:
                 raise ProtocolError(Err.INVALID_HANDSHAKE)
 
             inbound_handshake = Handshake.from_bytes(message.data)
-            if inbound_handshake.network_id != 'taco-' + network_id:
+            if inbound_handshake.network_id != 'shibgreen-' + network_id:
                 raise ProtocolError(Err.INCOMPATIBLE_NETWORK_ID)
             outbound_handshake = make_msg(
                 ProtocolMessageTypes.handshake,
                 Handshake(
-                    'taco-' + network_id,
+                    'shibgreen-' + network_id,
                     protocol_version,
-                    taco_full_version_str(),
+                    shibgreen_full_version_str(),
                     uint16(server_port),
                     uint8(local_type.value),
                     [(uint16(Capability.BASE.value), "1")],

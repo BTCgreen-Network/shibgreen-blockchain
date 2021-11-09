@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { Flex } from '@taco/core';
+import { Flex } from '@shibgreen/core';
 import {
   Typography,
   Grid,

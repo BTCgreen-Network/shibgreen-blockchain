@@ -3,7 +3,7 @@ import { useHistory, useRouteMatch } from "react-router";
 import { Trans } from '@lingui/macro';
 import { Grid, Typography } from '@material-ui/core';
 import { Share as ShareIcon, Speed as SpeedIcon, HomeWork as HomeWorkIcon } from '@material-ui/icons';
-import { Flex } from '@taco/core';
+import { Flex } from '@shibgreen/core';
 import WalletCreateCard from './WalletCreateCard';
 
 export default function WalletCreateList() {

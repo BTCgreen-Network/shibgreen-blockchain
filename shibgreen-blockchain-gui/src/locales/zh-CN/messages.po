@@ -6,16 +6,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: zh_CN\n"
-"Project-Id-Version: taco-blockchain\n"
+"Project-Id-Version: shibgreen-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2021-09-17 17:39\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: taco-blockchain\n"
+"X-Crowdin-Project: shibgreen-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /[Taco-Network.taco-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[SHIBgreen-Network.shibgreen-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -23,7 +23,7 @@ msgid "(Optional)"
 msgstr "（可选）"
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:64
-msgid "*Want to explore Taco’s blocks further? Check out <0>Taco Explorer</0> built by an open source developer."
+msgid "*Want to explore SHIBgreen’s blocks further? Check out <0>SHIBgreen Explorer</0> built by an open source developer."
 msgstr "* 想要进一步了解奇亚？来看看一位开源开发者创建的 <0>奇亚区块浏览器</0>。"
 
 #: src/components/plot/add/PlotAddNFT.tsx:123
@@ -48,8 +48,8 @@ msgstr "收割机是一个在存有农田文件的机器上运行的服务。农
 
 #: src/electron/main.tsx:422
 #: src/electron/main.tsx:509
-msgid "About Taco Blockchain"
-msgstr "关于奇亚Taco区块链项目"
+msgid "About SHIBgreen Blockchain"
+msgstr "关于奇亚SHIBgreen区块链项目"
 
 #: src/components/trading/ViewOffer.jsx:74
 msgid "Accept"
@@ -234,7 +234,7 @@ msgid "Block VDF Iterations"
 msgstr "区块可验证延迟函数迭代"
 
 #: src/components/block/Block.jsx:337
-msgid "Block at height {0} in the Taco blockchain"
+msgid "Block at height {0} in the SHIBgreen blockchain"
 msgstr "奇亚区块链上高度为 {0} 的区块"
 
 #: src/components/fullNode/FullNode.jsx:331
@@ -340,15 +340,15 @@ msgid "Chat on KeyBase"
 msgstr "在Keybase上参与讨论"
 
 #: src/electron/main.tsx:419
-msgid "Taco"
+msgid "SHIBgreen"
 msgstr "奇亚"
 
 #: src/electron/main.tsx:358
-msgid "Taco Blockchain Wiki"
+msgid "SHIBgreen Blockchain Wiki"
 msgstr "奇亚区块链项目维基"
 
 #: src/components/wallet/standard/WalletStandard.tsx:652
-msgid "Taco Wallet"
+msgid "SHIBgreen Wallet"
 msgstr "奇亚钱包"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:36
@@ -798,7 +798,7 @@ msgid "Enter a strong passphrase to secure your keys:"
 msgstr ""
 
 #: src/components/wallet/WalletImport.tsx:146
-msgid "Enter the 24 word mnemonic that you have saved in order to restore your Taco wallet."
+msgid "Enter the 24 word mnemonic that you have saved in order to restore your SHIBgreen wallet."
 msgstr "请输入你保存的24个助记词来恢复奇亚钱包"
 
 #: src/components/settings/RemovePassphrasePrompt.tsx:115
@@ -817,7 +817,7 @@ msgid "Error"
 msgstr "错误"
 
 #: src/components/wallet/standard/WalletStandard.tsx:460
-msgid "Error: Cannot send taco to coloured address. Please enter a taco address."
+msgid "Error: Cannot send shibgreen to coloured address. Please enter a shibgreen address."
 msgstr "错误：无法发送奇亚到染色地址。请输入奇亚钱包地址。"
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:20
@@ -940,7 +940,7 @@ msgid "Fee"
 msgstr "费用"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
-#~ msgid "Fee (TXTX)"
+#~ msgid "Fee (TXSHIB)"
 #~ msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
@@ -1145,16 +1145,16 @@ msgid "Join a Pool"
 msgstr "加入农业合作社"
 
 #: src/components/plot/add/PlotAddNFT.tsx:44
-msgid "Join a pool and get consistent XTX farming rewards. The average returns are the same, but it is much less volatile."
-msgstr "加入农业合作社来获得持续的XTX耕种收益。平均回报是相同的，但是收益会更加稳定。"
+msgid "Join a pool and get consistent XSHIB farming rewards. The average returns are the same, but it is much less volatile."
+msgstr "加入农业合作社来获得持续的XSHIB耕种收益。平均回报是相同的，但是收益会更加稳定。"
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:59
-msgid "Join a pool and get consistent XTX farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
-msgstr "加入农业合作社来获得持续的XTX耕种收益。平均回报是相同的，但是收益会更加稳定。为已开垦的农田分配农田NFT。你可以轻松切换耕种池，而不比重新开垦现有农田。"
+msgid "Join a pool and get consistent XSHIB farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgstr "加入农业合作社来获得持续的XSHIB耕种收益。平均回报是相同的，但是收益会更加稳定。为已开垦的农田分配农田NFT。你可以轻松切换耕种池，而不比重新开垦现有农田。"
 
 #: src/components/plot/add/PlotAddNFT.tsx:133
-msgid "Join a pool and get more consistent XTX farming rewards. Create a plot NFT and assign your new plots to a group."
-msgstr "加入农业合作社来获得持续的XTX耕种收益。创建一个农田NFT，然后将新农田分配到组。"
+msgid "Join a pool and get more consistent XSHIB farming rewards. Create a plot NFT and assign your new plots to a group."
+msgstr "加入农业合作社来获得持续的XSHIB耕种收益。创建一个农田NFT，然后将新农田分配到组。"
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:63
 msgid "K-Size"
@@ -1429,8 +1429,8 @@ msgid "Not found Plots"
 msgstr "未找到农田"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:188
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XTX reward for pooling plots."
-msgstr "请注意，这将不会改变你的合作社耕作支付地址。这只会影响旧农田文件，以及0.25XTX的合作社耕作奖励。"
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XSHIB reward for pooling plots."
+msgstr "请注意，这将不会改变你的合作社耕作支付地址。这只会影响旧农田文件，以及0.25XSHIB的合作社耕作奖励。"
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:118
 #: src/components/plotNFT/PlotNFTCard.tsx:160
@@ -1745,7 +1745,7 @@ msgid "Plots Passed Filter"
 msgstr "通过初筛的农田"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:35
-msgid "Plots are allocated space on your hard drive used to farm and earn Taco. <0>Learn more</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn SHIBgreen. <0>Learn more</0>"
 msgstr "农田就是在你的硬盘上分配的一块空间，用来收获奇亚币。<0>了解更多</0>"
 
 #: src/components/plot/queue/PlotQueueIndicator.tsx:34
@@ -2100,7 +2100,7 @@ msgid "Select Wallet Type"
 msgstr "选择钱包类别"
 
 #: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:25
-msgid "Select the final destination for the folder where you would like the plot to be stored. We recommend you use a large slow hard drive (like external XTX)."
+msgid "Select the final destination for the folder where you would like the plot to be stored. We recommend you use a large slow hard drive (like external XSHIB)."
 msgstr "选择您希望保存农田文件的最终输出文件夹。我们建议您使用大容量、慢速的硬盘（比如外置机械硬盘）。"
 
 #: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:41
@@ -2135,8 +2135,8 @@ msgid "Self Pooling"
 msgstr "自耕种"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:105
-msgid "Self pool. When you win a block you will earn XTX rewards."
-msgstr "自耕种。一旦发现新区块，你将得到全部XTX区块奖励。"
+msgid "Self pool. When you win a block you will earn XSHIB rewards."
+msgstr "自耕种。一旦发现新区块，你将得到全部XSHIB区块奖励。"
 
 #: src/components/trading/CreateOffer.jsx:164
 #: src/components/trading/TradesTable.tsx:47
@@ -2213,8 +2213,8 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr "勾选此项，将不会自动把最终目录添加到收割机进行耕种"
 
 #: src/components/pool/PoolHero.tsx:26
-msgid "Smooth out your XTX farming rewards by joining a pool."
-msgstr "加入农业合作社来稳定XTX耕作收益。"
+msgid "Smooth out your XSHIB farming rewards by joining a pool."
+msgstr "加入农业合作社来稳定XSHIB耕作收益。"
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:60
 msgid "Something went wrong"
@@ -2249,7 +2249,7 @@ msgstr "支出迭代长度(区块数)"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:401
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:448
-msgid "Spending Limit (taco per interval): {0}"
+msgid "Spending Limit (shibgreen per interval): {0}"
 msgstr "消费限额（单位时间可消费的奇亚币）：{0}"
 
 #: src/components/fullNode/FullNode.jsx:100
@@ -2298,8 +2298,8 @@ msgstr "状态："
 #~ msgstr "Sub Block Height"
 
 #: src/components/block/Block.jsx:338
-#~ msgid "Sub Block at height {0} in the Taco blockchain"
-#~ msgstr "Sub Block at height {0} in the Taco blockchain"
+#~ msgid "Sub Block at height {0} in the SHIBgreen blockchain"
+#~ msgstr "Sub Block at height {0} in the SHIBgreen blockchain"
 
 #: src/components/app/AppPassPrompt.tsx:199
 #: src/components/wallet/did/WalletDID.tsx:886
@@ -2332,23 +2332,23 @@ msgstr "正在同步 <0/> / <1/>"
 #~ msgstr "Syncing {progress}/{tip}"
 
 #: src/components/farm/card/FarmCardBlockRewards.tsx:15
-#~ msgid "TXTX Block Rewards"
+#~ msgid "TXSHIB Block Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardCoinbaseRewards.tsx:12
-#~ msgid "TXTX Farming Rewards"
+#~ msgid "TXSHIB Farming Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardFeesReward.tsx:12
-#~ msgid "TXTX Fees Collected"
+#~ msgid "TXSHIB Fees Collected"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardUserFees.tsx:12
-#~ msgid "TXTX User Fees"
-#~ msgstr "TXTX User Fees"
+#~ msgid "TXSHIB User Fees"
+#~ msgstr "TXSHIB User Fees"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:15
-#~ msgid "TXTX User Transaction Fees"
+#~ msgid "TXSHIB User Transaction Fees"
 #~ msgstr ""
 
 #: src/components/pool/PoolInfo.tsx:37
@@ -2434,8 +2434,8 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "本区块上奖励给农民的全部交易费用。"
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:102
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XTX address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
-msgstr "这是农民耕种奖励的支付方式。默认情况下，这将是一个XTX钱包地址，但是你可以设置任意长度小于1024的字符串，也就是说，你可以指定其它区块链或者支付系统标识。"
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XSHIB address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgstr "这是农民耕种奖励的支付方式。默认情况下，这将是一个XSHIB钱包地址，但是你可以设置任意长度小于1024的字符串，也就是说，你可以指定其它区块链或者支付系统标识。"
 
 #: src/components/plot/PlotsFailed.tsx:40
 msgid "These plots are invalid, you might want to delete them."
@@ -2457,7 +2457,7 @@ msgid "This feature is available only from the GUI."
 msgstr "此功能只在图形界面中提供。"
 
 #: src/components/wallet/card/WalletCardSpendableBalance.tsx:26
-msgid "This is the amount of Taco that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Taco that you have just spent but is not yet in the blockchain."
+msgid "This is the amount of SHIBgreen that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and SHIBgreen that you have just spent but is not yet in the blockchain."
 msgstr "这是你目前可以交易的奇亚币数额。该数额不包含处理中的农场奖励、收入交易，以及未经区块链确认的支付交易。"
 
 #: src/components/wallet/card/WalletCardPendingChange.tsx:26
@@ -2477,7 +2477,7 @@ msgid "This is the time the block was created by the farmer, which is before it 
 msgstr "此时间是该区块被农民创建的时间，因此，此时间会早于其被时间认证机制最终确认的时间。"
 
 #: src/components/wallet/card/WalletCardTotalBalance.tsx:34
-msgid "This is the total amount of taco in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of shibgreen in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr "这里是你的私钥所控制的, 到目前最新子块高度为止的全部奇亚数. 包含被冻结的耕种奖励, 但不包含待处理的收入与支出."
 
 #: src/components/wallet/card/WalletCardPendingTotalBalance.tsx:29
@@ -2523,7 +2523,7 @@ msgid "This trade was included on blockchain at this block height"
 msgstr "该交易在链上的区块高度"
 
 #: src/components/app/AppTimeBombAlert.tsx:19
-msgid "This version of Taco is no longer compatible with the blockchain and can not safely farm."
+msgid "This version of SHIBgreen is no longer compatible with the blockchain and can not safely farm."
 msgstr "此版本的奇亚客户端与区块链已经不再兼容，无法安全地种植。"
 
 #: src/components/fullNode/FullNode.jsx:92
@@ -2548,8 +2548,8 @@ msgstr "目标地址"
 msgid "Total Balance"
 msgstr "总余额"
 
-#: src/components/farm/card/FarmCardTotalTacoFarmed.tsx:15
-#~ msgid "Total Taco Farmed"
+#: src/components/farm/card/FarmCardTotalSHIBgreenFarmed.tsx:15
+#~ msgid "Total SHIBgreen Farmed"
 #~ msgstr ""
 
 #: src/components/fullNode/card/FullNodeCardTotalIterations.tsx:20
@@ -2733,7 +2733,7 @@ msgstr "钱包不存在"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.tacoWallet"
+#~ msgid "WalletItem.shibgreenWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48
@@ -2770,7 +2770,7 @@ msgid "Want to Join a Pool? Create a Plot NFT"
 msgstr "想要加入农业合作社？创建一个农田NFT"
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:139
-msgid "Want to earn more Taco? Add more plots to your farm."
+msgid "Want to earn more SHIBgreen? Add more plots to your farm."
 msgstr "想要获得更多奇亚币？ 给你的农场多开垦一些农田吧。"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:86
@@ -2799,7 +2799,7 @@ msgid "Weight is the total added difficulty of all sub blocks up to and includin
 msgstr "权重是施加给所有子块包括目前这块的额外的困难度."
 
 #: src/components/selectKey/SelectKey.tsx:183
-msgid "Welcome to Taco. Please log in with an existing key, or create a new key."
+msgid "Welcome to SHIBgreen. Please log in with an existing key, or create a new key."
 msgstr "欢迎来到奇亚。请用已有的密钥登录，或者创建一个新的密钥。"
 
 #: src/components/wallet/WalletAdd.tsx:66
@@ -2874,8 +2874,8 @@ msgid "You need to claim your rewards first"
 msgstr "你需要先领取你的奖励。"
 
 #: src/components/app/AppTimeBomb.tsx:28
-#~ msgid "You need to upgrade the Taco application as this version will stop working soon!"
-#~ msgstr "You need to upgrade the Taco application as this version will stop working soon!"
+#~ msgid "You need to upgrade the SHIBgreen application as this version will stop working soon!"
+#~ msgstr "You need to upgrade the SHIBgreen application as this version will stop working soon!"
 
 #: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:37
 msgid "You need {currencyCode} to join a pool."
@@ -2998,8 +2998,8 @@ msgstr "{0} 积点 {1} - {2} 小时前"
 msgid "{currencyCode} Block Rewards"
 msgstr "{currencyCode} 区块奖励"
 
-#: src/components/farm/card/FarmCardTotalTacoFarmed.tsx:29
-msgid "{currencyCode} Total Taco Farmed"
+#: src/components/farm/card/FarmCardTotalSHIBgreenFarmed.tsx:29
+msgid "{currencyCode} Total SHIBgreen Farmed"
 msgstr "{currencyCode} 收获的奇亚币总计"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:28

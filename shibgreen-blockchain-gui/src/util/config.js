@@ -6,23 +6,23 @@ const lodash = require('lodash');
 
 // defaults used in case of error point to the localhost daemon & its certs
 let self_hostname = 'localhost';
-global.daemon_rpc_ws = `wss://${self_hostname}:44476`;
+global.daemon_rpc_ws = `wss://${self_hostname}:44428`;
 global.cert_path = 'config/ssl/daemon/private_daemon.crt';
 global.key_path = 'config/ssl/daemon/private_daemon.key';
 
 function loadConfig(net) {
   try {
-    // check if TACO_ROOT is set. it overrides 'net'
+    // check if SHIBGREEN_ROOT is set. it overrides 'net'
     const config_root_dir =
-      'TACO_ROOT' in process.env
-        ? process.env.TACO_ROOT
-        : path.join(os.homedir(), '.taco', net);
+      'SHIBGREEN_ROOT' in process.env
+        ? process.env.SHIBGREEN_ROOT
+        : path.join(os.homedir(), '.shibgreen', net);
     const config = yaml.load(
       fs.readFileSync(path.join(config_root_dir, 'config/config.yaml'), 'utf8'),
     );
 
     self_hostname = lodash.get(config, 'ui.daemon_host', 'localhost'); // jshint ignore:line
-    const daemon_port = lodash.get(config, 'ui.daemon_port', 44476); // jshint ignore:line
+    const daemon_port = lodash.get(config, 'ui.daemon_port', 44428); // jshint ignore:line
 
     // store these in the global object so they can be used by both main and renderer processes
     global.daemon_rpc_ws = `wss://${self_hostname}:${daemon_port}`;

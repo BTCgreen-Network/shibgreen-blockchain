@@ -1,14 +1,14 @@
 from dataclasses import dataclass
 from typing import List, Optional
 
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.pot_iterations import calculate_ip_iters, calculate_sp_iters
-from taco.types.blockchain_format.classgroup import ClassgroupElement
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.sub_epoch_summary import SubEpochSummary
-from taco.util.ints import uint8, uint32, uint64, uint128
-from taco.util.streamable import Streamable, streamable
+from shibgreen.consensus.constants import ConsensusConstants
+from shibgreen.consensus.pot_iterations import calculate_ip_iters, calculate_sp_iters
+from shibgreen.types.blockchain_format.classgroup import ClassgroupElement
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.blockchain_format.sub_epoch_summary import SubEpochSummary
+from shibgreen.util.ints import uint8, uint32, uint64, uint128
+from shibgreen.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

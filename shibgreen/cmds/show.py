@@ -19,16 +19,16 @@ async def show_async(
 
     from time import localtime, struct_time
     from typing import List, Optional
-    from taco.consensus.block_record import BlockRecord
-    from taco.rpc.full_node_rpc_client import FullNodeRpcClient
-    from taco.server.outbound_message import NodeType
-    from taco.types.full_block import FullBlock
-    from taco.util.bech32m import encode_puzzle_hash
-    from taco.util.byte_types import hexstr_to_bytes
-    from taco.util.config import load_config
-    from taco.util.default_root import DEFAULT_ROOT_PATH
-    from taco.util.ints import uint16
-    from taco.util.misc import format_bytes
+    from shibgreen.consensus.block_record import BlockRecord
+    from shibgreen.rpc.full_node_rpc_client import FullNodeRpcClient
+    from shibgreen.server.outbound_message import NodeType
+    from shibgreen.types.full_block import FullBlock
+    from shibgreen.util.bech32m import encode_puzzle_hash
+    from shibgreen.util.byte_types import hexstr_to_bytes
+    from shibgreen.util.config import load_config
+    from shibgreen.util.default_root import DEFAULT_ROOT_PATH
+    from shibgreen.util.ints import uint16
+    from shibgreen.util.misc import format_bytes
 
     try:
         config = load_config(DEFAULT_ROOT_PATH, "config.yaml")
@@ -62,7 +62,7 @@ async def show_async(
                 print(f"Current Blockchain Status: Not Synced. Peak height: {peak.height}")
             else:
                 print("\nSearching for an initial chain\n")
-                print("You may be able to expedite with 'taco show -a host:port' using a known node.\n")
+                print("You may be able to expedite with 'shibgreen show -a host:port' using a known node.\n")
 
             if peak is not None:
                 if peak.is_transaction_block:
@@ -154,7 +154,7 @@ async def show_async(
             print(node_stop, "Node stopped")
         if add_connection:
             if ":" not in add_connection:
-                print("Enter a valid IP and port in the following format: 10.5.4.3:18620")
+                print("Enter a valid IP and port in the following format: 10.5.4.3:7442")
             else:
                 ip, port = (
                     ":".join(add_connection.split(":")[:-1]),

@@ -7,7 +7,7 @@ import {
   AlertDialog,
   Flex,
   Card,
-} from '@taco/core';
+} from '@shibgreen/core';
 import {
   Grid,
   Typography,

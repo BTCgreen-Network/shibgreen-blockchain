@@ -2,17 +2,17 @@ from typing import Any, Dict, List, Optional
 
 import aiohttp
 
-from taco.cmds.units import units
-from taco.consensus.block_record import BlockRecord
-from taco.rpc.farmer_rpc_client import FarmerRpcClient
-from taco.rpc.full_node_rpc_client import FullNodeRpcClient
-from taco.rpc.wallet_rpc_client import WalletRpcClient
-from taco.util.config import load_config
-from taco.util.default_root import DEFAULT_ROOT_PATH
-from taco.util.ints import uint16
-from taco.util.misc import format_bytes
-from taco.util.misc import format_minutes
-from taco.util.network import is_localhost
+from shibgreen.cmds.units import units
+from shibgreen.consensus.block_record import BlockRecord
+from shibgreen.rpc.farmer_rpc_client import FarmerRpcClient
+from shibgreen.rpc.full_node_rpc_client import FullNodeRpcClient
+from shibgreen.rpc.wallet_rpc_client import WalletRpcClient
+from shibgreen.util.config import load_config
+from shibgreen.util.default_root import DEFAULT_ROOT_PATH
+from shibgreen.util.ints import uint16
+from shibgreen.util.misc import format_bytes
+from shibgreen.util.misc import format_minutes
+from shibgreen.util.network import is_localhost
 
 SECONDS_PER_BLOCK = (24 * 3600) / 4608
 
@@ -212,9 +212,9 @@ async def summary(
         print("Farming")
 
     if amounts is not None:
-        print(f"Total taco farmed: {amounts['farmed_amount'] / units['taco']}")
-        print(f"User transaction fees: {amounts['fee_amount'] / units['taco']}")
-        print(f"Block rewards: {(amounts['farmer_reward_amount'] + amounts['pool_reward_amount']) / units['taco']}")
+        print(f"Total shibgreen farmed: {amounts['farmed_amount'] / units['shibgreen']}")
+        print(f"User transaction fees: {amounts['fee_amount'] / units['shibgreen']}")
+        print(f"Block rewards: {(amounts['farmer_reward_amount'] + amounts['pool_reward_amount']) / units['shibgreen']}")
         print(f"Last height farmed: {amounts['last_height_farmed']}")
 
     class PlotStats:
@@ -273,8 +273,8 @@ async def summary(
 
     if amounts is None:
         if wallet_not_running:
-            print("For details on farmed rewards and fees you should run 'taco start wallet' and 'taco wallet show'")
+            print("For details on farmed rewards and fees you should run 'shibgreen start wallet' and 'shibgreen wallet show'")
         elif wallet_not_ready:
-            print("For details on farmed rewards and fees you should run 'taco wallet show'")
+            print("For details on farmed rewards and fees you should run 'shibgreen wallet show'")
     else:
-        print("Note: log into your key using 'taco wallet show' to see rewards for each key")
+        print("Note: log into your key using 'shibgreen wallet show' to see rewards for each key")

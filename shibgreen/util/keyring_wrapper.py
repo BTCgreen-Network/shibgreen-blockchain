@@ -2,9 +2,9 @@ import asyncio
 import keyring as keyring_main
 
 from blspy import PrivateKey  # pyright: reportMissingImports=false
-from taco.util.default_root import DEFAULT_KEYS_ROOT_PATH
-from taco.util.file_keyring import FileKeyring
-from taco.util.misc import prompt_yes_no
+from shibgreen.util.default_root import DEFAULT_KEYS_ROOT_PATH
+from shibgreen.util.file_keyring import FileKeyring
+from shibgreen.util.misc import prompt_yes_no
 from keyrings.cryptfile.cryptfile import CryptFileKeyring  # pyright: reportMissingImports=false
 from keyring.backends.macOS import Keyring as MacKeyring
 from keyring.errors import KeyringError
@@ -18,15 +18,15 @@ from typing import Any, List, Optional, Tuple, Type, Union
 # WARNING: Changing the default passphrase will prevent passphrase-less users from accessing
 # their existing keys. Using a new default passphrase requires migrating existing users to
 # the new passphrase.
-DEFAULT_PASSPHRASE_IF_NO_MASTER_PASSPHRASE = "$ taco passphrase set # all the cool kids are doing it!"
+DEFAULT_PASSPHRASE_IF_NO_MASTER_PASSPHRASE = "$ shibgreen passphrase set # all the cool kids are doing it!"
 
-MAC_KEYCHAIN_MASTER_PASSPHRASE_SERVICE = "Taco Passphrase"
-MAC_KEYCHAIN_MASTER_PASSPHRASE_USER = "Taco Passphrase"
+MAC_KEYCHAIN_MASTER_PASSPHRASE_SERVICE = "SHIBgreen Passphrase"
+MAC_KEYCHAIN_MASTER_PASSPHRASE_USER = "SHIBgreen Passphrase"
 
 
 def check_macos_keychain_keys_present(mac_keychain: MacKeyring) -> bool:
     from keyring.credentials import SimpleCredential
-    from taco.util.keychain import default_keychain_user, default_keychain_service, get_private_key_user, MAX_KEYS
+    from shibgreen.util.keychain import default_keychain_user, default_keychain_service, get_private_key_user, MAX_KEYS
 
     keychain_user: str = default_keychain_user()
     keychain_service: str = default_keychain_service()
@@ -96,7 +96,7 @@ class KeyringWrapper:
         self.cached_passphrase = self._get_initial_cached_passphrase()
 
     def _configure_backend(self) -> Union[Any, FileKeyring]:
-        from taco.util.keychain import supports_keyring_passphrase
+        from shibgreen.util.keychain import supports_keyring_passphrase
 
         if self.keyring:
             raise Exception("KeyringWrapper has already been instantiated")
@@ -148,7 +148,7 @@ class KeyringWrapper:
         return None
 
     def _get_initial_cached_passphrase(self) -> str:
-        from taco.util.keychain import supports_os_passphrase_storage
+        from shibgreen.util.keychain import supports_os_passphrase_storage
 
         passphrase: Optional[str] = None
 
@@ -234,7 +234,7 @@ class KeyringWrapper:
         Sets a new master passphrase for the keyring
         """
 
-        from taco.util.keychain import (
+        from shibgreen.util.keychain import (
             KeyringCurrentPassphraseIsInvalid,
             KeyringRequiresMigration,
             supports_os_passphrase_storage,
@@ -340,12 +340,12 @@ class KeyringWrapper:
                 "passphrase."
             )
             print(
-                "Would you like to set a master passphrase now? Use 'taco passphrase set' to change the passphrase.\n"
+                "Would you like to set a master passphrase now? Use 'shibgreen passphrase set' to change the passphrase.\n"
             )
 
             response = prompt_yes_no("Set keyring master passphrase? (y/n) ")
             if response:
-                from taco.cmds.passphrase_funcs import prompt_for_new_passphrase
+                from shibgreen.cmds.passphrase_funcs import prompt_for_new_passphrase
 
                 # Prompt for a master passphrase and cache it
                 new_passphrase, save_passphrase = prompt_for_new_passphrase()
@@ -357,7 +357,7 @@ class KeyringWrapper:
                 )
             else:
                 print(
-                    "Will skip setting a master passphrase. Use 'taco passphrase set' to set the master passphrase.\n"
+                    "Will skip setting a master passphrase. Use 'shibgreen passphrase set' to set the master passphrase.\n"
                 )
         else:
             import colorama
@@ -374,7 +374,7 @@ class KeyringWrapper:
         return prompt_yes_no("Begin keyring migration? (y/n) ")
 
     def migrate_legacy_keys(self) -> MigrationResults:
-        from taco.util.keychain import get_private_key_user, Keychain, MAX_KEYS
+        from shibgreen.util.keychain import get_private_key_user, Keychain, MAX_KEYS
 
         print("Migrating contents from legacy keyring")
 
@@ -406,7 +406,7 @@ class KeyringWrapper:
         )
 
     def verify_migration_results(self, migration_results: MigrationResults) -> bool:
-        from taco.util.keychain import Keychain
+        from shibgreen.util.keychain import Keychain
 
         # Stop using the legacy keyring. This will direct subsequent reads to the new keyring.
         self.legacy_keyring = None
@@ -483,7 +483,7 @@ class KeyringWrapper:
         perform a before/after comparison of the keyring contents, and on success we'll prompt
         to cleanup the legacy keyring.
         """
-        from taco.cmds.passphrase_funcs import async_update_daemon_migration_completed_if_running
+        from shibgreen.cmds.passphrase_funcs import async_update_daemon_migration_completed_if_running
 
         # Make sure the user is ready to begin migration.
         response = self.confirm_migration()

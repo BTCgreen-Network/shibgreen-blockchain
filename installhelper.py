@@ -1,6 +1,6 @@
 #
 # Install helper code to manage inserting the correct version for the GUI
-# Gets the version from the result of "taco version"
+# Gets the version from the result of "shibgreen version"
 # Converts to proper symver format so NPM doesn't complain
 # Adds the version info to the package.json file
 #
@@ -47,17 +47,17 @@ def make_semver(version_str):
 
 
 def update_version():
-    with open(f"{os.path.dirname(__file__)}/taco-blockchain-gui/package.json") as f:
+    with open(f"{os.path.dirname(__file__)}/shibgreen-blockchain-gui/package.json") as f:
         data = json.load(f)
 
     version: str = "0.0"
-    output = subprocess.run(["taco", "version"], capture_output=True)
+    output = subprocess.run(["shibgreen", "version"], capture_output=True)
     if output.returncode == 0:
         version = str(output.stdout.strip(), "utf-8").splitlines()[-1]
 
     data["version"] = make_semver(version)
 
-    with open(f"{os.path.dirname(__file__)}/taco-blockchain-gui/package.json", "w") as w:
+    with open(f"{os.path.dirname(__file__)}/shibgreen-blockchain-gui/package.json", "w") as w:
         json.dump(data, indent=4, fp=w)
 
 

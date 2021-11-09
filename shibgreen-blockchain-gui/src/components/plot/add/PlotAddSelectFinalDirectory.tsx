@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 import { useFormContext } from 'react-hook-form';
-import { ButtonSelected, CardStep, Flex, TextField } from '@taco/core';
+import { ButtonSelected, CardStep, Flex, TextField } from '@shibgreen/core';
 import { Typography } from '@material-ui/core';
 import useSelectDirectory from '../../../hooks/useSelectDirectory';
 
@@ -25,7 +25,7 @@ export default function PlotAddSelectFinalDirectory() {
         <Trans>
           Select the final destination for the folder where you would like the
           plot to be stored. We recommend you use a large slow hard drive (like
-          external XTX).
+          external XSHIB).
         </Trans>
       </Typography>
 

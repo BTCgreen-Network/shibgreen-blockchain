@@ -2,15 +2,15 @@ import asyncio
 
 import pytest
 
-from taco.rpc.wallet_rpc_api import WalletRpcApi
-from taco.simulator.simulator_protocol import FarmNewBlockProtocol
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.mempool_inclusion_status import MempoolInclusionStatus
-from taco.types.peer_info import PeerInfo
-from taco.util.bech32m import encode_puzzle_hash
-from taco.util.ints import uint16
-from taco.wallet.util.wallet_types import WalletType
+from shibgreen.rpc.wallet_rpc_api import WalletRpcApi
+from shibgreen.simulator.simulator_protocol import FarmNewBlockProtocol
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.mempool_inclusion_status import MempoolInclusionStatus
+from shibgreen.types.peer_info import PeerInfo
+from shibgreen.util.bech32m import encode_puzzle_hash
+from shibgreen.util.ints import uint16
+from shibgreen.wallet.util.wallet_types import WalletType
 from tests.setup_nodes import self_hostname, setup_simulators_and_wallets
 from tests.time_out_assert import time_out_assert
 from tests.wallet.sync.test_wallet_sync import wallet_height_at_least
@@ -135,7 +135,7 @@ class TestRLWallet:
         assert await wallet.get_confirmed_balance() == fund_owners_initial_balance - 101
         assert await check_balance(api_user, user_wallet_id) == 100
         receiving_wallet = wallet_node_2.wallet_state_manager.main_wallet
-        address = encode_puzzle_hash(await receiving_wallet.get_new_puzzlehash(), "xtx")
+        address = encode_puzzle_hash(await receiving_wallet.get_new_puzzlehash(), "xshib")
         assert await receiving_wallet.get_spendable_balance() == 0
         val = await api_user.send_transaction({"wallet_id": user_wallet_id, "amount": 3, "fee": 2, "address": address})
         assert "transaction_id" in val
@@ -154,7 +154,7 @@ class TestRLWallet:
         await time_out_assert(15, wallet_height_at_least, True, wallet_node, 68)
         assert await check_balance(api_user, user_wallet_id) == 195
         # test spending
-        puzzle_hash = encode_puzzle_hash(await receiving_wallet.get_new_puzzlehash(), "xtx")
+        puzzle_hash = encode_puzzle_hash(await receiving_wallet.get_new_puzzlehash(), "xshib")
         val = await api_user.send_transaction(
             {"wallet_id": user_wallet_id, "amount": 105, "fee": 0, "address": puzzle_hash}
         )

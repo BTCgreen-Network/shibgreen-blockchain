@@ -3,15 +3,15 @@ import pathlib
 from multiprocessing import freeze_support
 from typing import Dict
 
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.default_constants import DEFAULT_CONSTANTS
-from taco.full_node.full_node import FullNode
-from taco.full_node.full_node_api import FullNodeAPI
-from taco.rpc.full_node_rpc_api import FullNodeRpcApi
-from taco.server.outbound_message import NodeType
-from taco.server.start_service import run_service
-from taco.util.config import load_config_cli
-from taco.util.default_root import DEFAULT_ROOT_PATH
+from shibgreen.consensus.constants import ConsensusConstants
+from shibgreen.consensus.default_constants import DEFAULT_CONSTANTS
+from shibgreen.full_node.full_node import FullNode
+from shibgreen.full_node.full_node_api import FullNodeAPI
+from shibgreen.rpc.full_node_rpc_api import FullNodeRpcApi
+from shibgreen.server.outbound_message import NodeType
+from shibgreen.server.start_service import run_service
+from shibgreen.util.config import load_config_cli
+from shibgreen.util.default_root import DEFAULT_ROOT_PATH
 
 # See: https://bugs.python.org/issue29288
 "".encode("idna")

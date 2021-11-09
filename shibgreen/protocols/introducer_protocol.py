@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from typing import List
 
-from taco.types.peer_info import TimestampedPeerInfo
-from taco.util.streamable import Streamable, streamable
+from shibgreen.types.peer_info import TimestampedPeerInfo
+from shibgreen.util.streamable import Streamable, streamable
 
 """
 Protocol to introducer

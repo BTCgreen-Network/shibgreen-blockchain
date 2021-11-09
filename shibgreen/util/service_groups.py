@@ -1,19 +1,19 @@
 from typing import KeysView, Generator
 
 SERVICES_FOR_GROUP = {
-    "all": "taco_harvester taco_timelord_launcher taco_timelord taco_farmer taco_full_node taco_wallet".split(),
-    "node": "taco_full_node".split(),
-    "harvester": "taco_harvester".split(),
-    "farmer": "taco_harvester taco_farmer taco_full_node taco_wallet".split(),
-    "farmer-no-wallet": "taco_harvester taco_farmer taco_full_node".split(),
-    "farmer-only": "taco_farmer".split(),
-    "timelord": "taco_timelord_launcher taco_timelord taco_full_node".split(),
-    "timelord-only": "taco_timelord".split(),
-    "timelord-launcher-only": "taco_timelord_launcher".split(),
-    "wallet": "taco_wallet taco_full_node".split(),
-    "wallet-only": "taco_wallet".split(),
-    "introducer": "taco_introducer".split(),
-    "simulator": "taco_full_node_simulator".split(),
+    "all": "shibgreen_harvester shibgreen_timelord_launcher shibgreen_timelord shibgreen_farmer shibgreen_full_node shibgreen_wallet".split(),
+    "node": "shibgreen_full_node".split(),
+    "harvester": "shibgreen_harvester".split(),
+    "farmer": "shibgreen_harvester shibgreen_farmer shibgreen_full_node shibgreen_wallet".split(),
+    "farmer-no-wallet": "shibgreen_harvester shibgreen_farmer shibgreen_full_node".split(),
+    "farmer-only": "shibgreen_farmer".split(),
+    "timelord": "shibgreen_timelord_launcher shibgreen_timelord shibgreen_full_node".split(),
+    "timelord-only": "shibgreen_timelord".split(),
+    "timelord-launcher-only": "shibgreen_timelord_launcher".split(),
+    "wallet": "shibgreen_wallet shibgreen_full_node".split(),
+    "wallet-only": "shibgreen_wallet".split(),
+    "introducer": "shibgreen_introducer".split(),
+    "simulator": "shibgreen_full_node_simulator".split(),
 }
 
 

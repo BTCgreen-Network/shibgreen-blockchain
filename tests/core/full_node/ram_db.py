@@ -2,12 +2,12 @@ from typing import Tuple
 
 import aiosqlite
 
-from taco.consensus.blockchain import Blockchain
-from taco.consensus.constants import ConsensusConstants
-from taco.full_node.block_store import BlockStore
-from taco.full_node.coin_store import CoinStore
-from taco.full_node.hint_store import HintStore
-from taco.util.db_wrapper import DBWrapper
+from shibgreen.consensus.blockchain import Blockchain
+from shibgreen.consensus.constants import ConsensusConstants
+from shibgreen.full_node.block_store import BlockStore
+from shibgreen.full_node.coin_store import CoinStore
+from shibgreen.full_node.hint_store import HintStore
+from shibgreen.util.db_wrapper import DBWrapper
 
 
 async def create_ram_blockchain(consensus_constants: ConsensusConstants) -> Tuple[aiosqlite.Connection, Blockchain]:

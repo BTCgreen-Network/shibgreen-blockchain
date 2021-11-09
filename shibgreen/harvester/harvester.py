@@ -5,10 +5,10 @@ from concurrent.futures.thread import ThreadPoolExecutor
 from pathlib import Path
 from typing import Callable, Dict, List, Optional, Tuple
 
-import taco.server.ws_connection as ws  # lgtm [py/import-and-import-from]
-from taco.consensus.constants import ConsensusConstants
-from taco.plotting.manager import PlotManager
-from taco.plotting.util import (
+import shibgreen.server.ws_connection as ws  # lgtm [py/import-and-import-from]
+from shibgreen.consensus.constants import ConsensusConstants
+from shibgreen.plotting.manager import PlotManager
+from shibgreen.plotting.util import (
     add_plot_directory,
     get_plot_directories,
     remove_plot_directory,
@@ -16,7 +16,7 @@ from taco.plotting.util import (
     PlotsRefreshParameter,
     PlotRefreshResult,
 )
-from taco.util.streamable import dataclass_from_dict
+from shibgreen.util.streamable import dataclass_from_dict
 
 log = logging.getLogger(__name__)
 
@@ -87,7 +87,7 @@ class Harvester:
         if update_result.loaded_plots > 0:
             self.event_loop.call_soon_threadsafe(self._state_changed, "plots")
 
-    def on_disconnect(self, connection: ws.WSTacoConnection):
+    def on_disconnect(self, connection: ws.WSSHIBgreenConnection):
         self.log.info(f"peer disconnected {connection.get_peer_logging()}")
         self._state_changed("close_connection")
 

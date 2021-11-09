@@ -2,11 +2,11 @@ import pytest
 
 from blspy import G2Element
 
-from taco.clvm.spend_sim import SpendSim, SimClient
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.program import Program
-from taco.types.spend_bundle import SpendBundle
-from taco.types.coin_spend import CoinSpend
+from shibgreen.clvm.spend_sim import SpendSim, SimClient
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.blockchain_format.program import Program
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.types.coin_spend import CoinSpend
 
 
 class TestSpendSim:

@@ -5,27 +5,27 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import yaml
 
-from taco import __version__
-from taco.consensus.coinbase import create_puzzlehash_for_pk
-from taco.ssl.create_ssl import (
+from shibgreen import __version__
+from shibgreen.consensus.coinbase import create_puzzlehash_for_pk
+from shibgreen.ssl.create_ssl import (
     ensure_ssl_dirs,
     generate_ca_signed_cert,
-    get_taco_ca_crt_key,
+    get_shibgreen_ca_crt_key,
     make_ca_cert,
     write_ssl_cert_and_key,
 )
-from taco.util.bech32m import encode_puzzle_hash
-from taco.util.config import (
-    create_default_taco_config,
+from shibgreen.util.bech32m import encode_puzzle_hash
+from shibgreen.util.config import (
+    create_default_shibgreen_config,
     initial_config_file,
     load_config,
     save_config,
     unflatten_properties,
 )
-from taco.util.ints import uint32
-from taco.util.keychain import Keychain
-from taco.util.path import mkdir
-from taco.util.ssl import (
+from shibgreen.util.ints import uint32
+from shibgreen.util.keychain import Keychain
+from shibgreen.util.path import mkdir
+from shibgreen.util.ssl import (
     DEFAULT_PERMISSIONS_CERT_FILE,
     DEFAULT_PERMISSIONS_KEY_FILE,
     RESTRICT_MASK_CERT_FILE,
@@ -33,7 +33,7 @@ from taco.util.ssl import (
     check_and_fix_permissions_for_ssl_file,
     fix_ssl,
 )
-from taco.wallet.derive_keys import master_sk_to_pool_sk, master_sk_to_wallet_sk
+from shibgreen.wallet.derive_keys import master_sk_to_pool_sk, master_sk_to_wallet_sk
 
 private_node_names = {"full_node", "wallet", "farmer", "harvester", "timelord", "daemon"}
 public_node_names = {"full_node", "wallet", "farmer", "introducer", "timelord"}
@@ -65,14 +65,14 @@ def check_keys(new_root: Path, keychain: Optional[Keychain] = None) -> None:
         keychain = Keychain()
     all_sks = keychain.get_all_private_keys()
     if len(all_sks) == 0:
-        print("No keys are present in the keychain. Generate them with 'taco keys generate'")
+        print("No keys are present in the keychain. Generate them with 'shibgreen keys generate'")
         return None
 
     config: Dict = load_config(new_root, "config.yaml")
     pool_child_pubkeys = [master_sk_to_pool_sk(sk).get_g1() for sk, _ in all_sks]
     all_targets = []
-    stop_searching_for_farmer = "xtx_target_address" not in config["farmer"]
-    stop_searching_for_pool = "xtx_target_address" not in config["pool"]
+    stop_searching_for_farmer = "xshib_target_address" not in config["farmer"]
+    stop_searching_for_pool = "xshib_target_address" not in config["pool"]
     number_of_ph_to_search = 500
     selected = config["selected_network"]
     prefix = config["network_overrides"]["config"][selected]["address_prefix"]
@@ -83,41 +83,41 @@ def check_keys(new_root: Path, keychain: Optional[Keychain] = None) -> None:
             all_targets.append(
                 encode_puzzle_hash(create_puzzlehash_for_pk(master_sk_to_wallet_sk(sk, uint32(i)).get_g1()), prefix)
             )
-            if all_targets[-1] == config["farmer"].get("xtx_target_address"):
+            if all_targets[-1] == config["farmer"].get("xshib_target_address"):
                 stop_searching_for_farmer = True
-            if all_targets[-1] == config["pool"].get("xtx_target_address"):
+            if all_targets[-1] == config["pool"].get("xshib_target_address"):
                 stop_searching_for_pool = True
 
     # Set the destinations, if necessary
     updated_target: bool = False
-    if "xtx_target_address" not in config["farmer"]:
+    if "xshib_target_address" not in config["farmer"]:
         print(
-            f"Setting the xtx destination for the farmer reward (1/8 plus fees, solo and pooling) to {all_targets[0]}"
+            f"Setting the xshib destination for the farmer reward (1/8 plus fees, solo and pooling) to {all_targets[0]}"
         )
-        config["farmer"]["xtx_target_address"] = all_targets[0]
+        config["farmer"]["xshib_target_address"] = all_targets[0]
         updated_target = True
-    elif config["farmer"]["xtx_target_address"] not in all_targets:
+    elif config["farmer"]["xshib_target_address"] not in all_targets:
         print(
             f"WARNING: using a farmer address which we don't have the private"
             f" keys for. We searched the first {number_of_ph_to_search} addresses. Consider overriding "
-            f"{config['farmer']['xtx_target_address']} with {all_targets[0]}"
+            f"{config['farmer']['xshib_target_address']} with {all_targets[0]}"
         )
 
     if "pool" not in config:
         config["pool"] = {}
-    if "xtx_target_address" not in config["pool"]:
-        print(f"Setting the xtx destination address for pool reward (7/8 for solo only) to {all_targets[0]}")
-        config["pool"]["xtx_target_address"] = all_targets[0]
+    if "xshib_target_address" not in config["pool"]:
+        print(f"Setting the xshib destination address for pool reward (7/8 for solo only) to {all_targets[0]}")
+        config["pool"]["xshib_target_address"] = all_targets[0]
         updated_target = True
-    elif config["pool"]["xtx_target_address"] not in all_targets:
+    elif config["pool"]["xshib_target_address"] not in all_targets:
         print(
             f"WARNING: using a pool address which we don't have the private"
             f" keys for. We searched the first {number_of_ph_to_search} addresses. Consider overriding "
-            f"{config['pool']['xtx_target_address']} with {all_targets[0]}"
+            f"{config['pool']['xshib_target_address']} with {all_targets[0]}"
         )
     if updated_target:
         print(
-            f"To change the XTX destination addresses, edit the `xtx_target_address` entries in"
+            f"To change the XSHIB destination addresses, edit the `xshib_target_address` entries in"
             f" {(new_root / 'config' / 'config.yaml').absolute()}."
         )
 
@@ -198,10 +198,10 @@ def create_all_ssl(root_path: Path):
 
     private_ca_key_path = ca_dir / "private_ca.key"
     private_ca_crt_path = ca_dir / "private_ca.crt"
-    taco_ca_crt, taco_ca_key = get_taco_ca_crt_key()
-    taco_ca_crt_path = ca_dir / "taco_ca.crt"
-    taco_ca_key_path = ca_dir / "taco_ca.key"
-    write_ssl_cert_and_key(taco_ca_crt_path, taco_ca_crt, taco_ca_key_path, taco_ca_key)
+    shibgreen_ca_crt, shibgreen_ca_key = get_shibgreen_ca_crt_key()
+    shibgreen_ca_crt_path = ca_dir / "shibgreen_ca.crt"
+    shibgreen_ca_key_path = ca_dir / "shibgreen_ca.key"
+    write_ssl_cert_and_key(shibgreen_ca_crt_path, shibgreen_ca_crt, shibgreen_ca_key_path, shibgreen_ca_key)
 
     if not private_ca_key_path.exists() or not private_ca_crt_path.exists():
         # Create private CA
@@ -218,8 +218,8 @@ def create_all_ssl(root_path: Path):
         ca_crt = private_ca_crt_path.read_bytes()
         generate_ssl_for_nodes(ssl_dir, ca_crt, ca_key, True)
 
-    taco_ca_crt, taco_ca_key = get_taco_ca_crt_key()
-    generate_ssl_for_nodes(ssl_dir, taco_ca_crt, taco_ca_key, False, overwrite=False)
+    shibgreen_ca_crt, shibgreen_ca_key = get_shibgreen_ca_crt_key()
+    generate_ssl_for_nodes(ssl_dir, shibgreen_ca_crt, shibgreen_ca_key, False, overwrite=False)
 
 
 def generate_ssl_for_nodes(ssl_dir: Path, ca_crt: bytes, ca_key: bytes, private: bool, overwrite=True):
@@ -270,16 +270,16 @@ def init(create_certs: Optional[Path], root_path: Path, fix_ssl_permissions: boo
         else:
             print(f"** {root_path} does not exist. Executing core init **")
             # sanity check here to prevent infinite recursion
-            if taco_init(root_path, fix_ssl_permissions=fix_ssl_permissions) == 0 and root_path.exists():
+            if shibgreen_init(root_path, fix_ssl_permissions=fix_ssl_permissions) == 0 and root_path.exists():
                 return init(create_certs, root_path, fix_ssl_permissions)
 
             print(f"** {root_path} was not created. Exiting **")
             return -1
     else:
-        return taco_init(root_path, fix_ssl_permissions=fix_ssl_permissions)
+        return shibgreen_init(root_path, fix_ssl_permissions=fix_ssl_permissions)
 
 
-def taco_version_number() -> Tuple[str, str, str, str]:
+def shibgreen_version_number() -> Tuple[str, str, str, str]:
     scm_full_version = __version__
     left_full_version = scm_full_version.split("+")
 
@@ -327,18 +327,18 @@ def taco_version_number() -> Tuple[str, str, str, str]:
     return major_release_number, minor_release_number, patch_release_number, dev_release_number
 
 
-def taco_minor_release_number():
-    res = int(taco_version_number()[2])
+def shibgreen_minor_release_number():
+    res = int(shibgreen_version_number()[2])
     print(f"Install release number: {res}")
     return res
 
 
-def taco_full_version_str() -> str:
-    major, minor, patch, dev = taco_version_number()
+def shibgreen_full_version_str() -> str:
+    major, minor, patch, dev = shibgreen_version_number()
     return f"{major}.{minor}.{patch}{dev}"
 
 
-def taco_init(root_path: Path, *, should_check_keys: bool = True, fix_ssl_permissions: bool = False):
+def shibgreen_init(root_path: Path, *, should_check_keys: bool = True, fix_ssl_permissions: bool = False):
     """
     Standard first run initialization or migration steps. Handles config creation,
     generation of SSL certs, and setting target addresses (via check_keys).
@@ -347,16 +347,16 @@ def taco_init(root_path: Path, *, should_check_keys: bool = True, fix_ssl_permis
     protected Keychain. When launching the daemon from the GUI, we want the GUI to
     handle unlocking the keychain.
     """
-    if os.environ.get("TACO_ROOT", None) is not None:
+    if os.environ.get("SHIBGREEN_ROOT", None) is not None:
         print(
-            f"warning, your TACO_ROOT is set to {os.environ['TACO_ROOT']}. "
-            f"Please unset the environment variable and run taco init again\n"
+            f"warning, your SHIBGREEN_ROOT is set to {os.environ['SHIBGREEN_ROOT']}. "
+            f"Please unset the environment variable and run shibgreen init again\n"
             f"or manually migrate config.yaml"
         )
 
-    print(f"Taco directory {root_path}")
+    print(f"SHIBgreen directory {root_path}")
     if root_path.is_dir() and Path(root_path / "config" / "config.yaml").exists():
-        # This is reached if TACO_ROOT is set, or if user has run taco init twice
+        # This is reached if SHIBGREEN_ROOT is set, or if user has run shibgreen init twice
         # before a new update.
         if fix_ssl_permissions:
             fix_ssl(root_path)
@@ -365,13 +365,13 @@ def taco_init(root_path: Path, *, should_check_keys: bool = True, fix_ssl_permis
         print(f"{root_path} already exists, no migration action taken")
         return -1
 
-    create_default_taco_config(root_path)
+    create_default_shibgreen_config(root_path)
     create_all_ssl(root_path)
     if fix_ssl_permissions:
         fix_ssl(root_path)
     if should_check_keys:
         check_keys(root_path)
     print("")
-    print("To see your keys, run 'taco keys show --show-mnemonic-seed'")
+    print("To see your keys, run 'shibgreen keys show --show-mnemonic-seed'")
 
     return 0

@@ -6,12 +6,12 @@ import React, {
 } from 'react';
 import { t, Trans } from '@lingui/macro';
 import { useForm } from 'react-hook-form';
-import { ButtonLoading, Loading, Flex, Form, FormBackButton } from '@taco/core';
+import { ButtonLoading, Loading, Flex, Form, FormBackButton } from '@shibgreen/core';
 import PlotNFTSelectBase from './PlotNFTSelectBase';
 import normalizeUrl from '../../../util/normalizeUrl';
 import getPoolInfo from '../../../util/getPoolInfo';
 import InitialTargetState from '../../../types/InitialTargetState';
-import { taco_to_byte } from '../../../util/taco';
+import { shibgreen_to_byte } from '../../../util/shibgreen';
 import useStandardWallet from '../../../hooks/useStandardWallet';
 import PlotNFTSelectFaucet from './PlotNFTSelectFaucet';
 
@@ -43,7 +43,7 @@ async function prepareSubmitData(data: FormData): SubmitData {
     initialTargetState.relative_lock_height = relative_lock_height;
   }
 
-  const feeBytes = taco_to_byte(fee);
+  const feeBytes = shibgreen_to_byte(fee);
 
   return {
     fee: feeBytes,

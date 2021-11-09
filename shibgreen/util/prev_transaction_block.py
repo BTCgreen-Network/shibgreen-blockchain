@@ -1,8 +1,8 @@
 from typing import Tuple
 
-from taco.consensus.block_record import BlockRecord
-from taco.consensus.blockchain_interface import BlockchainInterface
-from taco.util.ints import uint128
+from shibgreen.consensus.block_record import BlockRecord
+from shibgreen.consensus.blockchain_interface import BlockchainInterface
+from shibgreen.util.ints import uint128
 
 
 def get_prev_transaction_block(

@@ -8,17 +8,17 @@ from typing import Any, List, Optional, Tuple
 
 from blspy import AugSchemeMPL, G1Element, PrivateKey
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import Program
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_spend import CoinSpend
-from taco.types.spend_bundle import SpendBundle
-from taco.util.byte_types import hexstr_to_bytes
-from taco.util.ints import uint8, uint32, uint64, uint128
-from taco.util.streamable import Streamable, streamable
-from taco.wallet.derivation_record import DerivationRecord
-from taco.wallet.derive_keys import master_sk_to_wallet_sk
-from taco.wallet.rl_wallet.rl_wallet_puzzles import (
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.program import Program
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.util.byte_types import hexstr_to_bytes
+from shibgreen.util.ints import uint8, uint32, uint64, uint128
+from shibgreen.util.streamable import Streamable, streamable
+from shibgreen.wallet.derivation_record import DerivationRecord
+from shibgreen.wallet.derive_keys import master_sk_to_wallet_sk
+from shibgreen.wallet.rl_wallet.rl_wallet_puzzles import (
     make_clawback_solution,
     rl_make_aggregation_puzzle,
     rl_make_aggregation_solution,
@@ -26,12 +26,12 @@ from taco.wallet.rl_wallet.rl_wallet_puzzles import (
     rl_puzzle_for_pk,
     solution_for_rl,
 )
-from taco.wallet.transaction_record import TransactionRecord
-from taco.wallet.util.transaction_type import TransactionType
-from taco.wallet.util.wallet_types import WalletType
-from taco.wallet.wallet import Wallet
-from taco.wallet.wallet_coin_record import WalletCoinRecord
-from taco.wallet.wallet_info import WalletInfo
+from shibgreen.wallet.transaction_record import TransactionRecord
+from shibgreen.wallet.util.transaction_type import TransactionType
+from shibgreen.wallet.util.wallet_types import WalletType
+from shibgreen.wallet.wallet import Wallet
+from shibgreen.wallet.wallet_coin_record import WalletCoinRecord
+from shibgreen.wallet.wallet_info import WalletInfo
 
 
 @dataclass(frozen=True)

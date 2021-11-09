@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
 import { Trans } from '@lingui/macro';
 import { Box, Tooltip, Typography } from '@material-ui/core';
-import { Card, CopyToClipboard, Flex, Table } from '@taco/core';
+import { Card, CopyToClipboard, Flex, Table } from '@shibgreen/core';
 import type { Row } from '../core/components/Table/Table';
 import {
-  byte_to_taco_string,
+  byte_to_shibgreen_string,
   byte_to_colouredcoin_string,
-} from '../../util/taco';
+} from '../../util/shibgreen';
 import { unix_to_short_date } from '../../util/utils';
 import TransactionType from '../../constants/TransactionType';
 import WalletType from '../../constants/WalletType';
@@ -58,11 +58,11 @@ const getCols = (type: WalletType) => [
     field: (row: Row) =>
       type === WalletType.COLOURED_COIN
         ? byte_to_colouredcoin_string(row.amount)
-        : byte_to_taco_string(row.amount),
+        : byte_to_shibgreen_string(row.amount),
     title: <Trans>Amount</Trans>,
   },
   {
-    field: (row: Row) => byte_to_taco_string(row.fee_amount),
+    field: (row: Row) => byte_to_shibgreen_string(row.fee_amount),
     title: <Trans>Fee</Trans>,
   },
 ];

@@ -6,16 +6,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: is_IS\n"
-"Project-Id-Version: taco-blockchain\n"
+"Project-Id-Version: shibgreen-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2021-09-17 17:39\n"
 "Last-Translator: \n"
 "Language-Team: Icelandic\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: taco-blockchain\n"
+"X-Crowdin-Project: shibgreen-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: is\n"
-"X-Crowdin-File: /[Taco-Network.taco-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[SHIBgreen-Network.shibgreen-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -23,7 +23,7 @@ msgid "(Optional)"
 msgstr "(Valfrjálst)"
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:64
-msgid "*Want to explore Taco’s blocks further? Check out <0>Taco Explorer</0> built by an open source developer."
+msgid "*Want to explore SHIBgreen’s blocks further? Check out <0>SHIBgreen Explorer</0> built by an open source developer."
 msgstr ""
 
 #: src/components/plot/add/PlotAddNFT.tsx:123
@@ -48,7 +48,7 @@ msgstr ""
 
 #: src/electron/main.tsx:422
 #: src/electron/main.tsx:509
-msgid "About Taco Blockchain"
+msgid "About SHIBgreen Blockchain"
 msgstr ""
 
 #: src/components/trading/ViewOffer.jsx:74
@@ -230,7 +230,7 @@ msgid "Block VDF Iterations"
 msgstr ""
 
 #: src/components/block/Block.jsx:337
-msgid "Block at height {0} in the Taco blockchain"
+msgid "Block at height {0} in the SHIBgreen blockchain"
 msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:331
@@ -325,15 +325,15 @@ msgid "Chat on KeyBase"
 msgstr ""
 
 #: src/electron/main.tsx:419
-msgid "Taco"
+msgid "SHIBgreen"
 msgstr ""
 
 #: src/electron/main.tsx:358
-msgid "Taco Blockchain Wiki"
+msgid "SHIBgreen Blockchain Wiki"
 msgstr ""
 
 #: src/components/wallet/standard/WalletStandard.tsx:649
-msgid "Taco Wallet"
+msgid "SHIBgreen Wallet"
 msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:36
@@ -741,7 +741,7 @@ msgid "Edit Payout Instructions"
 msgstr "Breyta Útborgunar Leiðbeiningum"
 
 #: src/components/wallet/WalletImport.tsx:147
-msgid "Enter the 24 word mnemonic that you have saved in order to restore your Taco wallet."
+msgid "Enter the 24 word mnemonic that you have saved in order to restore your SHIBgreen wallet."
 msgstr ""
 
 #: src/components/farm/card/FarmCardStatus.tsx:35
@@ -755,7 +755,7 @@ msgid "Error"
 msgstr ""
 
 #: src/components/wallet/standard/WalletStandard.tsx:456
-msgid "Error: Cannot send taco to coloured address. Please enter a taco address."
+msgid "Error: Cannot send shibgreen to coloured address. Please enter a shibgreen address."
 msgstr ""
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:20
@@ -866,7 +866,7 @@ msgid "Fee"
 msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
-#~ msgid "Fee (TXTX)"
+#~ msgid "Fee (TXSHIB)"
 #~ msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
@@ -1071,16 +1071,16 @@ msgid "Join a Pool"
 msgstr "Taka þátt í Pool"
 
 #: src/components/plot/add/PlotAddNFT.tsx:44
-msgid "Join a pool and get consistent XTX farming rewards. The average returns are the same, but it is much less volatile."
-msgstr "Taktu þátt í pool og fáðu stöðugan XTX farming verðlaun. Meðaltals útborgunin er sú sama, en mun minni óstöðleiki."
+msgid "Join a pool and get consistent XSHIB farming rewards. The average returns are the same, but it is much less volatile."
+msgstr "Taktu þátt í pool og fáðu stöðugan XSHIB farming verðlaun. Meðaltals útborgunin er sú sama, en mun minni óstöðleiki."
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:59
-msgid "Join a pool and get consistent XTX farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
-msgstr "Taktu þátt í pool og fáðu stöðugan XTX farming verðlaun. Meðaltals útborgunin er sú sama, en mun minni óstöðleiki. Úthlutaðu plots til plot NFT. Þú getur léttilega breytt um pool án þess að endur-plotta."
+msgid "Join a pool and get consistent XSHIB farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgstr "Taktu þátt í pool og fáðu stöðugan XSHIB farming verðlaun. Meðaltals útborgunin er sú sama, en mun minni óstöðleiki. Úthlutaðu plots til plot NFT. Þú getur léttilega breytt um pool án þess að endur-plotta."
 
 #: src/components/plot/add/PlotAddNFT.tsx:133
-msgid "Join a pool and get more consistent XTX farming rewards. Create a plot NFT and assign your new plots to a group."
-msgstr "Taktu þátt í pool og fáðu enn stöðugri XTX farming verðlaun. Búðu til plot NFT og úthlutaðu nýju plots í hóp."
+msgid "Join a pool and get more consistent XSHIB farming rewards. Create a plot NFT and assign your new plots to a group."
+msgstr "Taktu þátt í pool og fáðu enn stöðugri XSHIB farming verðlaun. Búðu til plot NFT og úthlutaðu nýju plots í hóp."
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:63
 msgid "K-Size"
@@ -1322,8 +1322,8 @@ msgid "Not found Plots"
 msgstr ""
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:184
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XTX reward for pooling plots."
-msgstr "Athugið að þetta breytir ekki þínum pooling útborgunar addresses. Þetta hefur bara áhrif á gömul sniðuð plots, og 0.25XTX verðlaunin fyrir pooling plots."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XSHIB reward for pooling plots."
+msgstr "Athugið að þetta breytir ekki þínum pooling útborgunar addresses. Þetta hefur bara áhrif á gömul sniðuð plots, og 0.25XSHIB verðlaunin fyrir pooling plots."
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:118
 #: src/components/plotNFT/PlotNFTCard.tsx:160
@@ -1583,7 +1583,7 @@ msgid "Plots Passed Filter"
 msgstr ""
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:35
-msgid "Plots are allocated space on your hard drive used to farm and earn Taco. <0>Learn more</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn SHIBgreen. <0>Learn more</0>"
 msgstr ""
 
 #: src/components/plot/queue/PlotQueueIndicator.tsx:34
@@ -1924,7 +1924,7 @@ msgid "Select Wallet Type"
 msgstr ""
 
 #: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:25
-msgid "Select the final destination for the folder where you would like the plot to be stored. We recommend you use a large slow hard drive (like external XTX)."
+msgid "Select the final destination for the folder where you would like the plot to be stored. We recommend you use a large slow hard drive (like external XSHIB)."
 msgstr ""
 
 #: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:41
@@ -1959,8 +1959,8 @@ msgid "Self Pooling"
 msgstr "Sjálf Pooling"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:105
-msgid "Self pool. When you win a block you will earn XTX rewards."
-msgstr "Sjálf pool. Þegar þú vinnur bálka þá færðu XTX verðlaun."
+msgid "Self pool. When you win a block you will earn XSHIB rewards."
+msgstr "Sjálf pool. Þegar þú vinnur bálka þá færðu XSHIB verðlaun."
 
 #: src/components/trading/CreateOffer.jsx:164
 #: src/components/trading/TradesTable.tsx:47
@@ -2012,8 +2012,8 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr ""
 
 #: src/components/pool/PoolHero.tsx:26
-msgid "Smooth out your XTX farming rewards by joining a pool."
-msgstr "Jafnaðu út XTX farming verðlaunin þín og taktu þátt í pool."
+msgid "Smooth out your XSHIB farming rewards by joining a pool."
+msgstr "Jafnaðu út XSHIB farming verðlaunin þín og taktu þátt í pool."
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:60
 msgid "Something went wrong"
@@ -2048,7 +2048,7 @@ msgstr ""
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:401
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:448
-msgid "Spending Limit (taco per interval): {0}"
+msgid "Spending Limit (shibgreen per interval): {0}"
 msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:100
@@ -2097,8 +2097,8 @@ msgstr ""
 #~ msgstr "Sub Block Height"
 
 #: src/components/block/Block.jsx:338
-#~ msgid "Sub Block at height {0} in the Taco blockchain"
-#~ msgstr "Sub Block at height {0} in the Taco blockchain"
+#~ msgid "Sub Block at height {0} in the SHIBgreen blockchain"
+#~ msgstr "Sub Block at height {0} in the SHIBgreen blockchain"
 
 #: src/components/wallet/did/WalletDID.tsx:886
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:347
@@ -2126,23 +2126,23 @@ msgstr ""
 #~ msgstr "Syncing {progress}/{tip}"
 
 #: src/components/farm/card/FarmCardBlockRewards.tsx:15
-#~ msgid "TXTX Block Rewards"
+#~ msgid "TXSHIB Block Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardCoinbaseRewards.tsx:12
-#~ msgid "TXTX Farming Rewards"
+#~ msgid "TXSHIB Farming Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardFeesReward.tsx:12
-#~ msgid "TXTX Fees Collected"
+#~ msgid "TXSHIB Fees Collected"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardUserFees.tsx:12
-#~ msgid "TXTX User Fees"
-#~ msgstr "TXTX User Fees"
+#~ msgid "TXSHIB User Fees"
+#~ msgstr "TXSHIB User Fees"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:15
-#~ msgid "TXTX User Transaction Fees"
+#~ msgid "TXSHIB User Transaction Fees"
 #~ msgstr ""
 
 #: src/components/pool/PoolInfo.tsx:37
@@ -2224,8 +2224,8 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr ""
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:102
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XTX address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
-msgstr "Þetta er leiðbeiningar um hvernig farmer vill fá borgað. Venjulega þá mun þetta ver XTX addressa, en það getur verið sett sem hvaða strengur sem er minni en 1024 karakterar, það getur tilheyrt annarri bálkakeðju eða borgunar kerfisauðkenningu."
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XSHIB address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgstr "Þetta er leiðbeiningar um hvernig farmer vill fá borgað. Venjulega þá mun þetta ver XSHIB addressa, en það getur verið sett sem hvaða strengur sem er minni en 1024 karakterar, það getur tilheyrt annarri bálkakeðju eða borgunar kerfisauðkenningu."
 
 #: src/components/plot/PlotsFailed.tsx:40
 msgid "These plots are invalid, you might want to delete them."
@@ -2247,7 +2247,7 @@ msgid "This feature is available only from the GUI."
 msgstr ""
 
 #: src/components/wallet/card/WalletCardSpendableBalance.tsx:26
-msgid "This is the amount of Taco that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Taco that you have just spent but is not yet in the blockchain."
+msgid "This is the amount of SHIBgreen that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and SHIBgreen that you have just spent but is not yet in the blockchain."
 msgstr ""
 
 #: src/components/wallet/card/WalletCardPendingChange.tsx:26
@@ -2267,7 +2267,7 @@ msgid "This is the time the block was created by the farmer, which is before it 
 msgstr ""
 
 #: src/components/wallet/card/WalletCardTotalBalance.tsx:34
-msgid "This is the total amount of taco in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of shibgreen in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr ""
 
 #: src/components/wallet/card/WalletCardPendingTotalBalance.tsx:29
@@ -2313,7 +2313,7 @@ msgid "This trade was included on blockchain at this block height"
 msgstr ""
 
 #: src/components/app/AppTimeBombAlert.tsx:19
-msgid "This version of Taco is no longer compatible with the blockchain and can not safely farm."
+msgid "This version of SHIBgreen is no longer compatible with the blockchain and can not safely farm."
 msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:92
@@ -2338,8 +2338,8 @@ msgstr ""
 msgid "Total Balance"
 msgstr ""
 
-#: src/components/farm/card/FarmCardTotalTacoFarmed.tsx:15
-#~ msgid "Total Taco Farmed"
+#: src/components/farm/card/FarmCardTotalSHIBgreenFarmed.tsx:15
+#~ msgid "Total SHIBgreen Farmed"
 #~ msgstr ""
 
 #: src/components/fullNode/card/FullNodeCardTotalIterations.tsx:20
@@ -2515,7 +2515,7 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.tacoWallet"
+#~ msgid "WalletItem.shibgreenWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48
@@ -2552,7 +2552,7 @@ msgid "Want to Join a Pool? Create a Plot NFT"
 msgstr "Viltu taka þátt í Pool? Búðu til Plot NFT"
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:139
-msgid "Want to earn more Taco? Add more plots to your farm."
+msgid "Want to earn more SHIBgreen? Add more plots to your farm."
 msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:86
@@ -2580,7 +2580,7 @@ msgid "Weight is the total added difficulty of all sub blocks up to and includin
 msgstr ""
 
 #: src/components/selectKey/SelectKey.tsx:141
-msgid "Welcome to Taco. Please log in with an existing key, or create a new key."
+msgid "Welcome to SHIBgreen. Please log in with an existing key, or create a new key."
 msgstr ""
 
 #: src/components/wallet/WalletAdd.tsx:66
@@ -2651,8 +2651,8 @@ msgid "You need to claim your rewards first"
 msgstr "Þú þarft að sækja verðlaunin þín fyrst"
 
 #: src/components/app/AppTimeBomb.tsx:28
-#~ msgid "You need to upgrade the Taco application as this version will stop working soon!"
-#~ msgstr "You need to upgrade the Taco application as this version will stop working soon!"
+#~ msgid "You need to upgrade the SHIBgreen application as this version will stop working soon!"
+#~ msgstr "You need to upgrade the SHIBgreen application as this version will stop working soon!"
 
 #: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:37
 msgid "You need {currencyCode} to join a pool."
@@ -2743,8 +2743,8 @@ msgstr "{0} stig {1} - {2} klukkutímum síðan"
 msgid "{currencyCode} Block Rewards"
 msgstr ""
 
-#: src/components/farm/card/FarmCardTotalTacoFarmed.tsx:29
-msgid "{currencyCode} Total Taco Farmed"
+#: src/components/farm/card/FarmCardTotalSHIBgreenFarmed.tsx:29
+msgid "{currencyCode} Total SHIBgreen Farmed"
 msgstr ""
 
 #: src/components/farm/card/FarmCardUserFees.tsx:28

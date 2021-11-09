@@ -15,17 +15,17 @@ from blspy import G2Element
 
 from clvm_tools.binutils import assemble
 
-from taco.consensus.blockchain import ReceiveBlockResult
-from taco.consensus.constants import ConsensusConstants
-from taco.types.announcement import Announcement
-from taco.types.blockchain_format.program import Program
-from taco.types.coin_record import CoinRecord
-from taco.types.coin_spend import CoinSpend
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.full_block import FullBlock
-from taco.types.spend_bundle import SpendBundle
-from taco.util.errors import Err
-from taco.util.ints import uint32
+from shibgreen.consensus.blockchain import ReceiveBlockResult
+from shibgreen.consensus.constants import ConsensusConstants
+from shibgreen.types.announcement import Announcement
+from shibgreen.types.blockchain_format.program import Program
+from shibgreen.types.coin_record import CoinRecord
+from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.types.condition_opcodes import ConditionOpcode
+from shibgreen.types.full_block import FullBlock
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.util.errors import Err
+from shibgreen.util.ints import uint32
 from tests.block_tools import create_block_tools, test_constants
 from tests.util.keyring import TempKeyring
 

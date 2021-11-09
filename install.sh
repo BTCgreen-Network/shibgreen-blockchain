@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Check current Taco SSL version to prevent update on old SSL
-if [ -e ../.taco/mainnet/config/ssl/ca/taco_ca.crt ]; then
-	TACO_SSL_SERIAL=$(openssl x509 -noout -in ../.taco/mainnet/config/ssl/ca/taco_ca.crt -serial)
-	if [ $TACO_SSL_SERIAL = "serial=5C8A71239328650EB9FEF85CEC32BF779CA6A0C5" ]; then
+# Check current SHIBgreen SSL version to prevent update on old SSL
+if [ -e ../.shibgreen/mainnet/config/ssl/ca/shibgreen_ca.crt ]; then
+	SHIBGREEN_SSL_SERIAL=$(openssl x509 -noout -in ../.shibgreen/mainnet/config/ssl/ca/shibgreen_ca.crt -serial)
+	if [ $SHIBGREEN_SSL_SERIAL = "serial=5C8A71239328650EB9FEF85CEC32BF779CA6A0C5" ]; then
 		echo ""
 		echo "WARNING:"
-		echo "Old version of Taco Blockchain SSL has been detected."
-		echo "Please visit https://taconetwork.net/sslupdate/ for further instructions."
+		echo "Old version of SHIBgreen Blockchain SSL has been detected."
+		echo "Please visit https://shibgreennetwork.net/sslupdate/ for further instructions."
 		echo ""
 		echo "Exiting installer..."
 		echo ""
@@ -34,9 +34,9 @@ fi
 if [ "$(uname -m)" = "armv7l" ]; then
   echo ""
 	echo "WARNING:"
-	echo "The Taco Blockchain requires a 64 bit OS and this is 32 bit armv7l"
+	echo "The SHIBgreen Blockchain requires a 64 bit OS and this is 32 bit armv7l"
 	echo "For more information, see"
-	echo "https://github.com/Taco-Network/taco-blockchain/wiki/Raspberry-Pi"
+	echo "https://github.com/SHIBgreen-Network/shibgreen-blockchain/wiki/Raspberry-Pi"
 	echo "Exiting."
 	exit 1
 fi
@@ -136,14 +136,14 @@ python -m pip install --extra-index-url https://pypi.chia.net/simple/ miniupnpc=
 python -m pip install -e . --extra-index-url https://pypi.chia.net/simple/
 
 
-echo "Taco blockchain install.sh complete."
+echo "SHIBgreen blockchain install.sh complete."
 echo ""
-echo "Visit our Website to learn more about Taco:"
-echo "https://taconetwork.net"
+echo "Visit our Website to learn more about SHIBgreen:"
+echo "https://shibgreennetwork.net"
 echo ""
-echo "Try the Quick Start Guide to running taco-blockchain:"
-echo "https://github.com/Taco-Network/taco-blockchain/wiki/Quick-Start-Guide"
+echo "Try the Quick Start Guide to running shibgreen-blockchain:"
+echo "https://github.com/SHIBgreen-Network/shibgreen-blockchain/wiki/Quick-Start-Guide"
 echo ""
 echo "To install the GUI type 'sh install-gui.sh' after '. ./activate'."
 echo ""
-echo "Type '. ./activate' and then 'taco init' to begin."
+echo "Type '. ./activate' and then 'shibgreen init' to begin."

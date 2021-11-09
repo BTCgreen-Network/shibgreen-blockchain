@@ -4,13 +4,13 @@ from blspy import AugSchemeMPL
 from clvm import KEYWORD_FROM_ATOM
 from clvm_tools.binutils import disassemble as bu_disassemble
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import Program, INFINITE_COST
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.consensus.default_constants import DEFAULT_CONSTANTS
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.util.condition_tools import conditions_dict_for_solution, pkm_pairs_for_conditions_dict
-from taco.util.hash import std_hash
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.program import Program, INFINITE_COST
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.consensus.default_constants import DEFAULT_CONSTANTS
+from shibgreen.types.condition_opcodes import ConditionOpcode
+from shibgreen.util.condition_tools import conditions_dict_for_solution, pkm_pairs_for_conditions_dict
+from shibgreen.util.hash import std_hash
 
 CONDITIONS = dict((k, bytes(v)[0]) for k, v in ConditionOpcode.__members__.items())  # pylint: disable=E1101
 KFA = {v: k for k, v in CONDITIONS.items()}

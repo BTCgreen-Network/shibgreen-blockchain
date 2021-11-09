@@ -11,8 +11,8 @@ import {
   Plot as PlotIcon,
   Pool as PoolIcon,
   Settings as SettingsIcon,
-} from '@taco/icons';
-import { Flex, SideBarItem } from '@taco/core';
+} from '@shibgreen/icons';
+import { Flex, SideBarItem } from '@shibgreen/core';
 import { logOut } from '../../modules/message';
 import { RootState } from '../../modules/rootReducer';
 

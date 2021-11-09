@@ -2,8 +2,8 @@ import asyncio
 
 import pytest
 
-from taco.full_node.sync_store import SyncStore
-from taco.util.hash import std_hash
+from shibgreen.full_node.sync_store import SyncStore
+from shibgreen.util.hash import std_hash
 
 
 @pytest.fixture(scope="module")

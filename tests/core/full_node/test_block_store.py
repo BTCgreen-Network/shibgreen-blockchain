@@ -7,11 +7,11 @@ from pathlib import Path
 import aiosqlite
 import pytest
 
-from taco.consensus.blockchain import Blockchain
-from taco.full_node.block_store import BlockStore
-from taco.full_node.coin_store import CoinStore
-from taco.full_node.hint_store import HintStore
-from taco.util.db_wrapper import DBWrapper
+from shibgreen.consensus.blockchain import Blockchain
+from shibgreen.full_node.block_store import BlockStore
+from shibgreen.full_node.coin_store import CoinStore
+from shibgreen.full_node.hint_store import HintStore
+from shibgreen.util.db_wrapper import DBWrapper
 from tests.setup_nodes import bt, test_constants
 
 log = logging.getLogger(__name__)

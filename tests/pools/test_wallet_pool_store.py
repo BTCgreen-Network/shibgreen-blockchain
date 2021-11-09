@@ -7,14 +7,14 @@ import aiosqlite
 import pytest
 from clvm_tools import binutils
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import Program, SerializedProgram
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_spend import CoinSpend
-from taco.util.db_wrapper import DBWrapper
-from taco.util.ints import uint64
+from shibgreen.types.blockchain_format.coin import Coin
+from shibgreen.types.blockchain_format.program import Program, SerializedProgram
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.util.db_wrapper import DBWrapper
+from shibgreen.util.ints import uint64
 
-from taco.wallet.wallet_pool_store import WalletPoolStore
+from shibgreen.wallet.wallet_pool_store import WalletPoolStore
 
 
 @pytest.fixture(scope="module")

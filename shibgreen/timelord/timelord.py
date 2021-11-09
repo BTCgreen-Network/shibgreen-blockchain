@@ -9,28 +9,28 @@ from typing import Callable, Dict, List, Optional, Tuple, Set
 
 from chiavdf import create_discriminant
 
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.pot_iterations import calculate_sp_iters, is_overflow_block
-from taco.protocols import timelord_protocol
-from taco.protocols.protocol_message_types import ProtocolMessageTypes
-from taco.server.outbound_message import NodeType, make_msg
-from taco.server.server import TacoServer
-from taco.timelord.iters_from_block import iters_from_block
-from taco.timelord.timelord_state import LastState
-from taco.timelord.types import Chain, IterationType, StateType
-from taco.types.blockchain_format.classgroup import ClassgroupElement
-from taco.types.blockchain_format.reward_chain_block import RewardChainBlock
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.slots import (
+from shibgreen.consensus.constants import ConsensusConstants
+from shibgreen.consensus.pot_iterations import calculate_sp_iters, is_overflow_block
+from shibgreen.protocols import timelord_protocol
+from shibgreen.protocols.protocol_message_types import ProtocolMessageTypes
+from shibgreen.server.outbound_message import NodeType, make_msg
+from shibgreen.server.server import SHIBgreenServer
+from shibgreen.timelord.iters_from_block import iters_from_block
+from shibgreen.timelord.timelord_state import LastState
+from shibgreen.timelord.types import Chain, IterationType, StateType
+from shibgreen.types.blockchain_format.classgroup import ClassgroupElement
+from shibgreen.types.blockchain_format.reward_chain_block import RewardChainBlock
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.blockchain_format.slots import (
     ChallengeChainSubSlot,
     InfusedChallengeChainSubSlot,
     RewardChainSubSlot,
     SubSlotProofs,
 )
-from taco.types.blockchain_format.sub_epoch_summary import SubEpochSummary
-from taco.types.blockchain_format.vdf import VDFInfo, VDFProof
-from taco.types.end_of_slot_bundle import EndOfSubSlotBundle
-from taco.util.ints import uint8, uint32, uint64, uint128
+from shibgreen.types.blockchain_format.sub_epoch_summary import SubEpochSummary
+from shibgreen.types.blockchain_format.vdf import VDFInfo, VDFProof
+from shibgreen.types.end_of_slot_bundle import EndOfSubSlotBundle
+from shibgreen.util.ints import uint8, uint32, uint64, uint128
 
 log = logging.getLogger(__name__)
 
@@ -44,7 +44,7 @@ class Timelord:
         self.free_clients: List[Tuple[str, asyncio.StreamReader, asyncio.StreamWriter]] = []
         self.potential_free_clients: List = []
         self.ip_whitelist = self.config["vdf_clients"]["ip"]
-        self.server: Optional[TacoServer] = None
+        self.server: Optional[SHIBgreenServer] = None
         self.chain_type_to_stream: Dict[Chain, Tuple[str, asyncio.StreamReader, asyncio.StreamWriter]] = {}
         self.chain_start_time: Dict = {}
         # Chains that currently don't have a vdf_client.
@@ -116,7 +116,7 @@ class Timelord:
     async def _await_closed(self):
         pass
 
-    def set_server(self, server: TacoServer):
+    def set_server(self, server: SHIBgreenServer):
         self.server = server
 
     async def _handle_client(self, reader: asyncio.StreamReader, writer: asyncio.StreamWriter):

@@ -1,24 +1,24 @@
 from typing import Dict, List, Optional, Tuple, Any
 
-from taco.consensus.block_record import BlockRecord
-from taco.full_node.signage_point import SignagePoint
-from taco.rpc.rpc_client import RpcClient
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_record import CoinRecord
-from taco.types.coin_spend import CoinSpend
-from taco.types.end_of_slot_bundle import EndOfSubSlotBundle
-from taco.types.full_block import FullBlock
-from taco.types.spend_bundle import SpendBundle
-from taco.types.unfinished_header_block import UnfinishedHeaderBlock
-from taco.util.byte_types import hexstr_to_bytes
-from taco.util.ints import uint32, uint64
+from shibgreen.consensus.block_record import BlockRecord
+from shibgreen.full_node.signage_point import SignagePoint
+from shibgreen.rpc.rpc_client import RpcClient
+from shibgreen.types.blockchain_format.sized_bytes import bytes32
+from shibgreen.types.coin_record import CoinRecord
+from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.types.end_of_slot_bundle import EndOfSubSlotBundle
+from shibgreen.types.full_block import FullBlock
+from shibgreen.types.spend_bundle import SpendBundle
+from shibgreen.types.unfinished_header_block import UnfinishedHeaderBlock
+from shibgreen.util.byte_types import hexstr_to_bytes
+from shibgreen.util.ints import uint32, uint64
 
 
 class FullNodeRpcClient(RpcClient):
     """
-    Client to Taco RPC, connects to a local full node. Uses HTTP/JSON, and converts back from
+    Client to SHIBgreen RPC, connects to a local full node. Uses HTTP/JSON, and converts back from
     JSON into native python objects before returning. All api calls use POST requests.
-    Note that this is not the same as the peer protocol, or wallet protocol (which run Taco's
+    Note that this is not the same as the peer protocol, or wallet protocol (which run SHIBgreen's
     protocol on top of TCP), it's a separate protocol on top of HTTP thats provides easy access
     to the full node.
     """
