@@ -36,7 +36,7 @@ if [ "$(uname -m)" = "armv7l" ]; then
 	echo "WARNING:"
 	echo "The SHIBgreen Blockchain requires a 64 bit OS and this is 32 bit armv7l"
 	echo "For more information, see"
-	echo "https://github.com/SHIBgreen-Network/shibgreen-blockchain/wiki/Raspberry-Pi"
+	echo "https://github.com/BTCgreen-network/shibgreen-blockchain/wiki/Raspberry-Pi"
 	echo "Exiting."
 	exit 1
 fi
@@ -142,7 +142,7 @@ echo "Visit our Website to learn more about SHIBgreen:"
 echo "https://shibgreen.com"
 echo ""
 echo "Try the Quick Start Guide to running shibgreen-blockchain:"
-echo "https://github.com/SHIBgreen-Network/shibgreen-blockchain/wiki/Quick-Start-Guide"
+echo "https://github.com/BTCgreen-network/shibgreen-blockchain/wiki/Quick-Start-Guide"
 echo ""
 echo "To install the GUI type 'sh install-gui.sh' after '. ./activate'."
 echo ""

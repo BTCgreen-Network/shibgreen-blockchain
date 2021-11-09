@@ -38,7 +38,7 @@ export default function PlotOverviewHero() {
               }
               <Link
                 target="_blank"
-                href="https://github.com/SHIBgreen-Network/shibgreen-blockchain/wiki/Network-Architecture"
+                href="https://github.com/BTCgreen-network/shibgreen-blockchain/wiki/Network-Architecture"
               >
                 Learn more
               </Link>

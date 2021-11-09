@@ -18,7 +18,7 @@ function getInstallerConfig () {
     authors: 'SHIBgreen Network',
     version: process.env.SHIBGREEN_INSTALLER_VERSION,
     noMsi: true,
-    iconUrl: 'https://raw.githubusercontent.com/SHIBgreen-Network/shibgreen-blockchain/master/electron-react/src/assets/img/shibgreen.ico',
+    iconUrl: 'https://raw.githubusercontent.com/BTCgreen-network/shibgreen-blockchain/master/electron-react/src/assets/img/shibgreen.ico',
     outputDirectory: path.join(outPath, 'windows-installer'),
     certificateFile: 'win_code_sign_cert.p12',
     certificatePassword: process.env.WIN_CODE_SIGN_PASS,

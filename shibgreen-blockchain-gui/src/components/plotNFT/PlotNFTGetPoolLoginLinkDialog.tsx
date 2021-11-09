@@ -94,7 +94,7 @@ export default function PlotNFTGetPoolLoginLinkDialog(props: Props) {
                 </Trans>{' '}
                 <Link
                   target="_blank"
-                  href="https://github.com/SHIBgreen-Network/pool-reference/blob/main/SPECIFICATION.md#get-login"
+                  href="https://github.com/BTCgreen-network/pool-reference/blob/main/SPECIFICATION.md#get-login"
                   noWrap
                 >
                   <Trans>Learn More</Trans>

@@ -66,7 +66,7 @@ export default function PlotAddChooseSize() {
           }
           <Link
             target="_blank"
-            href="https://github.com/SHIBgreen-Network/shibgreen-blockchain/wiki/k-sizes"
+            href="https://github.com/BTCgreen-network/shibgreen-blockchain/wiki/k-sizes"
           >
             Learn more
           </Link>

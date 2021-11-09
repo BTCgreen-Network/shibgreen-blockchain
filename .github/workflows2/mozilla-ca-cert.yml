@@ -12,7 +12,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: "${{ github.event.inputs.shibgreen_ref }}"
-          repository: shibgreen-network/shibgreen-blockchain
+          repository: btcgreen-network/shibgreen-blockchain
           submodules: recursive
           token: "${{ secrets.GITHUB_TOKEN }}"
       - name: "Add changes to new branch"

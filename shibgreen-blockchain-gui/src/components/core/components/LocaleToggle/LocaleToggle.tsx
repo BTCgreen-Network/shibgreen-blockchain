@@ -43,7 +43,7 @@ export default function LocaleToggle(props: Props) {
     handleClose();
 
     openExternal(
-      'https://github.com/SHIBgreen-Network/shibgreen-blockchain-gui/tree/main/src/locales/README.md',
+      'https://github.com/BTCgreen-network/shibgreen-blockchain-gui/tree/main/src/locales/README.md',
     );
   }
 
