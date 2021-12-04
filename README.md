@@ -1,88 +1,17 @@
-# SHIBgreen-Blockchain
+SHIBgreen is a cryptocurrency forked from Chia and uses the Proof of Space and Time consensus algorithm
 
-**SHIBgreen** is a modern community-centric green cryptocurrency based on a proof-of-space-and-time consensus algorithm. It is a community-supported fork of the [Chia Network](https://github.com/Chia-Network/chia-blockchain) codebase.
+Discord Channel: https://discord.gg/PCyTa4CNx4
 
-For more information, see our website and downloads at www.BTCgreen-Network.net. 
-<p>You can learn more in the SHIBgreen Wiki: <a href="https://github.com/BTCgreen-Network/shibgreen-blockchain/wiki/SHIBgreen-Blockchain-Wiki">Quick Start Guide</a></p>
-<p>Please check out the SHIBgreen Discord Channel: (https://discord.gg/qfHBqZnXTj).</p>
+Website: https://shibgreen.com (coming soon)
 
-<p>Full Node List Here:<a href="https://www.shibgreen.com/shibgreen-full-nodes/" rel="nofollow"> Full Node IP's</a></p>
-<p>Introducer Port: 7442</p>
+Initial 1.0.0 release!
+Per usual should'nt have any issues.
+Full node port: 7442
 
-<h1>
-<a id="user-content-windows" class="anchor" href="#windows" aria-hidden="true"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Windows Installer</h1>
-<p>Download the SHIBgreen Blockchain <a href= "https://github.com/BTCgreen-Network/shibgreen-blockchain/releases/download/v1.2.11/SHIBgreenSetup-1.2.11.exe" rel="nofollow">Windows installer </a> or the <a href= "https://github.com/BTCgreen-Network/shibgreen-blockchain/releases/download/v1.2.11/SHIBgreen-windows.zip" rel="nofollow">Windows Zip</a></p>
-<p>As the Chia code signing certificate is new you will likely have to ask to keep the download and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line. Some Windows anti-virus applications are seeing the download as a false positive. You can see the entire source code and build method here so we think it's safe for you to ask those tools to ignore it. Running the installer while plotting on a previous version will stop your plotting process, so be careful.</p>
-<p>You can learn more through the Chia Quick Start Guide: <a href="https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide">Quick Start Guide</a></p>
-<h1>
 
-  <h1>
-<a id="user-content-Ubuntu/Debian" class="anchor" href="#windows" aria-hidden="true"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Ubuntu/Debian Install</h1>
-  
-<p>
-sudo apt-get update 
- <p>
-sudo apt-get upgrade -y
-  </p>
-  <p>
-# Install Git
-    <p>
-sudo apt install git -y
-  </p>
-  <p>
-# Checkout the source and install
-    <p>
-git clone https://github.com/BTCgreen-Network/shibgreen-blockchain.git -b latest --recurse-submodules
-<p>
-      cd shibgreen-blockchain
-sh install.sh
-<p>
-. ./activate
-shibgreen init
-    <p>
-#add your plot directories the /.shibgreen/main/config/config.yaml
-      <p>
-shibgreen start famer<p>
-#add your harvesters - https://github.com/Chia-Network/chia-blockchain/wiki/Farming-on-many-machines
-<p>
-# The GUI requires you have Ubuntu Desktop or a similar windowing system installed.<p>
-# You can not install and run the GUI as root
-<p>
-cd /home/'yourusername'/shibgreen-blockchain/
-  <p>
-. ./activate
-sh install-gui.sh
-<p>
-cd chia-blockchain-gui
-npm run electron &
-  </p> 
-  
- <h1> <a id="user-content-Ubuntu/Debian" class="anchor" href="#windows" aria-hidden="true"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Update SHIBgreen-Blockchain</h1>
-<p>
-  cd shibgreen-blockchain</p><p>
-  . ./activate</p><p>
-shibgreen stop -d all</p><p>
-deactivate</p><p>
-git fetch</p><p>
-git checkout main</p><p>
-git reset --hard FETCH_HEAD --recurse-submodules</p><p>
-sh install.sh</p><p>
-. ./activate</p><p>
-shibgreen init</p><p>
-shibgreen start farmer </p><p>
-  </p><p>
-  <b>##GUI Update (Updating from 1.2.1 to 1.2.11)</b></p><p>
-#1.2.1 did not have a GUI submodule. 1.2.11 does. Therefore we remove 1.2.1 GUI directory, and initialize the new GUI submodule</p><p>
-cd ~/shibgreen-blockchain</p><p>
-rm -rf shibgreen-blockchain-gui/</p><p>
-git submodule init</p><p>
-git submodule update</p><p>
-
-git fetch</p><p>
-git checkout main</p><p>
-sh install-gui.sh</p><p>
-npm run electron &  </p><p>
-  
-  <p>
- *Note, if you would like to run the Timelord to support the SHIBgreen ecosystem, run 'sh install-timelord.sh', then shibgreen start timelord. If you receive errors during the installation process, your system is missing dependencies. In this case, thank you for trying :)
-  </p>
+EARLY ADOPTERS GET MORE SHIBGREEN!!!!
+The way SHIBgreen was designed was to get alot of coins farmed early on and then significantly drop very early on in the blockchains life cycle.
+At height 168192 the block rewards will drop from 100,000 XSHIB to 20,000 XSHIB.
+Early adopters get the privlage of getting a lot of coins :)
+As of today (11/22/2021) each block of 100,000 XSHIB is selling for roughly 25cents on https://forks.green
+Have fun everyone, and i wish everybody good luck in finding SHIBgreen blocks!
