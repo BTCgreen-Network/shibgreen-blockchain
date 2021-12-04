@@ -25,9 +25,9 @@ else
 Write-Output "   ---"
 Write-Output "Create venv - python3.9 is required in PATH"
 Write-Output "   ---"
-python3 -m venv venv
+python -m venv venv
 . .\venv\Scripts\Activate.ps1
-python3 -m pip install --upgrade pip
+python -m pip install --upgrade pip
 pip install wheel pep517
 pip install pywin32
 pip install pyinstaller==4.5
