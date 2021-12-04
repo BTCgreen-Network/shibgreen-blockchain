@@ -25,9 +25,9 @@ else
 Write-Output "   ---"
 Write-Output "Create venv - python3.9 is required in PATH"
 Write-Output "   ---"
-python -m venv venv
+python3 -m venv venv
 . .\venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
 pip install wheel pep517
 pip install pywin32
 pip install pyinstaller==4.5
@@ -44,20 +44,6 @@ if (-not (Test-Path env:SHIBGREEN_INSTALLER_VERSION)) {
   }
 Write-Output "SHIBgreen Version is: $env:SHIBGREEN_INSTALLER_VERSION"
 Write-Output "   ---"
-
-Write-Output "Checking if madmax exists"
-Write-Output "   ---"
-if (Test-Path -Path .\madmax\) {
-    Write-Output "   madmax exists, moving to expected directory"
-    mv .\madmax\ .\venv\lib\site-packages\
-}
-
-Write-Output "Checking if bladebit exists"
-Write-Output "   ---"
-if (Test-Path -Path .\bladebit\) {
-    Write-Output "   bladebit exists, moving to expected directory"
-    mv .\bladebit\ .\venv\lib\site-packages\
-}
 
 Write-Output "   ---"
 Write-Output "Build shibgreen-blockchain wheels"
