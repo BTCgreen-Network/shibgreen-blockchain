@@ -98,7 +98,7 @@ export default function FarmFullNodeConnections() {
           {'The full node that your farmer is connected to is below. '}
           <Link
             target="_blank"
-            href="https://github.com/BTCgreen-network/shibgreen-blockchain/wiki/Network-Architecture"
+            href="https://github.com/BTCgreen-Network/shibgreen-blockchain/wiki/Network-Architecture"
           >
             Learn more
           </Link>

@@ -20,7 +20,7 @@ import {
 } from '../../../modules/createWallet';
 import { useStyles } from './WalletCreate';
 import { create_rl_admin_action } from '../../../modules/message';
-import { shibgreen_to_byte } from '../../../util/shibgreen';
+import { shibgreen_to_mojo } from '../../../util/shibgreen';
 import { openDialog } from '../../../modules/dialog';
 
 export const customStyles = makeStyles((theme) => ({
@@ -156,12 +156,12 @@ export const CreateRLAdminWallet = () => {
     dispatch(createState(true, true));
     const interval = interval_input.value;
     const interval_value = Number.parseInt(Number(interval));
-    const shibgreenper = shibgreen_to_byte(shibgreenper_input.value);
+    const shibgreenper = shibgreen_to_mojo(shibgreenper_input.value);
     const shibgreenper_value = Number.parseInt(Number(shibgreenper));
     const userpubkey = userpubkey_input.value;
-    const amount = shibgreen_to_byte(amount_input.value);
+    const amount = shibgreen_to_mojo(amount_input.value);
     const amount_value = Number.parseInt(Number(amount));
-    // var fee = shibgreen_to_byte(fee_input.value);
+    // var fee = shibgreen_to_mojo(fee_input.value);
     // TODO(lipa): send fee to server
     // const fee_value = parseInt(Number(fee));
     dispatch(

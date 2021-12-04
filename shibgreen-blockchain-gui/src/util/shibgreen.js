@@ -83,32 +83,32 @@ shibgreen_formatter.setFiat = (currency, rate, display = null) => {
   units.setUnit(currency, 1 / rate, display);
 };
 
-export const byte_to_shibgreen = (byte) => {
-  return shibgreen_formatter(Number.parseInt(byte), 'byte').to('shibgreen').value();
+export const mojo_to_shibgreen = (mojo) => {
+  return shibgreen_formatter(Number.parseInt(mojo), 'mojo').to('shibgreen').value();
 };
 
-export const shibgreen_to_byte = (shibgreen) => {
+export const shibgreen_to_mojo = (shibgreen) => {
   return shibgreen_formatter(Number.parseFloat(Number(shibgreen)), 'shibgreen')
-    .to('byte')
+    .to('mojo')
     .value();
 };
 
-export const byte_to_shibgreen_string = (byte) => {
-  return shibgreen_formatter(Number(byte), 'byte').to('shibgreen').toString();
+export const mojo_to_shibgreen_string = (mojo) => {
+  return shibgreen_formatter(Number(mojo), 'mojo').to('shibgreen').toString();
 };
 
-export const byte_to_colouredcoin = (byte) => {
-  return shibgreen_formatter(Number.parseInt(byte), 'byte')
+export const mojo_to_colouredcoin = (mojo) => {
+  return shibgreen_formatter(Number.parseInt(mojo), 'mojo')
     .to('colouredcoin')
     .value();
 };
 
-export const colouredcoin_to_byte = (colouredcoin) => {
+export const colouredcoin_to_mojo = (colouredcoin) => {
   return shibgreen_formatter(Number.parseFloat(Number(colouredcoin)), 'colouredcoin')
-    .to('byte')
+    .to('mojo')
     .value();
 };
 
-export const byte_to_colouredcoin_string = (byte) => {
-  return shibgreen_formatter(Number(byte), 'byte').to('colouredcoin').toString();
+export const mojo_to_colouredcoin_string = (mojo) => {
+  return shibgreen_formatter(Number(mojo), 'mojo').to('colouredcoin').toString();
 };

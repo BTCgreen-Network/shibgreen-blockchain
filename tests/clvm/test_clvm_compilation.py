@@ -9,7 +9,7 @@ wallet_program_files = set(
     [
         "shibgreen/wallet/puzzles/calculate_synthetic_public_key.clvm",
         "shibgreen/wallet/puzzles/cc.clvm",
-        "shibgreen/wallet/puzzles/chialisp_deserialisation.clvm",
+        "shibgreen/wallet/puzzles/shibgreenlisp_deserialisation.clvm",
         "shibgreen/wallet/puzzles/rom_bootstrap_generator.clvm",
         "shibgreen/wallet/puzzles/generator_for_single_coin.clvm",
         "shibgreen/wallet/puzzles/genesis-by-coin-id-with-0.clvm",

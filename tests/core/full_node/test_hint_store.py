@@ -9,7 +9,7 @@ from shibgreen.types.blockchain_format.coin import Coin
 from shibgreen.types.condition_opcodes import ConditionOpcode
 from shibgreen.types.condition_with_args import ConditionWithArgs
 from shibgreen.types.spend_bundle import SpendBundle
-from tests.core.full_node.test_coin_store import DBConnection
+from tests.util.db_connection import DBConnection
 from tests.wallet_tools import WalletTool
 from tests.setup_nodes import bt
 
@@ -51,7 +51,7 @@ class TestHintStore:
             assert coins_for_non_hint == []
 
     @pytest.mark.asyncio
-    async def test_hints_in_blockchain(self, empty_blockchain):
+    async def test_hints_in_blockchain(self, empty_blockchain):  # noqa: F811
         blockchain: Blockchain = empty_blockchain
 
         blocks = bt.get_consecutive_blocks(

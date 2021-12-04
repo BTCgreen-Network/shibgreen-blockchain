@@ -1,7 +1,7 @@
 from shibgreen.util.ints import uint32, uint64
 
 # 1 SHIBgreen coin = 1,000,000,000,0 = 1 trillion byte.
-_byte_per_shibgreen = 1000                                                                                                             
+_byte_per_shibgreen = 1000
 _blocks_per_year = 1681920  # 32 * 6 * 24 * 365
 
 

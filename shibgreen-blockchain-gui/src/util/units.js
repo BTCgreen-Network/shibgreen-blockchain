@@ -1,12 +1,12 @@
 const units = {
   shibgreen: 1,
-  byte: 1 / 1e3,
+  mojo: 1 / 1e3,
   colouredcoin: 1 / 1e9,
 };
 
 const aliases = {
   shibgreen: ['ch', 'shibgreen', 'SHIBgreen'],
-  byte: ['mj', 'byte'],
+  mojo: ['mj', 'mojo'],
   colouredcoin: ['cc', 'colouredcoin'],
 };
 
@@ -15,7 +15,7 @@ const display = {
     format: '{amount} CH',
     fractionDigits: 12,
   },
-  byte: {
+  mojo: {
     format: '{amount} MJ',
     fractionDigits: 0,
   },

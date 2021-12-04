@@ -39,7 +39,7 @@ import usePlotNFTDetails from '../../hooks/usePlotNFTDetails';
 import useOpenDialog from '../../hooks/useOpenDialog';
 import PoolJoin from '../pool/PoolJoin';
 import PoolAbsorbRewards from '../pool/PoolAbsorbRewards';
-import { byte_to_shibgreen } from '../../util/shibgreen';
+import { mojo_to_shibgreen } from '../../util/shibgreen';
 import { deleteUnconfirmedTransactions } from '../../modules/incoming';
 import PlotNFTGraph from './PlotNFTGraph';
 import PlotNFTGetPoolLoginLinkDialog from './PlotNFTGetPoolLoginLinkDialog';
@@ -150,7 +150,7 @@ export default function PlotNFTCard(props: Props) {
       label: <Trans>Unclaimed Rewards</Trans>,
       value: (
         <UnitFormat
-          value={byte_to_shibgreen(BigInt(balance))}
+          value={mojo_to_shibgreen(BigInt(balance))}
           state={State.SUCCESS}
         />
       ),

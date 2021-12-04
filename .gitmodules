@@ -1,8 +1,6 @@
-[submodule "shibgreen-blockchain-gui"]
-	path = shibgreen-blockchain-gui
-	url = https://github.com/BTCgreen-network/shibgreen-blockchain-gui.git
-	branch = pools
 [submodule "mozilla-ca"]
 	path = mozilla-ca
-	url = https://github.com/BTCgreen-network/mozilla-ca.git
-        branch = main
+	url = https://github.com/Chia-Network/mozilla-ca/
+[submodule "shibgreen-blockchain-gui"]
+	path = shibgreen-blockchain-gui
+	url = https://github.com/dominick01234/shibgreen-blockchain-gui

@@ -1,20 +1,4 @@
 #!/bin/bash
-
-# Check current SHIBgreen SSL version to prevent update on old SSL
-if [ -e ../.shibgreen/mainnet/config/ssl/ca/shibgreen_ca.crt ]; then
-	SHIBGREEN_SSL_SERIAL=$(openssl x509 -noout -in ../.shibgreen/mainnet/config/ssl/ca/shibgreen_ca.crt -serial)
-	if [ $SHIBGREEN_SSL_SERIAL = "serial=5C8A71239328650EB9FEF85CEC32BF779CA6A0C5" ]; then
-		echo ""
-		echo "WARNING:"
-		echo "Old version of SHIBgreen Blockchain SSL has been detected."
-		echo "Please visit https://shibgreen.com/sslupdate/ for further instructions."
-		echo ""
-		echo "Exiting installer..."
-		echo ""
-		exit 1
-	fi
-fi
-
 set -e
 UBUNTU=false
 DEBIAN=false
@@ -36,7 +20,7 @@ if [ "$(uname -m)" = "armv7l" ]; then
 	echo "WARNING:"
 	echo "The SHIBgreen Blockchain requires a 64 bit OS and this is 32 bit armv7l"
 	echo "For more information, see"
-	echo "https://github.com/BTCgreen-network/shibgreen-blockchain/wiki/Raspberry-Pi"
+	echo "https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi"
 	echo "Exiting."
 	exit 1
 fi
@@ -135,14 +119,13 @@ python -m pip install wheel
 python -m pip install --extra-index-url https://pypi.chia.net/simple/ miniupnpc==2.2.2
 python -m pip install -e . --extra-index-url https://pypi.chia.net/simple/
 
-
-echo "SHIBgreen blockchain install.sh complete."
 echo ""
-echo "Visit our Website to learn more about SHIBgreen:"
-echo "https://shibgreen.com"
+echo "SHIBgreen blockchain install.sh complete."
+echo "For assistance join us on Discord in the #new-to-shibgreen chat channel:"
+echo "https://discord.gg/R4xNEhJcEb"
 echo ""
 echo "Try the Quick Start Guide to running shibgreen-blockchain:"
-echo "https://github.com/BTCgreen-network/shibgreen-blockchain/wiki/Quick-Start-Guide"
+echo "https://github.com/BTCgreen-Network/shibgreen-blockchain"
 echo ""
 echo "To install the GUI type 'sh install-gui.sh' after '. ./activate'."
 echo ""

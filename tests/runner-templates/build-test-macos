@@ -1,5 +1,5 @@
 #
-# THIS FILE IS GENERATED. SEE https://github.com/BTCgreen-network/shibgreen-blockchain/tree/main/tests#readme
+# THIS FILE IS GENERATED. SEE https://github.com/Chia-Network/chia-blockchain/tree/main/tests#readme
 #
 name: MacOS TEST_NAME Tests
 
@@ -28,7 +28,7 @@ jobs:
     steps:
     - name: Cancel previous runs on the same branch
       if: ${{ github.ref != 'refs/heads/main' }}
-      uses: styfle/cancel-workflow-action@0.9.0
+      uses: styfle/cancel-workflow-action@0.9.1
       with:
         access_token: ${{ github.token }}
 
@@ -44,10 +44,10 @@ jobs:
 
     - name: Create keychain for CI use
       run: |
-        security create-keychain -p foo shibgreenchain
-        security default-keychain -s shibgreenchain
-        security unlock-keychain -p foo shibgreenchain
-        security set-keychain-settings -t 7200 -u shibgreenchain
+        security create-keychain -p foo chiachain
+        security default-keychain -s chiachain
+        security unlock-keychain -p foo chiachain
+        security set-keychain-settings -t 7200 -u chiachain
 
     - name: Get pip cache dir
       id: pip-cache
@@ -68,9 +68,9 @@ CHECKOUT_TEST_BLOCKS_AND_PLOTS
     - name: Link home directory
       run: |
         cd $HOME
-        ln -s $GITHUB_WORKSPACE/.shibgreen
-        echo "$HOME/.shibgreen"
-        ls -al $HOME/.shibgreen
+        ln -s $GITHUB_WORKSPACE/.chia
+        echo "$HOME/.chia"
+        ls -al $HOME/.chia
 
     - name: Run install script
       env:
@@ -92,5 +92,5 @@ INSTALL_TIMELORD
         . ./activate
         ./venv/bin/py.test TEST_DIR -s -v --durations 0PYTEST_PARALLEL_ARGS
 #
-# THIS FILE IS GENERATED. SEE https://github.com/BTCgreen-network/shibgreen-blockchain/tree/main/tests#readme
+# THIS FILE IS GENERATED. SEE https://github.com/Chia-Network/chia-blockchain/tree/main/tests#readme
 #

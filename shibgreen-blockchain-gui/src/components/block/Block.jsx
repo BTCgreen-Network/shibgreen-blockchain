@@ -28,7 +28,7 @@ import {
   sha256,
 } from '../../util/utils';
 import { getBlockRecord, getBlock } from '../../modules/fullnodeMessages';
-import { byte_to_shibgreen } from '../../util/shibgreen';
+import { mojo_to_shibgreen } from '../../util/shibgreen';
 import {
   calculatePoolReward,
   calculateBaseFarmerReward,
@@ -172,13 +172,13 @@ export default function Block() {
       ? blockRecord.weight - prevBlockRecord.weight
       : blockRecord?.weight ?? 0;
 
-  const poolReward = byte_to_shibgreen(calculatePoolReward(blockRecord.height));
-  const baseFarmerReward = byte_to_shibgreen(
+  const poolReward = mojo_to_shibgreen(calculatePoolReward(blockRecord.height));
+  const baseFarmerReward = mojo_to_shibgreen(
     calculateBaseFarmerReward(blockRecord.height),
   );
 
   const shibgreenFees = blockRecord.fees
-    ? byte_to_shibgreen(BigInt(blockRecord.fees))
+    ? mojo_to_shibgreen(BigInt(blockRecord.fees))
     : '';
 
   const rows = [

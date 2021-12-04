@@ -65,7 +65,7 @@ export default function FarmLatestBlockChallenges() {
           *Want to explore SHIBgreen’s blocks further? Check out{' '}
           <Link
             color="primary"
-            href="https://alltheblocks.net/shibgreen"
+            href="https://www.shibgreenexplorer.com/"
             target="_blank"
           >
             SHIBgreen Explorer

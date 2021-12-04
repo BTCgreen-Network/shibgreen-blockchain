@@ -7,7 +7,7 @@ from shibgreen.types.blockchain_format.program import Program
 from shibgreen.types.blockchain_format.sized_bytes import bytes32
 from shibgreen.types.condition_opcodes import ConditionOpcode
 from shibgreen.util.ints import uint64
-from shibgreen.wallet.chialisp import sexp
+from shibgreen.wallet.shibgreenlisp import sexp
 from shibgreen.wallet.puzzles.load_clvm import load_clvm
 
 RATE_LIMITED_MODE = 1

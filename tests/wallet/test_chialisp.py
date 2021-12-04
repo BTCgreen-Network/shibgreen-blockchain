@@ -1,6 +1,6 @@
 import pytest
 
-from shibgreen.wallet.chialisp import (
+from shibgreen.wallet.shibgreenlisp import (
     apply,
     args,
     cons,
@@ -17,7 +17,7 @@ from shibgreen.wallet.chialisp import (
 )
 
 
-class TestChialisp:
+class TestSHIBgreenlisp:
     def test_sexp(self):
         assert sexp() == "()"
         assert sexp(1) == "(1)"

@@ -20,7 +20,7 @@ import {
 } from '../../../modules/createWallet';
 import { useStyles } from './WalletCreate';
 import { create_cc_action } from '../../../modules/message';
-import { shibgreen_to_byte } from '../../../util/shibgreen';
+import { shibgreen_to_mojo } from '../../../util/shibgreen';
 import { openDialog } from '../../../modules/dialog';
 
 export const customStyles = makeStyles((theme) => ({
@@ -83,8 +83,8 @@ export const CreateNewCCWallet = () => {
       return;
     }
     dispatch(createState(true, true));
-    const amount = shibgreen_to_byte(amount_input.value);
-    const fee = shibgreen_to_byte(fee_input.value);
+    const amount = shibgreen_to_mojo(amount_input.value);
+    const fee = shibgreen_to_mojo(fee_input.value);
     dispatch(create_cc_action(amount, fee));
   }
 

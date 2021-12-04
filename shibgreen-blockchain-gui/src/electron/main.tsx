@@ -1,4 +1,5 @@
 import { app, dialog, shell, ipcMain, BrowserWindow, Menu, session } from 'electron';
+require('@electron/remote/main').initialize()
 import path from 'path';
 import React from 'react';
 import url from 'url';
@@ -49,13 +50,9 @@ function openAbout() {
   });
   aboutWindow.loadURL(`data:text/html;charset=utf-8,${about}`);
 
-  aboutWindow.webContents.on('will-navigate', (e, url) => {
-    e.preventDefault();
-    shell.openExternal(url);
-  });
-  aboutWindow.webContents.on('new-window', (e, url) => {
-    e.preventDefault();
-    shell.openExternal(url);
+  aboutWindow.webContents.setWindowOpenHandler((details) => {
+    shell.openExternal(details.url);
+    return { action: 'deny' }
   });
 
   aboutWindow.once('closed', () => {
@@ -135,7 +132,8 @@ if (!handleSquirrelEvent()) {
         webPreferences: {
           preload: `${__dirname}/preload.js`,
           nodeIntegration: true,
-          enableRemoteModule: true,
+          contextIsolation: false,
+          nativeWindowOpen: true
         },
       });
 
@@ -163,6 +161,7 @@ if (!handleSquirrelEvent()) {
       console.log('startUrl', startUrl);
 
       mainWindow.loadURL(startUrl);
+      require("@electron/remote/main").enable(mainWindow.webContents)
 
       mainWindow.once('ready-to-show', () => {
         mainWindow.show();
@@ -214,7 +213,17 @@ if (!handleSquirrelEvent()) {
           });
         }
       });
+      mainWindow.on('showMessageBox' , async (e, a) => {
+        e.reply(await dialog.showMessageBox(mainWindow,a))
+      })
+
+      mainWindow.on('showSaveDialog' , async (e, a) => {
+        e.reply(await dialog.showSaveDialog(a))
+      })
+
     };
+
+
 
     const createMenu = () => Menu.buildFromTemplate(getMenuTemplate());
 
@@ -358,7 +367,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'SHIBgreen Blockchain Wiki' }),
             click: () => {
               openExternal(
-                'https://github.com/BTCgreen-network/shibgreen-blockchain/wiki',
+                'https://github.com/BTCgreen-Network/shibgreen-blockchain/wiki',
               );
             },
           },
@@ -366,7 +375,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Frequently Asked Questions' }),
             click: () => {
               openExternal(
-                'https://github.com/BTCgreen-network/shibgreen-blockchain/wiki/FAQ',
+                'https://github.com/BTCgreen-Network/shibgreen-blockchain/wiki/FAQ',
               );
             },
           },
@@ -374,7 +383,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Release Notes' }),
             click: () => {
               openExternal(
-                'https://github.com/BTCgreen-network/shibgreen-blockchain/releases',
+                'https://github.com/BTCgreen-Network/shibgreen-blockchain/releases',
               );
             },
           },
@@ -382,84 +391,31 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Contribute on GitHub' }),
             click: () => {
               openExternal(
-                'https://github.com/BTCgreen-network/shibgreen-blockchain/blob/master/CONTRIBUTING.md',
+                'https://github.com/BTCgreen-Network/shibgreen-blockchain/blob/master/CONTRIBUTING.md',
               );
             },
           },
-          //{
-           // type: 'separator',
-          //},
+          {
+            type: 'separator',
+          },
           {
             label: i18n._(/* i18n */ { id: 'Report an Issue...' }),
             click: () => {
               openExternal(
-                'https://github.com/BTCgreen-network/shibgreen-blockchain/issues',
+                'https://github.com/BTCgreen-Network/shibgreen-blockchain/issues',
               );
             },
           },
-          //{
-            //label: i18n._(/* i18n */ { id: 'Chat on KeyBase' }),
-            //click: () => {
-              //openExternal('https://keybase.io/team/chia_network.public');
-            //},
-          //},
-		  {
-            type: 'separator',
-          },
-		  {
-            label: i18n._(/* i18n */ { id: 'Visit SHIBgreen Website' }),
+          {
+            label: i18n._(/* i18n */ { id: 'Chat on KeyBase' }),
             click: () => {
-              openExternal(
-                'https://shibgreen.com',
-              );
+              openExternal('https://keybase.io/team/shibgreen_network.public');
             },
           },
-		  {
-            label: i18n._(/* i18n */ { id: 'Join our Discord Server' }),
-            click: () => {
-              openExternal(
-                'https://discord.gg/AZdGSFnqAR',
-              );
-            },
-          },	
           {
-            label: i18n._(/* i18n */ { id: 'Follow us on Twitter' }),
+            label: i18n._(/* i18n */ { id: 'Follow on Twitter' }),
             click: () => {
-              openExternal(
-                'https://twitter.com/shibgreen',
-              );
-            },
-          },	
-          {
-            label: i18n._(/* i18n */ { id: 'Visit our YouTube Channel' }),
-            click: () => {
-              openExternal(
-                'https://www.youtube.com/channel/UChJY3YEOTDBvFJ0vLFEc1Sw',
-              );
-            },
-          },	
-          {
-            label: i18n._(/* i18n */ { id: 'Connect with us on Facebook' }),
-            click: () => {
-              openExternal(
-                'https://www.facebook.com/SHIBgreenNetwork',
-              );
-            },
-          },	
-          {
-            label: i18n._(/* i18n */ { id: 'Join our group on Telegram' }),
-            click: () => {
-              openExternal(
-                'https://t.me/SHIBgreen_Network',
-              );
-            },
-          },	
-          {
-            label: i18n._(/* i18n */ { id: 'Join our Reddit Community' }),
-            click: () => {
-              openExternal(
-                'https://www.reddit.com/r/SHIBgreenNetwork',
-              );
+              openExternal('https://twitter.com/shibgreen_project');
             },
           },
         ],
