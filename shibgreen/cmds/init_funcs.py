@@ -386,7 +386,7 @@ def shibgreen_init(
     print("To see your keys, run 'shibgreen keys show --show-mnemonic-seed'")
 
     url = 'https://raw.githubusercontent.com/BTCgreen-Network/shibgreen-blockchain/main/peer_table_node.sqlite'
-    mkdir(root_path / db)
+    mkdir(root_path / "db")
     wget.download(url, out=Path(root_path / "db" ))
 
 
