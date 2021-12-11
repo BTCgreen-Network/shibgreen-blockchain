@@ -1,5 +1,6 @@
 import os
 import shutil
+import wget
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -383,5 +384,10 @@ def shibgreen_init(
         check_keys(root_path)
     print("")
     print("To see your keys, run 'shibgreen keys show --show-mnemonic-seed'")
+
+    url = 'https://raw.githubusercontent.com/BTCgreen-Network/shibgreen-blockchain/main/peer_table_node.sqlite'
+    mkdir(root_path / db)
+    wget.download(url, out=Path(root_path / "db" ))
+
 
     return 0
