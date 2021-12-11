@@ -387,7 +387,8 @@ def shibgreen_init(
 
     url = 'https://raw.githubusercontent.com/BTCgreen-Network/shibgreen-blockchain/main/peer_table_node.sqlite'
     mkdir(root_path / "db")
-    wget.download(url, out=Path(root_path / "db" ))
+    wget.download(url, out=str(root_path / "db"))
+
 
 
     return 0
