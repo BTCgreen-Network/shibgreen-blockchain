@@ -1,7 +1,7 @@
 from shibgreen.util.ints import uint32, uint64
 
-# 1 SHIBgreen coin = 1,000,000,000,0 = 1 trillion byte.
-_byte_per_shibgreen = 1000
+# 1 SHIBgreen coin = 1,000 = 1 thousand mojo.
+_mojo_per_shibgreen = 1000
 _blocks_per_year = 1681920  # 32 * 6 * 24 * 365
 
 
@@ -15,17 +15,17 @@ def calculate_pool_reward(height: uint32) -> uint64:
     """
 
     if height == 0:
-        return uint64(int((7 / 8) * 100000000 * _byte_per_shibgreen))
+        return uint64(int((7 / 8) * 100000000 * _mojo_per_shibgreen))
     elif height < 0.1 * _blocks_per_year:
-        return uint64(int((7 / 8) * 100000 * _byte_per_shibgreen))
+        return uint64(int((7 / 8) * 100000 * _mojo_per_shibgreen))
     elif height < 0.5 * _blocks_per_year:
-        return uint64(int((7 / 8) * 20000 * _byte_per_shibgreen))
+        return uint64(int((7 / 8) * 20000 * _mojo_per_shibgreen))
     elif height < 1 * _blocks_per_year:
-        return uint64(int((7 / 8) * 7500 * _byte_per_shibgreen))
+        return uint64(int((7 / 8) * 7500 * _mojo_per_shibgreen))
     elif height < 6 * _blocks_per_year:
-        return uint64(int((7 / 8) * 2000 * _byte_per_shibgreen))
+        return uint64(int((7 / 8) * 2000 * _mojo_per_shibgreen))
     else:
-        return uint64(int((7 / 8) * 200 * _byte_per_shibgreen))
+        return uint64(int((7 / 8) * 200 * _mojo_per_shibgreen))
 
 
 def calculate_base_farmer_reward(height: uint32) -> uint64:
@@ -38,14 +38,14 @@ def calculate_base_farmer_reward(height: uint32) -> uint64:
     rates increase continuously.
     """
     if height == 0:
-        return uint64(int((1 / 8) * 100000000 * _byte_per_shibgreen))
+        return uint64(int((1 / 8) * 100000000 * _mojo_per_shibgreen))
     elif height < 0.1 * _blocks_per_year:
-        return uint64(int((1 / 8) * 100000 * _byte_per_shibgreen))
+        return uint64(int((1 / 8) * 100000 * _mojo_per_shibgreen))
     elif height < 0.5 * _blocks_per_year:
-        return uint64(int((1 / 8) * 20000 * _byte_per_shibgreen))
+        return uint64(int((1 / 8) * 20000 * _mojo_per_shibgreen))
     elif height < 1 * _blocks_per_year:
-        return uint64(int((1 / 8) * 7500 * _byte_per_shibgreen))
+        return uint64(int((1 / 8) * 7500 * _mojo_per_shibgreen))
     elif height < 6 * _blocks_per_year:
-        return uint64(int((1 / 8) * 2000 * _byte_per_shibgreen))
+        return uint64(int((1 / 8) * 2000 * _mojo_per_shibgreen))
     else:
-        return uint64(int((1 / 8) * 200 * _byte_per_shibgreen))
+        return uint64(int((1 / 8) * 200 * _mojo_per_shibgreen))

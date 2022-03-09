@@ -8,12 +8,10 @@ from shibgreen.types.blockchain_format.program import Program, SerializedProgram
 wallet_program_files = set(
     [
         "shibgreen/wallet/puzzles/calculate_synthetic_public_key.clvm",
-        "shibgreen/wallet/puzzles/cc.clvm",
+        "shibgreen/wallet/puzzles/cat.clvm",
         "shibgreen/wallet/puzzles/shibgreenlisp_deserialisation.clvm",
         "shibgreen/wallet/puzzles/rom_bootstrap_generator.clvm",
         "shibgreen/wallet/puzzles/generator_for_single_coin.clvm",
-        "shibgreen/wallet/puzzles/genesis-by-coin-id-with-0.clvm",
-        "shibgreen/wallet/puzzles/genesis-by-puzzle-hash-with-0.clvm",
         "shibgreen/wallet/puzzles/lock.inner.puzzle.clvm",
         "shibgreen/wallet/puzzles/p2_conditions.clvm",
         "shibgreen/wallet/puzzles/p2_delegated_conditions.clvm",
@@ -37,6 +35,14 @@ wallet_program_files = set(
         "shibgreen/wallet/puzzles/pool_member_innerpuz.clvm",
         "shibgreen/wallet/puzzles/singleton_launcher.clvm",
         "shibgreen/wallet/puzzles/p2_singleton_or_delayed_puzhash.clvm",
+        "shibgreen/wallet/puzzles/genesis_by_puzzle_hash.clvm",
+        "shibgreen/wallet/puzzles/everything_with_signature.clvm",
+        "shibgreen/wallet/puzzles/delegated_tail.clvm",
+        "shibgreen/wallet/puzzles/settlement_payments.clvm",
+        "shibgreen/wallet/puzzles/genesis_by_coin_id.clvm",
+        "shibgreen/wallet/puzzles/genesis-by-puzzle-hash-with-0.clvm",
+        "shibgreen/wallet/puzzles/delegated_genesis_checker.clvm",
+        "shibgreen/wallet/puzzles/genesis-by-coin-id-with-0.clvm",
     ]
 )
 

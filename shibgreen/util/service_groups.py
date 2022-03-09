@@ -10,10 +10,12 @@ SERVICES_FOR_GROUP = {
     "timelord": "shibgreen_timelord_launcher shibgreen_timelord shibgreen_full_node".split(),
     "timelord-only": "shibgreen_timelord".split(),
     "timelord-launcher-only": "shibgreen_timelord_launcher".split(),
-    "wallet": "shibgreen_wallet shibgreen_full_node".split(),
-    "wallet-only": "shibgreen_wallet".split(),
+    "wallet": "shibgreen_wallet".split(),
     "introducer": "shibgreen_introducer".split(),
     "simulator": "shibgreen_full_node_simulator".split(),
+    "crawler": "shibgreen_crawler".split(),
+    "seeder": "shibgreen_crawler shibgreen_seeder".split(),
+    "seeder-only": "shibgreen_seeder".split(),
 }
 
 

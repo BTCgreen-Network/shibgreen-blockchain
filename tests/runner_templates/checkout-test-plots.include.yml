@@ -1,0 +1,14 @@
+    - name: Checkout test blocks and plots
+      uses: actions/checkout@v2
+      with:
+        repository: 'BTCgreen-Network/test-cache'
+        path: '.shibgreen'
+        ref: '0.28.0'
+        fetch-depth: 1
+
+    - name: Link home directory
+      run: |
+        cd $HOME
+        ln -s $GITHUB_WORKSPACE/.shibgreen
+        echo "$HOME/.shibgreen"
+        ls -al $HOME/.shibgreen

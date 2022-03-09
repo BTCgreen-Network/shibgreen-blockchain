@@ -10,8 +10,8 @@ from shibgreen.types.announcement import Announcement
 from shibgreen.types.blockchain_format.coin import Coin
 from shibgreen.types.blockchain_format.sized_bytes import bytes32
 from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.types.condition_opcodes import ConditionOpcode
 from shibgreen.types.spend_bundle import SpendBundle
-from shibgreen.util.condition_tools import ConditionOpcode
 
 from shibgreen.util.ints import uint64
 from shibgreen.wallet.puzzles.load_clvm import load_clvm

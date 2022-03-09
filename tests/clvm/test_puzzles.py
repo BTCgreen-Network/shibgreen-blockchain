@@ -6,8 +6,8 @@ from blspy import AugSchemeMPL, BasicSchemeMPL, G1Element, G2Element
 from shibgreen.types.blockchain_format.program import Program
 from shibgreen.types.blockchain_format.sized_bytes import bytes32
 from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.types.condition_opcodes import ConditionOpcode
 from shibgreen.types.spend_bundle import SpendBundle
-from shibgreen.util.condition_tools import ConditionOpcode
 from shibgreen.util.hash import std_hash
 from shibgreen.wallet.puzzles import (
     p2_conditions,

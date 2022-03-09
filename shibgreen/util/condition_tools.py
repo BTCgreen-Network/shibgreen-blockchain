@@ -1,5 +1,7 @@
 from typing import Dict, List, Optional, Tuple, Set
 
+from clvm.casts import int_from_bytes
+
 from shibgreen.types.announcement import Announcement
 from shibgreen.types.name_puzzle_condition import NPC
 from shibgreen.types.blockchain_format.coin import Coin
@@ -7,7 +9,6 @@ from shibgreen.types.blockchain_format.program import Program, SerializedProgram
 from shibgreen.types.blockchain_format.sized_bytes import bytes32, bytes48
 from shibgreen.types.condition_opcodes import ConditionOpcode
 from shibgreen.types.condition_with_args import ConditionWithArgs
-from shibgreen.util.clvm import int_from_bytes
 from shibgreen.util.errors import ConsensusError, Err
 from shibgreen.util.ints import uint64
 
@@ -114,7 +115,7 @@ def created_outputs_for_conditions_dict(
     for cvp in conditions_dict.get(ConditionOpcode.CREATE_COIN, []):
         puzzle_hash, amount_bin = cvp.vars[0], cvp.vars[1]
         amount = int_from_bytes(amount_bin)
-        coin = Coin(input_coin_name, puzzle_hash, uint64(amount))
+        coin = Coin(input_coin_name, bytes32(puzzle_hash), uint64(amount))
         output_coins.append(coin)
     return output_coins
 

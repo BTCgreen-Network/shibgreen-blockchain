@@ -9,8 +9,8 @@ from shibgreen.types.announcement import Announcement
 from shibgreen.types.blockchain_format.coin import Coin
 from shibgreen.types.blockchain_format.sized_bytes import bytes32
 from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.types.condition_opcodes import ConditionOpcode
 from shibgreen.types.spend_bundle import SpendBundle
-from shibgreen.util.condition_tools import ConditionOpcode
 from shibgreen.util.ints import uint64
 from shibgreen.wallet.puzzles.load_clvm import load_clvm
 
@@ -298,11 +298,11 @@ def launcher_conditions_and_spend_bundle(
     return launcher_coin.name(), expected_conditions, spend_bundle
 
 
-def singleton_puzzle(launcher_id: Program, launcher_puzzle_hash: bytes32, inner_puzzle: Program) -> Program:
+def singleton_puzzle(launcher_id: bytes32, launcher_puzzle_hash: bytes32, inner_puzzle: Program) -> Program:
     return SINGLETON_MOD.curry((SINGLETON_MOD_HASH, (launcher_id, launcher_puzzle_hash)), inner_puzzle)
 
 
-def singleton_puzzle_hash(launcher_id: Program, launcher_puzzle_hash: bytes32, inner_puzzle: Program) -> bytes32:
+def singleton_puzzle_hash(launcher_id: bytes32, launcher_puzzle_hash: bytes32, inner_puzzle: Program) -> bytes32:
     return singleton_puzzle(launcher_id, launcher_puzzle_hash, inner_puzzle).get_tree_hash()
 
 

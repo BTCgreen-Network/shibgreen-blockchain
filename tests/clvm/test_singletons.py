@@ -8,9 +8,9 @@ from shibgreen.types.blockchain_format.program import Program
 from shibgreen.types.blockchain_format.sized_bytes import bytes32
 from shibgreen.types.blockchain_format.coin import Coin
 from shibgreen.types.coin_spend import CoinSpend
+from shibgreen.types.condition_opcodes import ConditionOpcode
 from shibgreen.types.spend_bundle import SpendBundle
 from shibgreen.util.errors import Err
-from shibgreen.util.condition_tools import ConditionOpcode
 from shibgreen.util.ints import uint64
 from shibgreen.consensus.default_constants import DEFAULT_CONSTANTS
 from shibgreen.wallet.lineage_proof import LineageProof
