@@ -26,6 +26,7 @@ import {
   mojoToSHIBgreen,
   DashboardTitle,
   Suspender,
+  toBech32m,
 } from '@shibgreen/core';
 import {
   unix_to_short_date,
@@ -33,7 +34,6 @@ import {
   arr_to_hex,
   sha256,
 } from '../../util/utils';
-import toBech32m from '../../util/toBech32m';
 import BlockTitle from './BlockTitle';
 
 /* global BigInt */
