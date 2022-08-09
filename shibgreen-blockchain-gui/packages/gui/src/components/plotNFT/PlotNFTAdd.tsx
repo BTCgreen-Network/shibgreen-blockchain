@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { useNavigate } from 'react-router';
 import { Trans } from '@lingui/macro';
 import { useCreateNewPoolWalletMutation } from '@shibgreen/api-react';
-import { ChevronRight as ChevronRightIcon } from '@material-ui/icons';
+import { ChevronRight as ChevronRightIcon } from '@mui/icons-material';
 import { Flex, Suspender } from '@shibgreen/core';
 import PlotNFTState from '../../constants/PlotNFTState';
 import useUnconfirmedPlotNFTs from '../../hooks/useUnconfirmedPlotNFTs';

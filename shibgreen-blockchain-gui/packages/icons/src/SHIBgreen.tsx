@@ -1,5 +1,5 @@
 import React from 'react';
-import { SvgIcon, SvgIconProps } from '@material-ui/core';
+import { SvgIcon, SvgIconProps } from '@mui/material';
 import SHIBgreenIcon from './images/shibgreen.svg';
 
 export default function Keys(props: SvgIconProps) {

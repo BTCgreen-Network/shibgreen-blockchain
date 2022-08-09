@@ -1,10 +1,11 @@
 import React, { useMemo } from 'react';
 import { Trans } from '@lingui/macro';
-import { useCurrencyCode, mojoToSHIBgreenLocaleString, CardSimple } from '@shibgreen/core';
+import { useCurrencyCode, mojoToSHIBgreenLocaleString, CardSimple, useLocale } from '@shibgreen/core';
 import { useGetFarmedAmountQuery } from '@shibgreen/api-react';
 
 export default function FarmCardUserFees() {
   const currencyCode = useCurrencyCode();
+  const [locale] = useLocale();
   const { data, isLoading, error } = useGetFarmedAmountQuery();
 
   const feeAmount = data?.feeAmount;
@@ -13,13 +14,13 @@ export default function FarmCardUserFees() {
     if (feeAmount !== undefined) {
       return (
         <>
-          {mojoToSHIBgreenLocaleString(feeAmount)}
+          {mojoToSHIBgreenLocaleString(feeAmount, locale)}
           &nbsp;
           {currencyCode}
         </>
       );
     }
-  }, [feeAmount]);
+  }, [feeAmount, locale, currencyCode]);
 
   return (
     <CardSimple

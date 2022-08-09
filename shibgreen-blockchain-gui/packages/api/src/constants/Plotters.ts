@@ -32,7 +32,7 @@ export const bladebitDefaults: PlotterDefaults = {
   delay: 0,
 };
 
-export const chiaposOptions: PlotterOptions = {
+export const shibgreenposOptions: PlotterOptions = {
   kSizes: [25, 32, 33, 34, 35],
   haveNumBuckets: true,
   haveMadmaxNumBucketsPhase3: false,
@@ -47,7 +47,7 @@ export const chiaposOptions: PlotterOptions = {
   canSetBufferSize: true,
 };
 
-export const chiaposDefaults: PlotterDefaults = {
+export const shibgreenposDefaults: PlotterDefaults = {
   plotterName: PlotterName.SHIBGREENPOS,
   plotSize: 32,
   numThreads: 2,

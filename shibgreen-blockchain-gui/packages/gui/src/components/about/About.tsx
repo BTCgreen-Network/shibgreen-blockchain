@@ -71,7 +71,7 @@ const Spacer = styled.div`
   margin-bottom: 1rem;
 `;
 
-const url = 'https://shibgreennetwork.org';
+const url = 'https://shibgreen.net';
 
 type Props = {
   version: string;

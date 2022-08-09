@@ -1,6 +1,6 @@
 # @shibgreen/api-react
 
-![Alt text](https://www.shibgreennetwork.org/img/shibgreen_logo.svg)
+![Alt text](https://www.shibgreen.net/img/shibgreen_logo.svg)
 
 This library provides react hooks on the top of @shibgreen/api and uses [RTK Query](https://redux-toolkit.js.org/rtk-query/overview) under do hood.
 It is designed to simplify common cases for loading data in a web application, eliminating the need to hand-write data fetching & caching logic yourself. Providing much more benefits:

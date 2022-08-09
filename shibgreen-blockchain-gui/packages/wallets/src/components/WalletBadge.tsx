@@ -2,7 +2,7 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import { Tooltip } from '@shibgreen/core';
 import { useGetCatListQuery } from '@shibgreen/api-react';
-import { VerifiedUser as VerifiedUserIcon, VerifiedUserProps } from '@material-ui/icons';
+import { VerifiedUser as VerifiedUserIcon, VerifiedUserProps } from '@mui/icons-material';
 import styled from 'styled-components';
 import type { Wallet } from '@shibgreen/api';
 import { WalletType } from '@shibgreen/api';

@@ -6,7 +6,7 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-} from '@material-ui/core';
+} from '@mui/material';
 import { AlertDialog, ButtonLoading, DialogActions, Flex, Form, TextField, useOpenDialog } from '@shibgreen/core';
 
 type WalletRenameDialogFormData = {

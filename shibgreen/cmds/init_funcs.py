@@ -1,6 +1,6 @@
 import os
 import shutil
-import wget
+import sqlite3
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -20,10 +20,11 @@ from shibgreen.util.config import (
     create_default_shibgreen_config,
     initial_config_file,
     load_config,
+    lock_and_load_config,
     save_config,
     unflatten_properties,
-    get_config_lock,
 )
+from shibgreen.util.db_version import set_db_version
 from shibgreen.util.keychain import Keychain
 from shibgreen.util.path import mkdir, path_from_root
 from shibgreen.util.ssl_check import (
@@ -43,8 +44,8 @@ from shibgreen.wallet.derive_keys import (
 )
 from shibgreen.cmds.configure import configure
 
-private_node_names = {"full_node", "wallet", "farmer", "harvester", "timelord", "crawler", "daemon"}
-public_node_names = {"full_node", "wallet", "farmer", "introducer", "timelord"}
+private_node_names: List[str] = ["full_node", "wallet", "farmer", "harvester", "timelord", "crawler", "daemon"]
+public_node_names: List[str] = ["full_node", "wallet", "farmer", "introducer", "timelord"]
 
 
 def dict_add_new_default(updated: Dict, default: Dict, do_not_migrate_keys: Dict[str, Any]):
@@ -76,8 +77,7 @@ def check_keys(new_root: Path, keychain: Optional[Keychain] = None) -> None:
         print("No keys are present in the keychain. Generate them with 'shibgreen keys generate'")
         return None
 
-    with get_config_lock(new_root, "config.yaml"):
-        config: Dict = load_config(new_root, "config.yaml", acquire_lock=False)
+    with lock_and_load_config(new_root, "config.yaml") as config:
         pool_child_pubkeys = [master_sk_to_pool_sk(sk).get_g1() for sk, _ in all_sks]
         all_targets = []
         stop_searching_for_farmer = "xshib_target_address" not in config["farmer"]
@@ -198,8 +198,7 @@ def migrate_from(
 
     # update config yaml with new keys
 
-    with get_config_lock(new_root, "config.yaml"):
-        config: Dict = load_config(new_root, "config.yaml", acquire_lock=False)
+    with lock_and_load_config(new_root, "config.yaml") as config:
         config_str: str = initial_config_file("config.yaml")
         default_config: Dict = yaml.safe_load(config_str)
         flattened_keys = unflatten_properties({k: "" for k in do_not_migrate_settings})
@@ -212,7 +211,12 @@ def migrate_from(
     return 1
 
 
-def create_all_ssl(root_path: Path):
+def create_all_ssl(
+    root_path: Path,
+    *,
+    private_ca_crt_and_key: Optional[Tuple[bytes, bytes]] = None,
+    node_certs_and_keys: Optional[Dict[str, Dict]] = None,
+):
     # remove old key and crt
     config_dir = root_path / "config"
     old_key_path = config_dir / "trusted.key"
@@ -235,6 +239,11 @@ def create_all_ssl(root_path: Path):
     shibgreen_ca_key_path = ca_dir / "shibgreen_ca.key"
     write_ssl_cert_and_key(shibgreen_ca_crt_path, shibgreen_ca_crt, shibgreen_ca_key_path, shibgreen_ca_key)
 
+    # If Private CA crt/key are passed-in, write them out
+    if private_ca_crt_and_key is not None:
+        private_ca_crt, private_ca_key = private_ca_crt_and_key
+        write_ssl_cert_and_key(private_ca_crt_path, private_ca_crt, private_ca_key_path, private_ca_key)
+
     if not private_ca_key_path.exists() or not private_ca_crt_path.exists():
         # Create private CA
         print(f"Can't find private CA, creating a new one in {root_path} to generate TLS certificates")
@@ -242,33 +251,53 @@ def create_all_ssl(root_path: Path):
         # Create private certs for each node
         ca_key = private_ca_key_path.read_bytes()
         ca_crt = private_ca_crt_path.read_bytes()
-        generate_ssl_for_nodes(ssl_dir, ca_crt, ca_key, True)
+        generate_ssl_for_nodes(
+            ssl_dir, ca_crt, ca_key, prefix="private", nodes=private_node_names, node_certs_and_keys=node_certs_and_keys
+        )
     else:
         # This is entered when user copied over private CA
         print(f"Found private CA in {root_path}, using it to generate TLS certificates")
         ca_key = private_ca_key_path.read_bytes()
         ca_crt = private_ca_crt_path.read_bytes()
-        generate_ssl_for_nodes(ssl_dir, ca_crt, ca_key, True)
+        generate_ssl_for_nodes(
+            ssl_dir, ca_crt, ca_key, prefix="private", nodes=private_node_names, node_certs_and_keys=node_certs_and_keys
+        )
 
     shibgreen_ca_crt, shibgreen_ca_key = get_shibgreen_ca_crt_key()
-    generate_ssl_for_nodes(ssl_dir, shibgreen_ca_crt, shibgreen_ca_key, False, overwrite=False)
+    generate_ssl_for_nodes(
+        ssl_dir,
+        shibgreen_ca_crt,
+        shibgreen_ca_key,
+        prefix="public",
+        nodes=public_node_names,
+        overwrite=False,
+        node_certs_and_keys=node_certs_and_keys,
+    )
 
 
-def generate_ssl_for_nodes(ssl_dir: Path, ca_crt: bytes, ca_key: bytes, private: bool, overwrite=True):
-    if private:
-        names = private_node_names
-    else:
-        names = public_node_names
-
-    for node_name in names:
+def generate_ssl_for_nodes(
+    ssl_dir: Path,
+    ca_crt: bytes,
+    ca_key: bytes,
+    *,
+    prefix: str,
+    nodes: List[str],
+    overwrite: bool = True,
+    node_certs_and_keys: Optional[Dict[str, Dict]] = None,
+):
+    for node_name in nodes:
         node_dir = ssl_dir / node_name
         ensure_ssl_dirs([node_dir])
-        if private:
-            prefix = "private"
-        else:
-            prefix = "public"
         key_path = node_dir / f"{prefix}_{node_name}.key"
         crt_path = node_dir / f"{prefix}_{node_name}.crt"
+        if node_certs_and_keys is not None:
+            certs_and_keys = node_certs_and_keys.get(node_name, {}).get(prefix, {})
+            crt = certs_and_keys.get("crt", None)
+            key = certs_and_keys.get("key", None)
+            if crt is not None and key is not None:
+                write_ssl_cert_and_key(crt_path, crt, key_path, key)
+                continue
+
         if key_path.exists() and crt_path.exists() and overwrite is False:
             continue
         generate_ca_signed_cert(ca_crt, ca_key, crt_path, key_path)
@@ -401,12 +430,9 @@ def shibgreen_init(
     protected Keychain. When launching the daemon from the GUI, we want the GUI to
     handle unlocking the keychain.
     """
-    if os.environ.get("SHIBGREEN_ROOT", None) is not None:
-        print(
-            f"warning, your SHIBGREEN_ROOT is set to {os.environ['SHIBGREEN_ROOT']}. "
-            f"Please unset the environment variable and run shibgreen init again\n"
-            f"or manually migrate config.yaml"
-        )
+    shibgreen_root = os.environ.get("SHIBGREEN_ROOT", None)
+    if shibgreen_root is not None:
+        print(f"SHIBGREEN_ROOT is set to {shibgreen_root}")
 
     print(f"SHIBgreen directory {root_path}")
     if root_path.is_dir() and Path(root_path / "config" / "config.yaml").exists():
@@ -464,30 +490,31 @@ def shibgreen_init(
 
     config: Dict
 
+    db_path_replaced: str
     if v1_db:
-        with get_config_lock(root_path, "config.yaml"):
-            config = load_config(root_path, "config.yaml", acquire_lock=False)
+        with lock_and_load_config(root_path, "config.yaml") as config:
             db_pattern = config["full_node"]["database_path"]
             new_db_path = db_pattern.replace("_v2_", "_v1_")
             config["full_node"]["database_path"] = new_db_path
+            db_path_replaced = new_db_path.replace("CHALLENGE", config["selected_network"])
+            db_path = path_from_root(root_path, db_path_replaced)
+
+            mkdir(db_path.parent)
+            with sqlite3.connect(db_path) as connection:
+                set_db_version(connection, 1)
+
             save_config(root_path, "config.yaml", config)
+
     else:
         config = load_config(root_path, "config.yaml")["full_node"]
-        db_path_replaced: str = config["database_path"].replace("CHALLENGE", config["selected_network"])
+        db_path_replaced = config["database_path"].replace("CHALLENGE", config["selected_network"])
         db_path = path_from_root(root_path, db_path_replaced)
         mkdir(db_path.parent)
-        import sqlite3
 
         with sqlite3.connect(db_path) as connection:
-            connection.execute("CREATE TABLE database_version(version int)")
-            connection.execute("INSERT INTO database_version VALUES (2)")
-            connection.commit()
+            set_db_version(connection, 2)
 
     print("")
     print("To see your keys, run 'shibgreen keys show --show-mnemonic-seed'")
-
-    url = 'https://raw.githubusercontent.com/BTCgreen-Network/shibgreen-blockchain/main/peer_table_node.sqlite'
-    mkdir(root_path / "db")
-    wget.download(url, out=str(root_path / "db"))
 
     return 0

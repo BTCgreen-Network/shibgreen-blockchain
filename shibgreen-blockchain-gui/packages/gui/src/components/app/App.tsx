@@ -1,11 +1,13 @@
 import React from 'react';
-import { ModeProvider } from '@shibgreen/core';
+import { ModeProvider, Persist } from '@shibgreen/core';
 import AppRouter from './AppRouter';
 
 export default function App() {
   return (
     <ModeProvider persist>
-      <AppRouter />
+      <Persist namespace="root">
+        <AppRouter />
+      </Persist>
     </ModeProvider>
   );
 }

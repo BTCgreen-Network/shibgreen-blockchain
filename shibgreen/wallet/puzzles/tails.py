@@ -5,6 +5,7 @@ from shibgreen.types.blockchain_format.sized_bytes import bytes32
 from shibgreen.types.spend_bundle import SpendBundle
 from shibgreen.util.ints import uint64
 from shibgreen.util.byte_types import hexstr_to_bytes
+from shibgreen.wallet.cat_wallet.lineage_store import CATLineageStore
 from shibgreen.wallet.lineage_proof import LineageProof
 from shibgreen.wallet.puzzles.load_clvm import load_clvm
 from shibgreen.wallet.cat_wallet.cat_utils import (
@@ -72,8 +73,12 @@ class GenesisById(LimitationsProgram):
         origin_id = origin.name()
 
         cat_inner: Program = await wallet.get_new_inner_puzzle()
-        await wallet.add_lineage(origin_id, LineageProof(), False)
         tail: Program = cls.construct([Program.to(origin_id)])
+
+        wallet.lineage_store = await CATLineageStore.create(
+            wallet.wallet_state_manager.db_wrapper, tail.get_tree_hash().hex()
+        )
+        await wallet.add_lineage(origin_id, LineageProof(), False)
 
         minted_cat_puzzle_hash: bytes32 = construct_cat_puzzle(CAT_MOD, tail.get_tree_hash(), cat_inner).get_tree_hash()
 
