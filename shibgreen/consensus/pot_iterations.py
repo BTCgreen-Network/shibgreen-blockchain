@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from shibgreen.consensus.constants import ConsensusConstants
 from shibgreen.consensus.pos_quality import _expected_plot_size
 from shibgreen.types.blockchain_format.sized_bytes import bytes32

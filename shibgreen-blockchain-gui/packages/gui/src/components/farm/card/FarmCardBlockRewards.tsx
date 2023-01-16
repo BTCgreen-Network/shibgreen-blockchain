@@ -1,8 +1,8 @@
-import React, { useMemo } from 'react';
+import { useGetFarmedAmountQuery } from '@shibgreen/api-react';
+import { useCurrencyCode, mojoToSHIBgreenLocaleString, CardSimple, useLocale } from '@shibgreen/core';
 import { Trans } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
-import { useCurrencyCode, mojoToSHIBgreenLocaleString, CardSimple, useLocale } from '@shibgreen/core';
-import { useGetFarmedAmountQuery } from '@shibgreen/api-react';
+import React, { useMemo } from 'react';
 
 export default function FarmCardBlockRewards() {
   const currencyCode = useCurrencyCode();

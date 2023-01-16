@@ -1,11 +1,11 @@
-import React from 'react';
-import { Trans } from '@lingui/macro';
-import { Tooltip } from '@shibgreen/core';
-import { useGetCatListQuery } from '@shibgreen/api-react';
-import { VerifiedUser as VerifiedUserIcon, VerifiedUserProps } from '@mui/icons-material';
-import styled from 'styled-components';
 import type { Wallet } from '@shibgreen/api';
 import { WalletType } from '@shibgreen/api';
+import { useGetCatListQuery } from '@shibgreen/api-react';
+import { Tooltip } from '@shibgreen/core';
+import { Trans } from '@lingui/macro';
+import { VerifiedUser as VerifiedUserIcon, VerifiedUserProps } from '@mui/icons-material';
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledSmallBadge = styled(VerifiedUserIcon)`
   font-size: 1rem;
@@ -32,4 +32,3 @@ export default function WalletBadge(props: Props) {
 
   return null;
 }
-

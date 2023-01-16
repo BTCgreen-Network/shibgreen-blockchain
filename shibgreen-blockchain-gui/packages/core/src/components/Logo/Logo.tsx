@@ -1,7 +1,7 @@
+import { SHIBgreen } from '@shibgreen/icons';
+import { Box, BoxProps } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import { Box, BoxProps } from '@mui/material';
-import { SHIBgreen } from '@shibgreen/icons';
 
 const StyledSHIBgreen = styled(SHIBgreen)`
   max-width: 100%;

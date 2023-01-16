@@ -1,7 +1,8 @@
-import React from 'react';
-import { Loading, Flex } from '@shibgreen/core';
 import { useGetThrottlePlotQueueQuery, useGetTotalHarvestersSummaryQuery } from '@shibgreen/api-react';
+import { Loading, Flex } from '@shibgreen/core';
 import { Grid } from '@mui/material';
+import React from 'react';
+
 import PlotHero from './PlotOverviewHero';
 import PlotOverviewPlots from './PlotOverviewPlots';
 

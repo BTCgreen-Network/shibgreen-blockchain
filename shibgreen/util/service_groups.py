@@ -1,7 +1,15 @@
-from typing import KeysView, Generator
+from __future__ import annotations
+
+from typing import Generator, KeysView
 
 SERVICES_FOR_GROUP = {
-    "all": "shibgreen_harvester shibgreen_timelord_launcher shibgreen_timelord shibgreen_farmer shibgreen_full_node shibgreen_wallet".split(),
+    "all": (
+        "shibgreen_harvester shibgreen_timelord_launcher shibgreen_timelord shibgreen_farmer "
+        "shibgreen_full_node shibgreen_wallet shibgreen_data_layer shibgreen_data_layer_http"
+    ).split(),
+    # TODO: should this be `data_layer`?
+    "data": "shibgreen_wallet shibgreen_data_layer".split(),
+    "data_layer_http": "shibgreen_data_layer_http".split(),
     "node": "shibgreen_full_node".split(),
     "harvester": "shibgreen_harvester".split(),
     "farmer": "shibgreen_harvester shibgreen_farmer shibgreen_full_node shibgreen_wallet".split(),

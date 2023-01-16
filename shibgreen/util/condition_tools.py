@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import Dict, List, Optional, Tuple
 
 from clvm.casts import int_from_bytes
@@ -7,9 +9,9 @@ from shibgreen.types.blockchain_format.program import Program, SerializedProgram
 from shibgreen.types.blockchain_format.sized_bytes import bytes32, bytes48
 from shibgreen.types.condition_opcodes import ConditionOpcode
 from shibgreen.types.condition_with_args import ConditionWithArgs
+from shibgreen.types.spend_bundle_conditions import SpendBundleConditions
 from shibgreen.util.errors import ConsensusError, Err
 from shibgreen.util.ints import uint64
-from shibgreen.types.spend_bundle_conditions import SpendBundleConditions
 
 # TODO: review each `assert` and consider replacing with explicit checks
 #       since asserts can be stripped with python `-OO` flag

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from shibgreen.util.ints import uint32, uint64
 
 # 1 SHIBgreen coin = 1,000 = 1 thousand mojo.

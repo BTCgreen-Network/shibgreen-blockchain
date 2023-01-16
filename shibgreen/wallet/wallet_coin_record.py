@@ -1,8 +1,11 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from shibgreen.types.blockchain_format.coin import Coin
 from shibgreen.types.blockchain_format.sized_bytes import bytes32
-from shibgreen.util.ints import uint32
+from shibgreen.types.coin_record import CoinRecord
+from shibgreen.util.ints import uint32, uint64
 from shibgreen.wallet.util.wallet_types import WalletType
 
 
@@ -23,3 +26,6 @@ class WalletCoinRecord:
 
     def name(self) -> bytes32:
         return self.coin.name()
+
+    def to_coin_record(self, timestamp: uint64) -> CoinRecord:
+        return CoinRecord(self.coin, self.confirmed_block_height, self.spent_block_height, self.coinbase, timestamp)

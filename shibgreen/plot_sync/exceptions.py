@@ -1,8 +1,10 @@
+from __future__ import annotations
+
 from typing import Any
 
 from shibgreen.plot_sync.util import ErrorCodes, State
 from shibgreen.protocols.harvester_protocol import PlotSyncIdentifier
-from shibgreen.server.ws_connection import NodeType
+from shibgreen.server.outbound_message import NodeType
 from shibgreen.util.ints import uint64
 
 

@@ -1,9 +1,9 @@
-import React from 'react';
-import { Trans } from '@lingui/macro';
-import { useNavigate } from 'react-router-dom';
-import { Grid, Typography } from '@mui/material';
 import { Button, CardHero } from '@shibgreen/core';
 import { Pooling } from '@shibgreen/icons';
+import { Trans } from '@lingui/macro';
+import { Grid, Typography } from '@mui/material';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function PoolHero() {
   const navigate = useNavigate();
@@ -18,9 +18,7 @@ export default function PoolHero() {
         <CardHero>
           <Pooling color="primary" fontSize="extraLarge" />
           <Typography variant="body1">
-            <Trans>
-              Smooth out your XSHIB farming rewards by joining a pool.
-            </Trans>
+            <Trans>Smooth out your XSHIB farming rewards by joining a pool.</Trans>
           </Typography>
           <Button onClick={handleJoinPool} variant="contained" color="primary">
             <Trans>Join a Pool</Trans>

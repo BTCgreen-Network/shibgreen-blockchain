@@ -8,8 +8,6 @@ from shibgreen.wallet.lineage_proof import LineageProof
 from shibgreen.types.blockchain_format.program import Program
 from shibgreen.types.blockchain_format.coin import Coin
 
-DID_HRP = "did:shibgreen:"
-
 
 @streamable
 @dataclass(frozen=True)

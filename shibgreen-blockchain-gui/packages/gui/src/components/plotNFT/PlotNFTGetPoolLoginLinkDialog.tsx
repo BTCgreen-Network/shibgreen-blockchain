@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { t, Trans } from '@lingui/macro';
-import styled from 'styled-components';
-import { Button, CopyToClipboard, Flex, Link, Loading } from '@shibgreen/core';
-import {
-  Alert,
-  Dialog,
-  DialogActions,
-  DialogTitle,
-  DialogContent,
-  Typography,
-} from '@mui/material';
-import { useGetPoolLoginLinkQuery } from '@shibgreen/api-react';
 import type { PlotNFT, PlotNFTExternal } from '@shibgreen/api';
+import { useGetPoolLoginLinkQuery } from '@shibgreen/api-react';
+import { Button, CopyToClipboard, Flex, Link, Loading } from '@shibgreen/core';
+import { t, Trans } from '@lingui/macro';
+import { Alert, Dialog, DialogActions, DialogTitle, DialogContent, Typography } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 const StyledLoginLink = styled(Typography)`
   word-break: break-all;
@@ -31,11 +24,18 @@ export default function PlotNFTGetPoolLoginLinkDialog(props: Props) {
     },
   } = nft;
 
-  const { data: loginLink, isLoading, error } = useGetPoolLoginLinkQuery({
-    launcherId,
-  }, {
-    skip: !poolUrl,
-  });
+  const {
+    data: loginLink,
+    isLoading,
+    error,
+  } = useGetPoolLoginLinkQuery(
+    {
+      launcherId,
+    },
+    {
+      skip: !poolUrl,
+    }
+  );
 
   function handleClose() {
     onClose();
@@ -64,13 +64,12 @@ export default function PlotNFTGetPoolLoginLinkDialog(props: Props) {
 
               <Typography variant="body2" color="textSecondary">
                 <Trans>
-                  It is a one-time login link that can be used to log in to a
-                  pool's website. It contains a signature using the farmer's key
-                  from the plot NFT. Not all pools support this feature.
+                  It is a one-time login link that can be used to log in to a pool's website. It contains a signature
+                  using the farmer's key from the plot NFT. Not all pools support this feature.
                 </Trans>{' '}
                 <Link
                   target="_blank"
-                  href="https://github.com/BTCgreen-Network/pool-reference/blob/main/SPECIFICATION.md#get-login"
+                  href="https://github.com/SHIBgreen-Network/pool-reference/blob/main/SPECIFICATION.md#get-login"
                   noWrap
                 >
                   <Trans>Learn More</Trans>

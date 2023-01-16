@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from shibgreen.util.byte_types import SizedBytes
 
 

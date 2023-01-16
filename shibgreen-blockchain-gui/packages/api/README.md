@@ -1,8 +1,8 @@
 # @shibgreen/api
 
-![Alt text](https://www.shibgreen.net/img/shibgreen_logo.svg)
+![Alt text](https://www.shib.green/img/shibgreen_logo.svg)
 
-This library provides support for TypeScript/JavaScript [SHIBgreen](https://www.shibgreen.net) apps to access the [SHIBgreen Blockchain RPC](https://github.com/BTCgreen-Network/shibgreen-blockchain/wiki/RPC-Interfaces), by making it easier to perform the following actions:
+This library provides support for TypeScript/JavaScript [SHIBgreen](https://www.shib.green) apps to access the [SHIBgreen Blockchain RPC](https://github.com/SHIBgreen-Network/shibgreen-blockchain/wiki/RPC-Interfaces), by making it easier to perform the following actions:
 
 - Making requests to the SHIBgreen Blockchain RPC.
 - Catch responses and errors with standard try/catch and async/await syntax.

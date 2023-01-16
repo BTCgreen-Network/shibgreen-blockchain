@@ -3,5 +3,4 @@
 
 set -e
 
-ln -s /usr/lib/shibgreen-blockchain/resources/app.asar.unpacked/daemon/shibgreen /usr/bin/shibgreen || true
-ln -s /usr/lib/shibgreen-blockchain/resources/app.asar.unpacked/daemon /opt/shibgreen || true
+ln -s /opt/shibgreen/resources/app.asar.unpacked/daemon/shibgreen /usr/bin/shibgreen || true

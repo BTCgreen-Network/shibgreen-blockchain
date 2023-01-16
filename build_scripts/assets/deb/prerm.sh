@@ -4,4 +4,3 @@
 set -e
 
 unlink /usr/bin/shibgreen || true
-unlink /opt/shibgreen || true
