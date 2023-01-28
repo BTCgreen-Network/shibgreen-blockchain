@@ -1,6 +1,6 @@
 const units = {
   shibgreen: 1,
-  mojo: 1 / 1e12,
+  mojo: 1 / 1e3,
   colouredcoin: 1 / 1e9,
 };
 
